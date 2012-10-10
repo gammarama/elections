@@ -2,15 +2,22 @@ source("NationalPollingParse-Di.R")
 source("SPEDataCleanup.R")
 
 analyzeRyan <- function(state) {
-    polls.chosen <- subset(polls.state, Region == state)[,-6]
+    polls.chosen <- subset(polls.state, Region %in% state)[,-6]
+    print(head(polls.chosen))
     polls.chosenm <- melt(polls.chosen, id = c("Date", "Pollster", "Region"))
     qplot(Date, value, data = polls.chosenm, colour = variable) + geom_smooth() +
-        annotate(geom = "rect", xmin = as.Date("2012-8-11"), xmax = as.Date("2012-8-12"), ymin = 40, ymax = 55, alpha = .4, colour = "darkred")
+        annotate(geom = "rect", xmin = as.Date("2012-8-11"), xmax = as.Date("2012-8-12"), ymin = 40, ymax = 55, alpha = .4, colour = "darkred") +
+        scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
+        facet_wrap(facets = ~Region) +
+        opts(title = "Paul Ryan Effect on State Polling") +
+        ylab("Percentage Support")
 }
 
+swing.states <- c("Colorado", "Florida", "Iowa", "Michigan", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin")
 analyzeRyan("wisconsin")
 analyzeRyan("florida")
-analyzeRyan("new york")
+analyzeRyan("iowa")
+analyzeRyan(tolower(swing.states))
 
 ### Tracking polls vs state trends?
 #qplot(long, lat, data = polls.state.map, group = group, geom = "polygon", fill = Obama.Romney)
@@ -38,6 +45,23 @@ qplot(Date, Obama.Romney, data = polls.subswing, colour = isNational) + geom_smo
     annotate(geom = "rect", xmin = as.Date("2012-07-18"), xmax = as.Date("2012-07-19"), ymin = -5, ymax = 10, alpha = .4, colour = "darkgrey")
 
 # So what happened around this time?
+wtf.sub <- subset(pres.data, exp_dat >= as.Date("2012-07-11") & exp_dat <= as.Date("2012-07-25"))
+wtf.sub <- wtf.sub[with(wtf.sub, order(-exp_amo)), ]
+head(wtf.sub, n = 10)
+
+wtf_sub2<-wtf.sub[,c("exp_amo", "beneful_can", "bucket2")]
+wtf_sum <- dcast(melt(wtf.sub2,id=c("beneful_can", "bucket2")), wtf.sub2$bucket2 ~ wtf.sub2$beneful_can, sum)
+wtf_sum$both<-wtf_sum$obama + wtf_sum$romney
+
+## For the plot
+wtf_wtf <- ddply(wtf_sub2, .(bucket2, beneful_can), summarise, Sum = sum(exp_amo))
+ggplot(wtf_wtf, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
+twoweeksum <- subset(wtf_wtf, bucket2 == "ad" & beneful_can == "romney")$Sum
+overallsum <- subset(sum_exp2_p, bucket2 == "ad" & beneful_can == "romney")$Sum
+
+twoweeksum / overallsum
+# vs...
+2 / (as.numeric(max(num.weeks$week)) - as.numeric(min(num.weeks$week)))
 
 pres.datam <- pres.data[,c("beneful_can", "exp_amo", "exp_dat")]
 pres.datamp <- ddply(pres.datam, .(exp_dat, beneful_can), summarise, day_amo = sum(exp_amo))

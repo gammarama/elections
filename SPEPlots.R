@@ -31,7 +31,7 @@ ggplot(num.weeks, aes(week, WeeklySum, fill = beneful_can)) + geom_bar(position 
 #qplot(romney, obama, data=sum_exp2) +geom_abline() + geom_text(aes(label=`df2$bucket2`), data=subset(sum_exp2, (romney > 5*10^6 | obama > 5*10^6)), hjust=-.1)
 qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +geom_abline() + geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + scale_x_log10() + scale_y_log10()
 
-ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_y_log10() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
+ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
 #ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent")
 
 #ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + geom_bar() + coord_flip() + scale_y_log10() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
