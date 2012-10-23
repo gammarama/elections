@@ -185,3 +185,58 @@ sum_exp.spep$spe_nam <- factor(sum_exp.spep$spe_nam, levels = sum_exp.spep$spe_n
 
 # What buckets do we want to look at first?
 sum_exp.spe[with(sum_exp.spe, order(-(obama + romney))), ]
+
+
+### Let's play with the polling data
+# Source in Di's code
+source("NationalPollingParse-Di.R")
+
+polls.sub2 <- subset(polls.sub[,c(1:2, 5:6)], Date > as.Date("2012-04-28"))
+polls.subswing <- subset(polls.sub2, Region %in% c("National", "Colorado", "Florida", "Iowa", "Michigan", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin"))
+
+polls.subswing$isNational <- (polls.subswing$Region == "National")
+
+
+polls.sub3 <- subset(polls.sub[,c(1:6)], Date > as.Date("2012-04-28"))
+polls.subswing3 <- subset(polls.sub3, Region %in% c("National", "Colorado", "Florida", "Iowa", "Michigan", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin"))
+
+polls.subswing3$isNational <- (polls.subswing$Region == "National")
+
+
+num.weeks.sum <- ddply(subset(num.weeks, week > 17), .(week, beneful_can), summarise, sum = sum(WeeklySum, na.rm = TRUE))
+num.weeks.sum$Date <- as.Date("2012-04-28") + (7 * (as.numeric(num.weeks.sum$week) - week(as.Date("2012-04-28"))))
+
+polls.week <- ddply(polls.subswing, .(week = factor(week(Date)), isNational), summarise, Obama.Romney.Avg = mean(Obama.Romney))
+polls.week3 <- ddply(subset(polls.subswing3, !isNational), .(week = factor(week(Date)), isNational), summarise, Obama.Romney.Avg = mean(Obama.Romney), Obama = mean(Obama), Romney = mean(Romney))
+polls.week3$week <- as.numeric(as.character(polls.week3$week))
+names(polls.week3)[4] <- "Obama.Poll"
+names(polls.week3)[5] <- "Romney.Poll"
+
+unmelted.polls <- dcast(polls.week, week ~ isNational)
+names(unmelted.polls) <- c("weeknum", "Swing", "National")
+
+unmelted.sum <- dcast(num.weeks.sum, week+Date ~ beneful_can, value.var = "sum")
+unmelted.sum$obama.romney <- unmelted.sum$obama - unmelted.sum$romney
+final.df <- cbind(subset(unmelted.sum[,-c(3,4)], unmelted.sum$week >= 17 & unmelted.sum$week <= week(today())), subset(unmelted.polls[,-1], unmelted.sum$week >= 17 & unmelted.sum$week <= week(today())))
+final.df3 <- cbind(subset(unmelted.sum, unmelted.sum$week >= 18 & unmelted.sum$week <= week(today())), subset(polls.week3[,-1], polls.week3$week >= 18 & polls.week3$week <= week(today())))
+names(final.df3)[1] <- "weeknum"
+
+wtf.sub <- subset(pres.data, exp_dat >= as.Date("2012-07-11") & exp_dat <= as.Date("2012-07-25"))
+wtf.sub <- wtf.sub[with(wtf.sub, order(-exp_amo)), ]
+
+wtf.sub2<-wtf.sub[,c("exp_amo", "beneful_can", "bucket2")]
+wtf_sum <- dcast(melt(wtf.sub2,id=c("beneful_can", "bucket2")), wtf.sub2$bucket2 ~ wtf.sub2$beneful_can, sum)
+wtf_sum$both<-wtf_sum$obama + wtf_sum$romney
+
+## For the plot
+wtf_wtf <- ddply(wtf_sub2, .(bucket2, beneful_can), summarise, Sum = sum(exp_amo))
+
+twoweeksum <- subset(wtf_wtf, bucket2 == "ad" & beneful_can == "romney")$Sum
+overallsum <- subset(sum_exp2_p, bucket2 == "ad" & beneful_can == "romney")$Sum
+
+twoweeksum / overallsum
+# vs...
+2 / (as.numeric(max(num.weeks$week)) - as.numeric(min(num.weeks$week)))
+
+pres.datam <- pres.data[,c("beneful_can", "exp_amo", "exp_dat")]
+pres.datamp <- ddply(pres.datam, .(exp_dat, beneful_can), summarise, day_amo = sum(exp_amo))
