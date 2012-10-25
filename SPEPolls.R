@@ -41,8 +41,8 @@ analyzeStateTrends(tolower(swing.states))
 qplot(Date, Obama.Romney, data = polls.subswing, colour = isNational) + geom_smooth()
 qplot(Date, Obama.Romney, data = subset(polls.subswing, Region %in% c("Pennsylvania", "Ohio", "Florida")), colour = Region) + geom_smooth()
 qplot(Date, Obama.Romney, data = subset(polls.subswing, Date > as.Date("2012-09-15")), colour = isNational) + geom_smooth() +
-    annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
-    geom_line(y = 0, colour = "darkgrey")
+  annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
+  geom_line(y = 0, colour = "darkgrey")
 
 
 # Here we notice an extremely abrupt increases in spending.
@@ -83,6 +83,51 @@ qplot(Date, Obama.Romney, data = polls.subswing, colour = isNational) + geom_smo
 ggplot(wtf_wtf, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
 qplot(exp_dat, day_amo, data = subset(pres.datamp, exp_dat > as.Date("2012-09-15")), colour = beneful_can) + scale_y_log10() + geom_smooth()
 
+### Events to Symbols
+## Paul Ryan: +
+## DNC: Triangle
+## RNC: Square with X in it
+## 47% Video: Star
+## 1st Debate: Circle
+## All other Points: Square
+### 
+qplot(obama, Obama.Poll, data = final.df3[-1,], geom = "path", colour = I("blue")) + 
+  scale_x_log10() + 
+  geom_path(aes(romney, Romney.Poll), colour = "red") + 
+  geom_point(aes(shape = Event, size = WeekNumber)) + 
+  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
+  scale_shape(solid = FALSE) +
+  ylab("Percentage Support (Weekly Average)") +
+  xlab("Super PAC Spending (Weekly Average)") + 
+  ggtitle("Polling Average over Spending by Week") +
+  coord_fixed()
+  #theme(legend.position="none")
 
-qplot(obama, Obama.Poll, data = final.df3, colour = I("blue")) + geom_point(aes(romney, Romney.Poll), colour = I("red")) + scale_x_log10()
-qplot(obama, Obama.Poll, data = final.df3[-1,], colour = I("blue")) + geom_text(aes(label = weeknum), vjust = -.5) + geom_point(aes(romney, Romney.Poll), colour = I("red")) + scale_x_log10() + geom_path(colour = I("blue")) + geom_path(aes(romney, Romney.Poll), colour = I("red")) + geom_text(aes(romney, Romney.Poll, label = weeknum), vjust = -.5)
+
+## One Week Lag
+qplot(obama, Obama.Poll, data = final.df3.lag2[-1,], geom = "path", colour = I("blue")) + 
+  scale_x_log10() + 
+  geom_path(aes(romney, Romney.Poll), colour = "red") + 
+  geom_point(aes(shape = Event, size = WeekNumber)) + 
+  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
+  scale_shape(solid = FALSE) +
+  ylab("Percentage Support (Weekly Average)") +
+  xlab("Super PAC Spending (Previous Week Average)") + 
+  ggtitle("Polling Average over Spending by Previous Week") +
+  coord_fixed()
+  #theme(legend.position="none")
+
+
+
+## Two Week Lag
+qplot(obama, Obama.Poll, data = final.df3.lag2[-1,], geom = "path", colour = I("blue")) + 
+  scale_x_log10() + 
+  geom_path(aes(romney, Romney.Poll), colour = "red") + 
+  geom_point(aes(shape = Event, size = WeekNumber)) + 
+  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
+  scale_shape(solid = FALSE) +
+  ylab("Percentage Support (Weekly Average)") +
+  xlab("Super PAC Spending (Two Weeks Prior Average)") + 
+  ggtitle("Polling Average over Spending by Two Weeks Prior") +
+  coord_fixed()
+  #theme(legend.position="none")

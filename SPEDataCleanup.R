@@ -221,6 +221,53 @@ final.df <- cbind(subset(unmelted.sum[,-c(3,4)], unmelted.sum$week >= 17 & unmel
 final.df3 <- cbind(subset(unmelted.sum, unmelted.sum$week >= 18 & unmelted.sum$week <= week(today())), subset(polls.week3[,-1], polls.week3$week >= 18 & polls.week3$week <= week(today())))
 names(final.df3)[1] <- "weeknum"
 
+
+unmelted.sum.lag1 <- unmelted.sum
+names(unmelted.sum.lag1)[1] <- "weeknum"
+unmelted.sum.lag1$weeknum <- as.numeric(as.character(unmelted.sum.lag1$weeknum))
+unmelted.sum.lag1$weeknum <- unmelted.sum.lag1$weeknum + 1
+unmelted.sum.lag1$weeknum <- factor(unmelted.sum.lag1$weeknum)
+unmelted.sum.lag1 <- unmelted.sum.lag1[-c(27, 26), ]
+final.df3.lag1 <- cbind(unmelted.sum.lag1, polls.week3[-1,])
+
+
+unmelted.sum.lag2 <- unmelted.sum
+names(unmelted.sum.lag2)[1] <- "weeknum"
+unmelted.sum.lag2$weeknum <- as.numeric(as.character(unmelted.sum.lag2$weeknum))
+unmelted.sum.lag2$weeknum <- unmelted.sum.lag2$weeknum + 2
+unmelted.sum.lag2$weeknum <- factor(unmelted.sum.lag2$weeknum)
+unmelted.sum.lag2 <- unmelted.sum.lag2[-c(27, 26, 25), ]
+final.df3.lag2 <- cbind(unmelted.sum.lag2, polls.week3[-c(1,2), ])
+
+
+
+final.df3$Event <- ifelse(final.df3$weeknum == 33, "PaulRyanSelection", "None")
+final.df3$Event[final.df3$weeknum == 35] <- "RNC"
+final.df3$Event[final.df3$weeknum == 36] <- "DNC"
+final.df3$Event[final.df3$weeknum == 38] <- "47%Video"
+final.df3$Event[final.df3$weeknum == 41] <- "1stDebate"
+
+final.df3.lag1$Event <- ifelse(final.df3.lag1$weeknum == 33, "PaulRyanSelection", "None")
+final.df3.lag1$Event[final.df3.lag1$weeknum == 35] <- "RNC"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 36] <- "DNC"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 38] <- "47%Video"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 41] <- "1stDebate"
+
+final.df3.lag2$Event <- ifelse(final.df3.lag2$weeknum == 33, "PaulRyanSelection", "None")
+final.df3.lag2$Event[final.df3.lag2$weeknum == 35] <- "RNC"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 36] <- "DNC"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 38] <- "47%Video"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 41] <- "1stDebate"
+
+final.df3$Event <- factor(final.df3$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
+final.df3.lag1$Event <- factor(final.df3.lag1$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
+final.df3.lag2$Event <- factor(final.df3.lag2$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
+
+final.df3$WeekNumber <- as.numeric(as.character(final.df3$weeknum))
+final.df3.lag1$WeekNumber <- as.numeric(as.character(final.df3.lag1$weeknum))
+final.df3.lag2$WeekNumber <- as.numeric(as.character(final.df3.lag2$weeknum))
+
+
 wtf.sub <- subset(pres.data, exp_dat >= as.Date("2012-07-11") & exp_dat <= as.Date("2012-07-25"))
 wtf.sub <- wtf.sub[with(wtf.sub, order(-exp_amo)), ]
 
