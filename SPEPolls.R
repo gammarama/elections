@@ -105,29 +105,51 @@ qplot(obama, Obama.Poll, data = final.df3[-1,], geom = "path", colour = I("blue"
 
 
 ## One Week Lag
-qplot(obama, Obama.Poll, data = final.df3.lag2[-1,], geom = "path", colour = I("blue")) + 
-  scale_x_log10() + 
-  geom_path(aes(romney, Romney.Poll), colour = "red") + 
-  geom_point(aes(shape = Event, size = WeekNumber)) + 
-  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
-  scale_shape(solid = FALSE) +
-  ylab("Percentage Support (Weekly Average)") +
-  xlab("Super PAC Spending (Previous Week Average)") + 
-  ggtitle("Polling Average over Spending by Previous Week") +
-  coord_fixed()
-  #theme(legend.position="none")
+qplot(ObamaSpendChange, ObamaPollChange, data = final.df3.lag1[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = -1088052.97, y = 1.30219780, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x =  1455100.32, y = 0.39285714, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1883070.69, y = 0.54135338, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 418553.52, y = 1.02534562, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 3386047.23, y = 0.37073171, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  geom_smooth()
+
+qplot(RomneySpendChange, RomneyPollChange, data = final.df3.lag1[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 406377.99, y = -1.13736264, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1748705.58, y = 1.32142857, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -13342978.01, y = -2.78195489, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1723434.56, y = -0.06682028, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 4885549.67, y = 0.54982578, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  scale_colour_gradientn(colours = c("#850707", "#F78686")) +
+  geom_smooth(colour = I("red"))
 
 
 
 ## Two Week Lag
-qplot(obama, Obama.Poll, data = final.df3.lag2[-1,], geom = "path", colour = I("blue")) + 
-  scale_x_log10() + 
-  geom_path(aes(romney, Romney.Poll), colour = "red") + 
-  geom_point(aes(shape = Event, size = WeekNumber)) + 
-  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
-  scale_shape(solid = FALSE) +
-  ylab("Percentage Support (Weekly Average)") +
-  xlab("Super PAC Spending (Two Weeks Prior Average)") + 
-  ggtitle("Polling Average over Spending by Two Weeks Prior") +
-  coord_fixed()
-  #theme(legend.position="none")
+qplot(ObamaSpendChange, ObamaPollChange, data = final.df3.lag2[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 1619629.98, y = 1.30219780, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x =  -619310.00, y = 0.39285714, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 1455100.32, y = 0.54135338, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 4453646.40, y = 1.02534562, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -2553605.82, y = 0.37073171, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  geom_smooth()
+
+qplot(RomneySpendChange, RomneyPollChange, data = final.df3.lag2[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 7536978.98, y = -1.13736264, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 8966694.68, y = 1.32142857, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1748705.58, y = -2.78195489, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 7307676.72, y = -0.06682028, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 3616271.36, y = 0.54982578, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  scale_colour_gradientn(colours = c("#850707", "#F78686")) +
+  geom_smooth(colour = I("red"))

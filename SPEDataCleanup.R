@@ -1,5 +1,6 @@
 library(plyr)
 library(reshape2)
+library(lubridate)
 
 #Get csv from URL
 data<-read.csv("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=2012")
@@ -227,8 +228,27 @@ names(unmelted.sum.lag1)[1] <- "weeknum"
 unmelted.sum.lag1$weeknum <- as.numeric(as.character(unmelted.sum.lag1$weeknum))
 unmelted.sum.lag1$weeknum <- unmelted.sum.lag1$weeknum + 1
 unmelted.sum.lag1$weeknum <- factor(unmelted.sum.lag1$weeknum)
-unmelted.sum.lag1 <- unmelted.sum.lag1[-c(27, 26), ]
-final.df3.lag1 <- cbind(unmelted.sum.lag1, polls.week3[-1,])
+unmelted.sum.lag1 <- unmelted.sum.lag1[-c(28, 27), ]
+final.df3.lag1 <- cbind(unmelted.sum.lag1, polls.week3[-c(1,2),])
+
+ObamaPollPrevWeek <- c(final.df3.lag1$Obama.Poll[1], final.df3.lag1$Obama.Poll[1:length(final.df3.lag1$Obama.Poll) - 1])
+final.df3.lag1$ObamaPollChange <- final.df3.lag1$Obama.Poll - ObamaPollPrevWeek
+  
+RomneyPollPrevWeek <- c(final.df3.lag1$Romney.Poll[1], final.df3.lag1$Romney.Poll[1:length(final.df3.lag1$Romney.Poll) - 1])
+final.df3.lag1$RomneyPollChange <- final.df3.lag1$Romney.Poll - RomneyPollPrevWeek
+
+Obama.Romney.AvgPollPrevWeek <- c(final.df3.lag1$Obama.Romney.Avg[1], final.df3.lag1$Obama.Romney.Avg[1:length(final.df3.lag1$Obama.Romney.Avg) - 1])
+final.df3.lag1$ObamaRomneyPollChange <- final.df3.lag1$Obama.Romney.Avg - Obama.Romney.AvgPollPrevWeek
+
+
+ObamaSpendPrevWeek <- c(final.df3.lag1$obama[1], final.df3.lag1$obama[1:length(final.df3.lag1$obama) - 1])
+final.df3.lag1$ObamaSpendChange <- final.df3.lag1$obama - ObamaSpendPrevWeek
+
+RomneySpendPrevWeek <- c(final.df3.lag1$romney[1], final.df3.lag1$romney[1:length(final.df3.lag1$romney) - 1])
+final.df3.lag1$RomneySpendChange <- final.df3.lag1$romney - RomneySpendPrevWeek
+
+Obama.Romney.AvgSpendPrevWeek <- c(final.df3.lag1$obama.romney[1], final.df3.lag1$obama.romney[1:length(final.df3.lag1$obama.romney) - 1])
+final.df3.lag1$ObamaRomneySpendChange <- final.df3.lag1$obama.romney - Obama.Romney.AvgSpendPrevWeek
 
 
 unmelted.sum.lag2 <- unmelted.sum
@@ -236,32 +256,60 @@ names(unmelted.sum.lag2)[1] <- "weeknum"
 unmelted.sum.lag2$weeknum <- as.numeric(as.character(unmelted.sum.lag2$weeknum))
 unmelted.sum.lag2$weeknum <- unmelted.sum.lag2$weeknum + 2
 unmelted.sum.lag2$weeknum <- factor(unmelted.sum.lag2$weeknum)
-unmelted.sum.lag2 <- unmelted.sum.lag2[-c(27, 26, 25), ]
-final.df3.lag2 <- cbind(unmelted.sum.lag2, polls.week3[-c(1,2), ])
+unmelted.sum.lag2 <- unmelted.sum.lag2[-c(28, 27, 26), ]
+final.df3.lag2 <- cbind(unmelted.sum.lag2, polls.week3[-c(1,2,3), ])
+
+
+ObamaPollPrevWeek2 <- c(final.df3.lag2$Obama.Poll[1], final.df3.lag2$Obama.Poll[1:length(final.df3.lag2$Obama.Poll) - 1])
+final.df3.lag2$ObamaPollChange <- final.df3.lag2$Obama.Poll - ObamaPollPrevWeek2
+
+RomneyPollPrevWeek2 <- c(final.df3.lag2$Romney.Poll[1], final.df3.lag2$Romney.Poll[1:length(final.df3.lag2$Romney.Poll) - 1])
+final.df3.lag2$RomneyPollChange <- final.df3.lag2$Romney.Poll - RomneyPollPrevWeek2
+
+Obama.Romney.AvgPollPrevWeek2 <- c(final.df3.lag2$Obama.Romney.Avg[1], final.df3.lag2$Obama.Romney.Avg[1:length(final.df3.lag2$Obama.Romney.Avg) - 1])
+final.df3.lag2$ObamaRomneyPollChange <- final.df3.lag2$Obama.Romney.Avg - Obama.Romney.AvgPollPrevWeek2
+
+
+ObamaSpendPrevWeek2 <- c(final.df3.lag2$obama[1], final.df3.lag2$obama[1:length(final.df3.lag2$obama) - 1])
+final.df3.lag2$ObamaSpendChange <- final.df3.lag2$obama - ObamaSpendPrevWeek2
+
+RomneySpendPrevWeek2 <- c(final.df3.lag2$romney[1], final.df3.lag2$romney[1:length(final.df3.lag2$romney) - 1])
+final.df3.lag2$RomneySpendChange <- final.df3.lag2$romney - RomneySpendPrevWeek2
+
+Obama.Romney.AvgSpendPrevWeek2 <- c(final.df3.lag2$obama.romney[1], final.df3.lag2$obama.romney[1:length(final.df3.lag2$obama.romney) - 1])
+final.df3.lag2$ObamaRomneySpendChange <- final.df3.lag2$obama.romney - Obama.Romney.AvgSpendPrevWeek2
 
 
 
-final.df3$Event <- ifelse(final.df3$weeknum == 33, "PaulRyanSelection", "None")
-final.df3$Event[final.df3$weeknum == 35] <- "RNC"
-final.df3$Event[final.df3$weeknum == 36] <- "DNC"
-final.df3$Event[final.df3$weeknum == 38] <- "47%Video"
-final.df3$Event[final.df3$weeknum == 41] <- "1stDebate"
+final.df3$Event <- ifelse(final.df3$weeknum == 33, "1", "None")
+final.df3$Event[final.df3$weeknum == 35] <- "2"
+final.df3$Event[final.df3$weeknum == 36] <- "3"
+final.df3$Event[final.df3$weeknum == 38] <- "4"
+final.df3$Event[final.df3$weeknum == 41] <- "5"
 
-final.df3.lag1$Event <- ifelse(final.df3.lag1$weeknum == 33, "PaulRyanSelection", "None")
-final.df3.lag1$Event[final.df3.lag1$weeknum == 35] <- "RNC"
-final.df3.lag1$Event[final.df3.lag1$weeknum == 36] <- "DNC"
-final.df3.lag1$Event[final.df3.lag1$weeknum == 38] <- "47%Video"
-final.df3.lag1$Event[final.df3.lag1$weeknum == 41] <- "1stDebate"
+final.df3.lag1$Event <- ifelse(final.df3.lag1$weeknum == 33, "1", "None")
+final.df3.lag1$Event[final.df3.lag1$weeknum == 35] <- "2"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 36] <- "3"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 38] <- "4"
+final.df3.lag1$Event[final.df3.lag1$weeknum == 41] <- "5"
 
-final.df3.lag2$Event <- ifelse(final.df3.lag2$weeknum == 33, "PaulRyanSelection", "None")
-final.df3.lag2$Event[final.df3.lag2$weeknum == 35] <- "RNC"
-final.df3.lag2$Event[final.df3.lag2$weeknum == 36] <- "DNC"
-final.df3.lag2$Event[final.df3.lag2$weeknum == 38] <- "47%Video"
-final.df3.lag2$Event[final.df3.lag2$weeknum == 41] <- "1stDebate"
+final.df3.lag2$Event <- ifelse(final.df3.lag2$weeknum == 33, "1", "None")
+final.df3.lag2$Event[final.df3.lag2$weeknum == 35] <- "2"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 36] <- "3"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 38] <- "4"
+final.df3.lag2$Event[final.df3.lag2$weeknum == 41] <- "5"
 
-final.df3$Event <- factor(final.df3$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
-final.df3.lag1$Event <- factor(final.df3.lag1$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
-final.df3.lag2$Event <- factor(final.df3.lag2$Event, levels = c("None", "PaulRyanSelection", "RNC", "DNC", "47%Video", "1stDebate"))
+final.df3$Event <- factor(final.df3$Event, levels = c("None", "1", "2", "3", "4", "5"))
+final.df3.lag1$Event <- factor(final.df3.lag1$Event, levels = c("None", "1", "2", "3", "4", "5"))
+final.df3.lag2$Event <- factor(final.df3.lag2$Event, levels = c("None", "1", "2", "3", "4", "5"))
+
+final.df3$Event2 <- ifelse(final.df3$Event == "None", 20, NA)
+final.df3.lag1$Event2 <- ifelse(final.df3.lag1$Event == "None", 20, NA)
+final.df3.lag2$Event2 <- ifelse(final.df3.lag2$Event == "None", 20, NA)
+final.df3$Event[final.df3$Event == "None"] <- NA
+final.df3.lag1$Event[final.df3.lag1$Event == "None"] <- NA
+final.df3.lag2$Event[final.df3.lag2$Event == "None"] <- NA
+
 
 final.df3$WeekNumber <- as.numeric(as.character(final.df3$weeknum))
 final.df3.lag1$WeekNumber <- as.numeric(as.character(final.df3.lag1$weeknum))
