@@ -1,4 +1,3 @@
-source("NationalPollingParse-Di.R")
 source("SPEDataCleanup.R")
 
 library(RColorBrewer)
@@ -25,7 +24,7 @@ analyzeStateTrends <- function(state) {
     annotate("text", x=as.Date("3/10/2012","%d/%m/%Y"), y=60, label="5", color="grey50", hjust=-0.5, alpha=0.4, size=3) + 
     annotate("text", x=as.Date("3/10/2012","%d/%m/%Y"), y=30, label="5", color="grey50", hjust=-0.5, alpha=0.4, size=3) +
     annotate("rect", xmin=as.Date("3/10/2012","%d/%m/%Y"), ymin=30, xmax=as.Date("4/10/2012","%d/%m/%Y"), ymax=60, fill="grey50", alpha=0.4) +
-    opts(legend.position="bottom")
+    theme(legend.position="bottom")
 }
 
 #list taken from http://www.realclearpolitics.com
@@ -38,35 +37,18 @@ analyzeStateTrends(tolower(swing.states))
 ### Tracking polls vs state trends?
 #qplot(long, lat, data = polls.state.map, group = group, geom = "polygon", fill = Obama.Romney)
 
-# Colorado, Florida, Iowa, Michigan, Nevada, New Hampshire, North Carolina, Ohio, Pennsylvania, Virginia, Wisconsin
-polls.sub2 <- subset(polls.sub[,c(1:2, 5:6)], Date > as.Date("2012-04-25"))
-polls.subswing <- subset(polls.sub2, Region %in% c("National", "Colorado", "Florida", "Iowa", "Michigan", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin"))
-
-polls.subswing$isNational <- (polls.subswing$Region == "National")
-
 # How does the candidate's performance compare in 11 swing states relative to the overall national performance?
 qplot(Date, Obama.Romney, data = polls.subswing, colour = isNational) + geom_smooth()
 qplot(Date, Obama.Romney, data = subset(polls.subswing, Region %in% c("Pennsylvania", "Ohio", "Florida")), colour = Region) + geom_smooth()
 qplot(Date, Obama.Romney, data = subset(polls.subswing, Date > as.Date("2012-09-15")), colour = isNational) + geom_smooth() +
-    annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
-    geom_line(y = 0, colour = "darkgrey")
+  annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
+  geom_line(y = 0, colour = "darkgrey")
 
 
 # Here we notice an extremely abrupt increases in spending.
 # Romney: beginning the week of 2012-07-18
 ##--------------------------------------------------
 ##2. Build the plots
-num.weeks.sum <- ddply(num.weeks, .(week, beneful_can), summarise, sum = sum(WeeklySum, na.rm = TRUE))
-num.weeks.sum$Date <- as.Date("2012-04-25") + (7 * (as.numeric(num.weeks.sum$week) - week(as.Date("2012-04-25"))))
-
-polls.week <- ddply(polls.subswing, .(week = factor(week(Date)), isNational), summarise, Obama.Romney.Avg = mean(Obama.Romney))
-unmelted.polls <- dcast(polls.week, week ~ isNational)
-names(unmelted.polls) <- c("week", "Swing", "National")
-
-unmelted.sum <- dcast(num.weeks.sum, week+Date ~ beneful_can, value.var = "sum")
-unmelted.sum$obama.romney <- unmelted.sum$obama - unmelted.sum$romney
-final.df <- cbind(unmelted.sum[,-c(3,4)], unmelted.polls[,-1])
-
 qplot(obama.romney, Swing, data = final.df) + geom_smooth(method = "lm")
 qplot(Date, Swing, data = final.df, size = obama.romney) + geom_smooth()
 
@@ -98,24 +80,76 @@ qplot(Date, Obama.Romney, data = polls.subswing, colour = isNational) + geom_smo
   theme(legend.position="bottom")
 
 # So what happened around this time?
-wtf.sub <- subset(pres.data, exp_dat >= as.Date("2012-07-11") & exp_dat <= as.Date("2012-07-25"))
-wtf.sub <- wtf.sub[with(wtf.sub, order(-exp_amo)), ]
-head(wtf.sub, n = 10)
-
-wtf_sub2<-wtf.sub[,c("exp_amo", "beneful_can", "bucket2")]
-wtf_sum <- dcast(melt(wtf.sub2,id=c("beneful_can", "bucket2")), wtf.sub2$bucket2 ~ wtf.sub2$beneful_can, sum)
-wtf_sum$both<-wtf_sum$obama + wtf_sum$romney
-
-## For the plot
-wtf_wtf <- ddply(wtf_sub2, .(bucket2, beneful_can), summarise, Sum = sum(exp_amo))
 ggplot(wtf_wtf, aes(bucket2, Sum, fill = beneful_can)) + geom_bar(position = "dodge") + coord_flip() + scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + xlab("") + ylab("Amount Spent (Log 10)")
-twoweeksum <- subset(wtf_wtf, bucket2 == "ad" & beneful_can == "romney")$Sum
-overallsum <- subset(sum_exp2_p, bucket2 == "ad" & beneful_can == "romney")$Sum
-
-twoweeksum / overallsum
-# vs...
-2 / (as.numeric(max(num.weeks$week)) - as.numeric(min(num.weeks$week)))
-
-pres.datam <- pres.data[,c("beneful_can", "exp_amo", "exp_dat")]
-pres.datamp <- ddply(pres.datam, .(exp_dat, beneful_can), summarise, day_amo = sum(exp_amo))
 qplot(exp_dat, day_amo, data = subset(pres.datamp, exp_dat > as.Date("2012-09-15")), colour = beneful_can) + scale_y_log10() + geom_smooth()
+
+### Events to Symbols
+## Paul Ryan: +
+## DNC: Triangle
+## RNC: Square with X in it
+## 47% Video: Star
+## 1st Debate: Circle
+## All other Points: Square
+### 
+qplot(obama, Obama.Poll, data = final.df3[-1,], geom = "path", colour = I("blue")) + 
+  scale_x_log10() + 
+  geom_path(aes(romney, Romney.Poll), colour = "red") + 
+  geom_point(aes(shape = Event, size = WeekNumber)) + 
+  geom_point(aes(romney, Romney.Poll, shape = Event, size = WeekNumber)) +
+  scale_shape(solid = FALSE) +
+  ylab("Percentage Support (Weekly Average)") +
+  xlab("Super PAC Spending (Weekly Average)") + 
+  ggtitle("Polling Average over Spending by Week") +
+  coord_fixed()
+  #theme(legend.position="none")
+
+
+## One Week Lag
+qplot(ObamaSpendChange, ObamaPollChange, data = final.df3.lag1[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = -1088052.97, y = 1.30219780, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x =  1455100.32, y = 0.39285714, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1883070.69, y = 0.54135338, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 418553.52, y = 1.02534562, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 3386047.23, y = 0.37073171, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  geom_smooth()
+
+qplot(RomneySpendChange, RomneyPollChange, data = final.df3.lag1[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 406377.99, y = -1.13736264, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1748705.58, y = 1.32142857, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -13342978.01, y = -2.78195489, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1723434.56, y = -0.06682028, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 4885549.67, y = 0.54982578, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  scale_colour_gradientn(colours = c("#850707", "#F78686")) +
+  geom_smooth(colour = I("red"))
+
+
+
+## Two Week Lag
+qplot(ObamaSpendChange, ObamaPollChange, data = final.df3.lag2[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 1619629.98, y = 1.30219780, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x =  -619310.00, y = 0.39285714, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 1455100.32, y = 0.54135338, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 4453646.40, y = 1.02534562, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -2553605.82, y = 0.37073171, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  geom_smooth()
+
+qplot(RomneySpendChange, RomneyPollChange, data = final.df3.lag2[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  geom_point() + 
+  annotate("text", x = 7536978.98, y = -1.13736264, label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 8966694.68, y = 1.32142857, label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = -1748705.58, y = -2.78195489, label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 7307676.72, y = -0.06682028, label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = 3616271.36, y = 0.54982578, label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  scale_colour_gradientn(colours = c("#850707", "#F78686")) +
+  geom_smooth(colour = I("red"))
