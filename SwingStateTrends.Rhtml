@@ -47,9 +47,9 @@ Released   : 20110411
 ##0. Load libraries
 library(ggplot2)
 library(XML)
-#library(lubridate)
-#library(plyr)
-#library(reshape2)
+library(lubridate)
+library(plyr)
+library(reshape2)
 
 ##--------------------------------------------------
 ##1. Load and prepare data
@@ -59,8 +59,7 @@ r <- xmlRoot(doc)
 body <- xmlChildren(r)[[2]]
 tables <- getNodeSet(doc, "//table")
 polls<-NULL
-pres.data<-read.csv("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=2012")
-pres.data$exp_dat<-as.Date(pres.data$exp_dat,format='%m/%d/%Y')
+
 
 x <- xmlValue(tables[[6]], "td")
 xp <- getNodeSet(tables[[6]], "tr")
@@ -244,7 +243,7 @@ end.rcode-->
 					<ul>
 						<li><a href="http://www.nationalpolls.com">National Polls</a></li>
 						<li><a href="http://www.fec.gov">Federal Electoral Commission</a></li>
-        <li> <em> Last spend date:  <!--rinline max(pres.data$exp_dat) --> </em></li>
+       <li> <em> Last poll date:  <!--rinline today() --> </li></em>
 					      </ul>
 				</li>	
 			</ul>
