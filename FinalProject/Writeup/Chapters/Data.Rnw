@@ -1,0 +1,54 @@
+We are primarily working with two data sources to complete our analysis: independent expenditures (PAC) data and polling data. The PAC spending data comes from the \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commision} and the polling data comes from \url{http://nationalpolls.com/}. 
+
+\subsection{Variable Definitions}
+The variables present in the PAC spending data are defined as follows:
+\begin{landscape}
+\begin{center}
+\begin{longtable}[\textwidth]{l l l p{0.4\textheight} p{0.4\textheight}}
+Tag & Field Name	& Data Type	& Description	& Explanation \\
+\hline
+can\_id  & Candidate ID  & Character &unique ID of candidate for or against whom the expenditure was made	& First character indicates office sought - H=House, S=Senate, P=Presidential. Columns 3-4 are the state abbreviation for Congressional candidates. NOTE - this information is provided by filers and may be missing - in these cases office, state, district and candidate name should appear. \\
+spe\_id & Spender ID & Character & Unique ID of committee, individual or group making expenditure	&	Unique FEC ID assigned to the entity submitting reports of independent expenditures \\
+spe\_nam & Spender Name &	Character &	Name of committee, individual or group making expenditure	& \\
+ele\_typ & Election Type & Character & code for specific election for which expenditure was made & First character indicates election - P=Primary, G=General, S=Special. Next four characters indicate election year. \\
+can\_off\_sta & Candidate State	& Character	& Postal state abbreviation for the candidate	& \\	 
+can\_off\_dis &	Candidate District & Number &	District number for the candidate	&	District location if spending for/against House candidate.\\
+can\_off & Office &	Character &	Office Sought by Candidate &	(H=House, S=Senate, P=President)\\
+can\_par\_aff &	Party	& Character &	Party abbreviation for candidate & Dem=Democrat \newline Rep=Republican \\
+exp\_amo & Expenditure Amount &	Currency & Dollar amount of specific expenditure & \\
+exp\_dat &	Expenditure date &	Date	& Date of specific Expenditure	MM/DD/YYYY & \\	 
+agg\_amo & Aggregate amount &	Currency &	Total amount expended during the calendar year, per election, per office sought & \\
+sup\_opp &	Support or Oppose &	Character &	S=Support, O=Oppose	& Describes whether the expenditure was made to support or oppose the candidate. \\	 
+pur &	Purpose of expenditure &	Character	&	description of the expenditure, e.g. television or radio ad & \\
+pay &	name of payee	& Character &	Name of the person or vendor or other entity receiving this payment &\\
+file\_num	& Filing number &	Number &	Unique identifier for a submission (which may report several disbursements) & \\
+amn\_ind &	Amendment Indicator &	Character &	New report or amendment to a report	& \\	 
+tra\_id	& Transaction ID &	Character	& Unique identifier for the transaction (unique within the specific filing	& \\
+ima\_num &	Image number &	Number &	Image location for page on which transaction appears & \\
+rec\_dt	& Filing receipt date	& Date & Date on which transaction was submitted to FEC	MM/DD/YYYY &\\	 
+prev\_file_num & Previous filing number &	Number &	Reference to a filing being amended &	For electronic filings the previous filing number references the filing being amended. For new filings and paper filings this field will be null
+\end{longtable}
+\end{center}
+\end{landscape}
+\noindent
+The variables present in the polling data are defined as follows:
+\begin{center}
+\begin{longtable}[\textwidth]{l p{0.15\textwidth} l p{0.3\textwidth}}
+Tag & Field Name  & Data Type	& Description\\
+\hline
+Pollster & Polling Company & Character & Company that conducted the poll. \\
+State/US & State & Character & State poll was conducted of. If national poll, then value is ``National".\\
+Date & Poll Date & Date & Range of dates that the poll was being conducted.\\
+Obama & Support for Mr. Obama & Number & Integer rounded percent of support in the poll. \\
+Romney & Support for Mr. Romney & Number & Integer rounded percent of support in the poll.
+\end{longtable}
+\end{center}
+\subsection{Cleaning}
+Buckets
+Formatting (Dates, etc.)
+Beneful Can
+
+Polls - reformatted, dates, etc.
+
+
+

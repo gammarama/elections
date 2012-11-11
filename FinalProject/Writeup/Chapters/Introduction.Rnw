@@ -1,0 +1,6 @@
+(1/2 - 1 page)
+Motivate your project - why is it exciting? why should people read?
+Mention your data source. 
+If you go into a topic that a general audience is not familiar with, explain all the NECESSARY parts that allow your audience to understand the work. Don't go excessively beyond the page limit. If you need more than 1/2 page, it's a good sign, that you should switch topics.
+Summarize your main finding. 
+Outline your data analysis and the structure of the rest of the paper.

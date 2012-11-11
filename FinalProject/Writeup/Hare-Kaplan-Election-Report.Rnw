@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+
+%AMS-TeX packages
+\usepackage{amssymb,amsmath,amsthm} 
+%geometry (sets margin) and other useful packages
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,ctable,booktabs}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{ltablex,calc,enumerate,multirow, float, soul}
+\usepackage{hyperref}
+\usepackage{longtable, pdflscape}
+
+\begin{document}
+
+\title{(First Draft) A Look at the 2012 Presidential Election}
+\author{Eric Hare \& Andee Kaplan}
+\date{Nov. 15, 2012}
+
+\maketitle
+
+\section{Introduction}
+<<ch1-intro, child='Chapters/Introduction.Rnw', eval=TRUE>>=
+@
+
+\section{Data}
+<<ch2-data, child='Chapters/Data.Rnw', eval=TRUE>>=
+@
+
+\section{Findings}
+<<ch3-findings, child='Chapters/Findings.Rnw', eval=TRUE>>=
+@
+
+\section{Conclusions/Future Work}
+<<ch4-conclusion, child='Chapters/Conclusion.Rnw', eval=TRUE>>=
+@
+
+\end{document}

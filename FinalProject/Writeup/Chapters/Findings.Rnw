@@ -1,0 +1,1 @@
+this is where you describe the findings from your data exploration. If you were looking at different aspects, you might need to use extra structuring elements.
