@@ -130,14 +130,13 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \end{longtable}
 \end{center}
 \subsection{Cleaning}
-Buckets
-Formatting (Dates, etc.)
-Beneful Can
+Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-Polls - reformatted, dates, etc.
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.
 
+An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.
 
-
+The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.
 
 
 \section{Findings}
