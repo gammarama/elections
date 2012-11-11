@@ -28,9 +28,20 @@
 @
 
 \section{Findings}
-<<ch3-findings, child='Chapters/Findings.Rnw', eval=TRUE>>=
+<<ch3-findings-1, child='Chapters/Findings_temporal.Rnw', eval=TRUE>>=
 @
 
+<<ch3-findings-2, child='Chapters/Findings_type.Rnw', eval=TRUE>>=
+@
+
+<<ch3-findings-3, child='Chapters/Findings_PAC_trends.Rnw', eval=TRUE>>=
+@
+
+<<ch3-findings-4, child='Chapters/Findings_swing.Rnw', eval=TRUE>>=
+@
+
+<<ch3-findings-5, child='Chapters/Findings_support_spend.Rnw', eval=TRUE>>=
+@
 \section{Conclusions/Future Work}
 <<ch4-conclusion, child='Chapters/Conclusion.Rnw', eval=TRUE>>=
 @

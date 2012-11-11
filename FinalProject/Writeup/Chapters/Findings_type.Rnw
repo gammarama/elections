@@ -1,0 +1,15 @@
+<<type_plot_1, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.align='center', fig.pos='h!'>>=
+qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
+  geom_abline() + 
+  geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
+  scale_x_log10() + 
+  scale_y_log10()
+
+ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
+  geom_bar(position = "dodge") + 
+  coord_flip() + 
+  scale_y_log10() + 
+  scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + 
+  xlab("") + 
+  ylab("Amount Spent (Log 10)")
+@

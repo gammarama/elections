@@ -1,0 +1,24 @@
+<<type_support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.align='center', fig.pos='h!'>>=
+
+## One Week Lag
+qplot(ObamaSpendChange, ObamaPollChange, data = final.df3[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  annotate("text", x = final.df3$ObamaSpendChange[15], y = final.df3$ObamaPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$ObamaSpendChange[18], y = final.df3$ObamaPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$ObamaSpendChange[19], y = final.df3$ObamaPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$ObamaSpendChange[21], y = final.df3$ObamaPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$ObamaSpendChange[24], y = final.df3$ObamaPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  geom_smooth()
+
+qplot(RomneySpendChange, RomneyPollChange, data = final.df3[-1,], geom = "point", colour = week) + 
+  ylab("Change in Percentage Support (Weekly Average)") +
+  xlab("Change in Super PAC Spending") +
+  annotate("text", x = final.df3$RomneySpendChange[15], y = final.df3$RomneyPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$RomneySpendChange[18], y = final.df3$RomneyPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$RomneySpendChange[19], y = final.df3$RomneyPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$RomneySpendChange[21], y = final.df3$RomneyPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
+  annotate("text", x = final.df3$RomneySpendChange[24], y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
+  scale_colour_gradientn(colours = c("#850707", "#F78686")) +
+  geom_smooth(colour = I("red"))
+@

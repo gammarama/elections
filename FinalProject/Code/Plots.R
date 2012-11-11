@@ -1,4 +1,4 @@
-source("MergedCleanup.R")
+source("Code/MergedCleanup.R")
 
 ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + geom_point() + geom_line() + facet_grid(facets=bucket2~sup_opp) + 
     scale_colour_manual(name = "Candidate who benefits", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) + 

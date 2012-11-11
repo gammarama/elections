@@ -2,8 +2,8 @@
 ### STAT 579
 ### Final Project
 
-source("SpendCleanup.R")
-source("PollsCleanup.R")
+source("../../Code/SpendCleanup.R")
+source("../../Code/PollsCleanup.R")
 
 polls.week <- ddply(subset(polls.data, !isNational), .(week = factor(week(Date)), isNational), summarise, Obama.Romney.Avg = mean(Obama.Romney), Obama = mean(Obama), Romney = mean(Romney))
 polls.week$week <- as.numeric(as.character(polls.week$week))
