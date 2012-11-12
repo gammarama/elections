@@ -8,19 +8,19 @@ qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), col
   theme(legend.position="bottom")
 @
 <<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
+labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
+
 qplot(Date, Obama.Romney, data = polls.data, colour = isNational) + geom_smooth() + 
-    #annotate("text", x=as.Date("18/7/2012","%d/%m/%Y"), y=20, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=5) +
-#annotate("rect", xmin=as.Date("18/7/2012","%d/%m/%Y"), ymin=-20, xmax=as.Date("19/7/2012","%d/%m/%Y"), ymax=20, fill="#FF0000", alpha=0.4) +
-#annotate("text", x=as.Date("5/9/2012","%d/%m/%Y"), y=20, label="2", color="#330099", hjust=-0.5, alpha=0.4, size=5) +
-#annotate("rect", xmin=as.Date("5/9/2012","%d/%m/%Y"), ymin=-20, xmax=as.Date("6/9/2012","%d/%m/%Y"), ymax=20, fill="#330099", alpha=0.4) +
-    scale_colour_manual(name = " ", values = c("#600CAC","#FF7600"), labels=c("Swing State","National" )) + 
-    scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
-    scale_y_continuous(limits=c(-20,20)) +
-    ylab("Romney -------- | -------- Obama  ") +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=0, ymax=Inf, fill="blue", alpha=0.03) +
+  annotate("text", x=as.Date("18/7/2012","%d/%m/%Y"), y=20, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=5) +
+  annotate("rect", xmin=as.Date("18/7/2012","%d/%m/%Y"), ymin=-20, xmax=as.Date("19/7/2012","%d/%m/%Y"), ymax=20, fill="#FF0000", alpha=0.4) +
+  scale_colour_manual(name = " ", values = c("#600CAC","#FF7600"), labels=c("Swing State","National" )) + 
+  scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
+  scale_y_continuous(limits=c(-20,20)) +
+  ylab("Romney -------- | -------- Obama  ") +
+  annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=0, ymax=Inf, fill="blue", alpha=0.03) +
   annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=-Inf, ymax=0, fill="red", alpha=0.03) +
-  geom_text(data=labels.tracking[1,], mapping=aes(x=Date, y=Obama.Romney, label=text), colour=I("#FF0000"), size=5, alpha=I(0.2), shape=1) +
-  geom_text(data=labels.tracking[2,], mapping=aes(x=Date, y=Obama.Romney, label=text), colour=I("#330099"), size=5, alpha=I(0.2), shape=1) +
+  geom_text(data=labels.tracking[1,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#FF0000"), size=5, alpha=I(0.2), shape=1) +
+  geom_text(data=labels.tracking[2,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#330099"), size=5, alpha=I(0.2), shape=1) +
   theme_bw() +
   theme(
     legend.position="bottom"
