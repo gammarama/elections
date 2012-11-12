@@ -27,10 +27,3 @@ analyzeStateTrends <- function(state) {
 swing.states <- c("Colorado", "Florida", "Iowa", "Michigan", "Missouri", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin")
 analyzeStateTrends(swing.states)
 @
-
-<<type_swing_2, echo=FALSE, warning=FALSE, fig.width=10, fig.height=4, out.width='\\textwidth', fig.align='center', fig.pos='h!', cache=TRUE>>=
-qplot(Date, Obama.Romney, data = subset(polls.data, Date > as.Date("2012-09-15") & State %in% c("National", swing.states)), colour = isNational) + geom_smooth(method="loess") +
-  annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
-  geom_line(y = 0, colour = "darkgrey") +
-  theme(legend.position="bottom")
-@

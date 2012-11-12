@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.1.20)  12 NOV 2012 10:47
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.1.20)  12 NOV 2012 13:11
 entering extended mode
 **Hare-Kaplan-Election-Report.tex
 
@@ -736,62 +736,58 @@ Package color Info: Redefining color shadecolor on input line 170.
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
-Package color Info: Redefining color shadecolor on input line 181.
+Package color Info: Redefining color shadecolor on input line 182.
 
-<figure/type_swing_2.pdf, id=61, 722.7pt x 289.08pt> [5 <//iastate.edu/cyfiles/
-ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/FinalProje
-ct/Writeup/figure/temporal_plot.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/
-Projects/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/t
-ype_plot1.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presiden
-tial Election/Election-2012/FinalProject/Writeup/figure/type_plot2.pdf> <//iast
-ate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Election/Election
--2012/FinalProject/Writeup/figure/PAC_plot.pdf>]
-File: figure/type_swing_2.pdf Graphic file (type pdf)
- <use figure/type_swing_2.pdf>
-Package color Info: Redefining color shadecolor on input line 193.
-
-<figure/trend_plot.pdf, id=93, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=61, 722.7pt x 361.35pt> [5 <//iastate.edu/cyfiles/aj
+kaplan/Documents/Projects/2012 Presidential Election/Election-2012/FinalProject
+/Writeup/figure/temporal_plot.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Pr
+ojects/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/typ
+e_plot1.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidenti
+al Election/Election-2012/FinalProject/Writeup/figure/type_plot2.pdf> <//iastat
+e.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2
+012/FinalProject/Writeup/figure/PAC_plot.pdf>]
 File: figure/trend_plot.pdf Graphic file (type pdf)
  <use figure/trend_plot.pdf>
-Package color Info: Redefining color shadecolor on input line 203.
+Package color Info: Redefining color shadecolor on input line 192.
 
-[6 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Electio
-n/Election-2012/FinalProject/Writeup/figure/type_swing_1.pdf> <//iastate.edu/cy
-files/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/Fina
-lProject/Writeup/figure/type_swing_2.pdf>]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 206.
-Package color Info: Redefining color shadecolor on input line 210.
+<figure/effect_plot.pdf, id=93, 722.7pt x 361.35pt>
+File: figure/effect_plot.pdf Graphic file (type pdf)
 
-<figure/support_spend1.pdf, id=117, 289.08pt x 289.08pt>
+<use figure/effect_plot.pdf>
+Package color Info: Redefining color shadecolor on input line 202.
+
+<figure/support_spend1.pdf, id=94, 289.08pt x 289.08pt> [6 <//iastate.edu/cyfil
+es/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/FinalPr
+oject/Writeup/figure/type_swing_1.pdf> <//iastate.edu/cyfiles/ajkaplan/Document
+s/Projects/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure
+/trend_plot.pdf>]
 File: figure/support_spend1.pdf Graphic file (type pdf)
-
-<use figure/support_spend1.pdf>
+ <use figure/support_spend1.pdf>
 <figure/support_spend2.pdf, id=118, 289.08pt x 289.08pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
  [7 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Electi
-on/Election-2012/FinalProject/Writeup/figure/trend_plot.pdf> <//iastate.edu/cyf
-iles/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/Final
-Project/Writeup/figure/support_spend1.pdf> <//iastate.edu/cyfiles/ajkaplan/Docu
-ments/Projects/2012 Presidential Election/Election-2012/FinalProject/Writeup/fi
-gure/support_spend2.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+on/Election-2012/FinalProject/Writeup/figure/effect_plot.pdf> <//iastate.edu/cy
+files/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/Fina
+lProject/Writeup/figure/support_spend1.pdf> <//iastate.edu/cyfiles/ajkaplan/Doc
+uments/Projects/2012 Presidential Election/Election-2012/FinalProject/Writeup/f
+igure/support_spend2.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
 
 ("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
 Election-2012\FinalProject\Writeup\Hare-Kaplan-Election-Report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
 Package rerunfilecheck Info: File `Hare-Kaplan-Election-Report.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: 7AC85E0C50825151B3587556B3440BCF;319.
  ) 
 Here is how much of TeX's memory you used:
- 8792 strings out of 495285
- 129507 string characters out of 3179770
+ 8791 strings out of 495285
+ 129483 string characters out of 3179770
  226846 words of memory out of 3000000
- 11781 multiletter control sequences out of 15000+200000
+ 11780 multiletter control sequences out of 15000+200000
  11525 words of font info for 44 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  33i,6n,37p,671b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -802,9 +798,9 @@ rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (7 pages, 290914 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (7 pages, 318551 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 184 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

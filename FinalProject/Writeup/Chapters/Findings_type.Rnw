@@ -20,7 +20,6 @@ ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) +
   geom_bar() + 
   xlab("Benefiting Candidate") + 
   ylab("Amount Spent") + 
-  scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC") + 
-  labs(title = "Spending by Super PAC")
+  scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC")
 @
 
