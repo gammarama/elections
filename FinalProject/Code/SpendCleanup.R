@@ -4,7 +4,7 @@
 
 library(lubridate)
 library(XML)
-library(ggplot2)
+suppressWarnings(library(ggplot2))
 library(plyr)
 library(reshape2)
 library(RColorBrewer)

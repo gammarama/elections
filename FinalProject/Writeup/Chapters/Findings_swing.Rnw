@@ -1,9 +1,9 @@
-<<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=4, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
+<<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=6, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
 
 analyzeStateTrends <- function(state) {
   polls.chosen <- subset(polls.data[-(6:7)], State %in% state)
   polls.chosenm <- melt(polls.chosen, id = c("Date", "Pollster", "State"))
-  qplot(Date, value, data = polls.chosenm, colour = variable) + geom_smooth() +
+  qplot(Date, value, data = polls.chosenm, colour = variable) + geom_smooth(method="loess") +
     scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
     facet_wrap(facets = ~State) +
     scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
@@ -29,7 +29,7 @@ analyzeStateTrends(swing.states)
 @
 
 <<type_swing_2, echo=FALSE, warning=FALSE, fig.width=10, fig.height=4, out.width='\\textwidth', fig.align='center', fig.pos='h!', cache=TRUE>>=
-qplot(Date, Obama.Romney, data = subset(polls.data, Date > as.Date("2012-09-15") & State %in% c("National", swing.states)), colour = isNational) + geom_smooth() +
+qplot(Date, Obama.Romney, data = subset(polls.data, Date > as.Date("2012-09-15") & State %in% c("National", swing.states)), colour = isNational) + geom_smooth(method="loess") +
   annotate(geom = "rect", xmin = as.Date("2012-10-04"), xmax = as.Date("2012-10-04"), ymin = -5, ymax = 10, alpha = .4, colour = "darkred") +
   geom_line(y = 0, colour = "darkgrey") +
   theme(legend.position="bottom")

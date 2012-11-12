@@ -1,9 +1,10 @@
-<<type_plot_1, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.align='center', fig.pos='h!'>>=
+<<type_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.pos='h!'>>=
 qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
   geom_abline() + 
   geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
   scale_x_log10() + 
-  scale_y_log10()
+  scale_y_log10() +
+  theme(legend.position="bottom")
 
 ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
   geom_bar(position = "dodge") + 
@@ -11,5 +12,15 @@ ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) +
   scale_y_log10() + 
   scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + 
   xlab("") + 
-  ylab("Amount Spent (Log 10)")
+  ylab("Amount Spent (Log 10)") +
+  theme(legend.position="bottom")
 @
+<<PAC_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
+ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) + 
+  geom_bar() + 
+  xlab("Benefiting Candidate") + 
+  ylab("Amount Spent") + 
+  scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC") + 
+  labs(title = "Spending by Super PAC")
+@
+
