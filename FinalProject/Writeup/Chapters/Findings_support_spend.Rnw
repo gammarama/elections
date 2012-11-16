@@ -1,4 +1,4 @@
-<<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
+<<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H'>>=
 qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), colour = beneful_can) + scale_y_log10() + geom_line() +
   annotate("text", x=as.Date("14/7/2012","%d/%m/%Y"), y=5e+07, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=10) +
   annotate("rect", xmin=as.Date("14/7/2012","%d/%m/%Y"), ymin=1e+04, xmax=as.Date("15/7/2012","%d/%m/%Y"), ymax=5e+07, fill="#FF0000", alpha=0.4) +
@@ -7,6 +7,7 @@ qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), col
   scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
   theme(legend.position="bottom")
 @
+
 <<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
 labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
 
@@ -38,7 +39,8 @@ qplot(ObamaSpendChange, ObamaPollChange, data = final.df3[-1,], geom = "point", 
   annotate("text", x = final.df3$ObamaSpendChange[21], y = final.df3$ObamaPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
   annotate("text", x = final.df3$ObamaSpendChange[24], y = final.df3$ObamaPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
   geom_smooth(method="loess") +
-  ylim(c(-6,11))
+  ylim(c(-6,11)) +
+  theme(legend.position="bottom")
 
 qplot(RomneySpendChange, RomneyPollChange, data = final.df3[-1,], geom = "point", colour = week) + 
   ylab("Change in Percentage Support (Weekly Average)") +
@@ -50,5 +52,6 @@ qplot(RomneySpendChange, RomneyPollChange, data = final.df3[-1,], geom = "point"
   annotate("text", x = final.df3$RomneySpendChange[24], y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
   scale_colour_gradientn(colours = c("#850707", "#F78686")) +
   geom_smooth(method="loess",colour = I("red")) +
-  ylim(c(-6,11))
+ # ylim(c(-6,12)) + 
+  theme(legend.position="bottom")
 @

@@ -13,6 +13,9 @@
 
 \begin{document}
 
+\setlength{\parskip}{4ex}
+\setlength{\parindent}{0pt}
+
 \title{(First Draft) A Look at the 2012 Presidential Election}
 \author{Eric Hare \& Andee Kaplan}
 \date{Nov. 15, 2012}

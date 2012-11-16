@@ -1,3 +1,7 @@
+\subsection*{Spending Categories}
+These plots shows the comparison of amount spent for each candidate by categories of independent expenditure, since April 25, 2012. The categories are mined from the self-reported text description of the expense. The top plot shows the total spending (vertical) against the difference in spending, with values to the right being categories where organizations supporting Romney are outspending those supporting Obama, and vice versa for those to the left. The bottom plot shows bar chart comparisons of the spending in main categories, on a log scale, and bar charts showing overall spending by amount and by frequency. 
+Organizations supporting Romney are greatly outspending those supporting Obama, and particularly in direct contact and advertisements. On the other hand, organizations supporting Obama are only outspending those supporting Romney in salary. Organizations supporting Romney are spending a few large chunks of change, but those supporting Obama are spending more frequently and smaller amounts.
+
 <<type_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.pos='h!'>>=
 qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
   geom_abline() + 
@@ -15,6 +19,11 @@ ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) +
   ylab("Amount Spent (Log 10)") +
   theme(legend.position="bottom")
 @
+
+\subsection*{Spending by Independent Organizations}
+This chart displays the total spending by the top independent organizations split by candidate. The cumulative amounts spent is displayed vertically, by the benefiting candidate. Names of the organizations mark how much has been spent by each, for example, Restore Our Future, Inc has spent about \$40mil, and together with Americans for Prosperity they have spent about \$90mil. The size of the text is also proportional to amount, but it is on a log scale so that more labels are visible. 
+The organizations supporting Romney have spent significantly more than those for Obama. In fact, two Romney Super PACs (Restore our Future, Inc and Americans for Prosperity) have spent more than all the organizations supporting Obama combined.
+
 <<PAC_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
 ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) + 
   geom_bar() + 
