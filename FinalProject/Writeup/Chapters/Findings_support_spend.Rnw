@@ -1,4 +1,8 @@
-<<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H'>>=
+\subsection*{Spending By Week}
+
+Looking at weekly spending by PACs benefitting Romney, we can see a sharp increase in spending that occurred during the week of July 18th. Similarly, there was a sharp increase in spending by Obama-supporting PACs duing the week of September 9th. We look at the national and swing-state polls to determine if there is any noticable effect due to these changes in spending.
+
+<<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Weekly Spending by Super PACs supporting Obama and Romney'>>=
 qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), colour = beneful_can) + scale_y_log10() + geom_line() +
   annotate("text", x=as.Date("14/7/2012","%d/%m/%Y"), y=5e+07, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=10) +
   annotate("rect", xmin=as.Date("14/7/2012","%d/%m/%Y"), ymin=1e+04, xmax=as.Date("15/7/2012","%d/%m/%Y"), ymax=5e+07, fill="#FF0000", alpha=0.4) +
@@ -8,7 +12,11 @@ qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), col
   theme(legend.position="bottom")
 @
 
-<<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='h!'>>=
+\subsection*{Effect of Spending on Polls}
+
+This plot shows the polling margin (Obama - Romney) over time, faceted by swing states versus the national polls.  It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers.  A marker is placed on July 18th, corresponding to the sharp increase in spending by Romney-supporting PACs.  It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
+
+<<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Margin (Obama - Romney) over time, faceted by swing states versus national polls'>>=
 labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
 
 qplot(Date, Obama.Romney, data = polls.data, colour = isNational) + geom_smooth(method="loess") + 
@@ -27,7 +35,11 @@ qplot(Date, Obama.Romney, data = polls.data, colour = isNational) + geom_smooth(
     legend.position="bottom"
   )
 @
-<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.45\\textwidth'>>=
+
+This plot compares the difference in spending by week by the PACs to the difference in polling between Mitt Romney and Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated important events. The goal is to see if there is a relationship between PAC spending and poll results. 
+In both Obama-supporting and Romney-supporting PACs we can see a weak positive relationship between spending and polling.
+
+<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate', fig.show='hold'>>=
 
 ## One Week Lag
 qplot(ObamaSpendChange, ObamaPollChange, data = final.df3[-1,], geom = "point", colour = week) + 

@@ -3,7 +3,7 @@
 %AMS-TeX packages
 \usepackage{amssymb,amsmath,amsthm} 
 %geometry (sets margin) and other useful packages
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx,ctable,booktabs}
 \usepackage{color}
 \usepackage{listings}
@@ -13,7 +13,7 @@
 
 \begin{document}
 
-\setlength{\parskip}{4ex}
+\setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}
 
 \title{(First Draft) A Look at the 2012 Presidential Election}
