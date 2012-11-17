@@ -1,7 +1,7 @@
 \subsection*{Swing State Trends}
 
 This plot displays the change in polling support for both Romney and Obama over time, in 12 swing states. The data includes all polls in the National Polls database from April 25th to now. Vertical lines indicate difference between the two candidates, and color shows who is ahead. There are five markers which signify major events in the campaign: the selection of Paul Ryan as Mitt Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the first presidential debate. 
-The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time ("bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
+The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 
 <<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=6, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Averages for Obama and Romney by swing state'>>=
 
