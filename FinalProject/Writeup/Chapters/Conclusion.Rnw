@@ -1,7 +1,3 @@
-%(1/2 page) 
-%Summarize your findings - don't just list them, but try to come up with a cohesive statement. If you started your Intro by posing a %question, try to answer it at this point.
-%For future work come up with at least two good points of how to extend the project or your analysis in a meaningful way.
-
 Ultimately, our findings suggest that while election spending itself was a very significant part of the 2012 elections, it is not clear whether the existence of Super PACs had a measurable impact on the outcome. Instead, the events that garnered large amounts of media coverage, such as the 47\% video and the first presidential debate, seemed to have the most noticeable effect on the polling.Furthermore, our analysis did not take into account the spending done by the candidates themselves. It may be that such spending muted the effect of Super PAC spending.
 
 Our analysis also makes clear that Mr. Obama's polling held up more strongly in the swing states than in the national polling throughout the campaign. This advantage was evident in the election results, as well. According to the current AP vote tally as of November 16th, Mr. Obama won the overall popular vote by 2.8\%. But he won Colorado, the state that put him over the 270 electoral votes needed for victory, by 4.7\%. This suggests that Mr. Obama could have lost the popular vote by nearly 2\% and still have been elected president of the United States.
