@@ -5,7 +5,7 @@ The variables present in the PAC spending data are defined as follows:
 \begin{landscape}
 \begin{center}
 \begin{longtable}[\textwidth]{l l l p{0.4\textheight} p{0.4\textheight}}
-Tag & Field Name	& Data Type	& Description	& Explanation \\
+Tag & Field Name    & Data Type	& Description	& Explanation \\
 \hline
 can\_id  & Candidate ID  & Character &unique ID of candidate for or against whom the expenditure was made	& First character indicates office sought - H=House, S=Senate, P=Presidential. Columns 3-4 are the state abbreviation for Congressional candidates. NOTE - this information is provided by filers and may be missing - in these cases office, state, district and candidate name should appear. \\
 spe\_id & Spender ID & Character & Unique ID of committee, individual or group making expenditure	&	Unique FEC ID assigned to the entity submitting reports of independent expenditures \\
@@ -55,7 +55,16 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \subsection{Cleaning}
 Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read "oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as "ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read "oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as "ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
+
+\begin{itemize}
+    \item Ads - Advertisement spending, including television, radio, and online
+    \item Direct Contact - Direct voter contact, such as canvassing
+    \item Salary - Payments made to staff of the organization
+    \item Swag - Clothing, signs, and other promotional material
+    \item Transport - Transportation costs, such as taxis or van rentals
+    \item Other - All expenses that do not fit into the above categories
+\end{itemize}
 
 An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits` from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 

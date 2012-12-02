@@ -95,7 +95,7 @@ The variables present in the PAC spending data are defined as follows:
 \begin{landscape}
 \begin{center}
 \begin{longtable}[\textwidth]{l l l p{0.4\textheight} p{0.4\textheight}}
-Tag & Field Name	& Data Type	& Description	& Explanation \\
+Tag & Field Name    & Data Type	& Description	& Explanation \\
 \hline
 can\_id  & Candidate ID  & Character &unique ID of candidate for or against whom the expenditure was made	& First character indicates office sought - H=House, S=Senate, P=Presidential. Columns 3-4 are the state abbreviation for Congressional candidates. NOTE - this information is provided by filers and may be missing - in these cases office, state, district and candidate name should appear. \\
 spe\_id & Spender ID & Character & Unique ID of committee, individual or group making expenditure	&	Unique FEC ID assigned to the entity submitting reports of independent expenditures \\
@@ -108,13 +108,13 @@ can\_par\_aff &	Party	& Character &	Party abbreviation for candidate & Dem=Democ
 exp\_amo & Expenditure Amount &	Currency & Dollar amount of specific expenditure & 
 Min: \$0.00 \newline
 Max: \$17661251.08 \newline
-Mean: \$11297.45 \newline
+Mean: \$11307.01 \newline
 Median: \$26.61\\
 exp\_dat &	Expenditure date &	Date	& Date of specific Expenditure	MM/DD/YYYY & \\	 
 agg\_amo & Aggregate amount &	Currency &	Total amount expended during the calendar year, per election, per office sought & 
 Min: \$-39124.40 \newline
 Max: \$161321977.00 \newline
-Mean: \$514597.11 \newline
+Mean: \$514520.91 \newline
 Median: \$202014.82\\
 sup\_opp &	Support or Oppose &	Character &	S=Support, O=Oppose	& Describes whether the expenditure was made to support or oppose the candidate. \\	 
 pur &	Purpose of expenditure &	Character	&	description of the expenditure, e.g. television or radio ad & \\
@@ -145,7 +145,16 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \subsection{Cleaning}
 Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read "oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as "ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read "oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as "ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
+
+\begin{itemize}
+    \item Ads - Advertisement spending, including television, radio, and online
+    \item Direct Contact - Direct voter contact, such as canvassing
+    \item Salary - Payments made to staff of the organization
+    \item Swag - Clothing, signs, and other promotional material
+    \item Transport - Transportation costs, such as taxis or van rentals
+    \item Other - All expenses that do not fit into the above categories
+\end{itemize}
 
 An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits` from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 
@@ -259,29 +268,47 @@ This plot shows the polling margin (Obama - Romney) over time, colored by swing 
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: there is no package called 'zoo'}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'zoo'}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: there is no package called 'forecast'}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:base':\\\#\# \\\#\#     as.Date, as.Date.numeric}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "zoo"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: parallel}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "zoo"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: tseries}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.zoo.Nat' not found}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: fracdiff}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.zoo.Swing' not found}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: Rcpp}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "na.spline"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: RcppArmadillo}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "index"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: colorspace}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "na.spline"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: nnet}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "index"}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: caret}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'x.Nat' not found}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: lattice}}
 
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'x.Swing' not found}}
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: reshape}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'reshape'}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:reshape2':\\\#\# \\\#\#     colsplit, melt, recast}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:plyr':\\\#\# \\\#\#     rename, round\_any}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:lubridate':\\\#\# \\\#\#     stamp}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: cluster}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: foreach}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# This is forecast 4.00}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Nat' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Swing' not found}}
 
 {\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Nat.Smooth' not found}}
 

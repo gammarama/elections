@@ -158,7 +158,10 @@ df.spe<-pres.spe[,c("exp_amo", "beneful_can", "spe_nam")]
 sum_exp.spe <- dcast(melt(df.spe,id=c("beneful_can", "spe_nam")), df.spe$spe_nam ~ df.spe$beneful_can, sum)
 
 sum_exp.spep <- ddply(df.spe, .(spe_nam, beneful_can), summarise, Sum = sum(exp_amo))
+sums.bak <- sum_exp.spep[which(substring(as.character(sum_exp.spep$spe_nam), 1, 5) == "Other"), ]$Sum
+sum_exp.spep[which(substring(as.character(sum_exp.spep$spe_nam), 1, 5) == "Other"), ]$Sum <- c(1, 1)
 sum_exp.spep <- sum_exp.spep[with(sum_exp.spep, order(beneful_can, -Sum)), ]
+sum_exp.spep[which(substring(as.character(sum_exp.spep$spe_nam), 1, 5) == "Other"), ]$Sum <- sums.bak
 sum_exp.spep$spe_nam <- factor(sum_exp.spep$spe_nam, levels = sum_exp.spep$spe_nam)
 
 red <- rev(brewer.pal(9, "Reds"))
