@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.1.20)  3 DEC 2012 10:53
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.1.20)  3 DEC 2012 15:52
 entering extended mode
 **Hare-Kaplan-Election-Report.tex
 
@@ -636,180 +636,493 @@ Election-2012\FinalProject\Writeup\Hare-Kaplan-Election-Report.out")
 ("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
 Election-2012\FinalProject\Writeup\Hare-Kaplan-Election-Report.out")
 \@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-Package color Info: Redefining color shadecolor on input line 86.
- [1
+) [1
 
 {C:/Documents and Settings/All Users/Application Data/MiKTeX/2.8/pdftex/config/
-pdftex.map}] [2]
-Underfull \hbox (badness 3503) in paragraph at lines 124--125
+pdftex.map}]
+Package color Info: Redefining color shadecolor on input line 92.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 95.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \begin{landscape}
+                        [1
+
+]
+Underfull \hbox (badness 3503) in paragraph at lines 114--115
 []|\OT1/cmr/m/n/10.95 First char-ac-ter in-di-cates elec-tion -
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 124--125
+Underfull \hbox (badness 3058) in paragraph at lines 114--115
 \OT1/cmr/m/n/10.95 P=Primary, G=General, S=Special.
  []
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.122 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-Underfull \hbox (badness 1496) in paragraph at lines 135--135
+! Missing } inserted.
+<inserted text> 
+                }
+l.122 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.122 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.122 ...SE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.125 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.125 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.125 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.125 ...SE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.128 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.128 ...UE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.131 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.131 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.131 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.131 ...UE) : \\  object 'spend.data' not found}}
+                                                  \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 133--133
 \OT1/cmr/m/n/10.95 en-dar year, per elec-tion, per of-fice
  []
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.136 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-Underfull \hbox (badness 4752) in paragraph at lines 143--143
+! Missing } inserted.
+<inserted text> 
+                }
+l.136 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (404.45709pt too wide) in alignment at lines 108--136
+ [] [] [] [] [] 
+ []
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.136 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.136 ...SE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.139 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.139 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.139 ...LSE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.139 ...SE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.142 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.142 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.142 ...RUE) : \\  object 'spend.data' not found}
+                                                  } \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.142 ...UE) : \\  object 'spend.data' not found}}
+                                                   \newline
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.145 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.145 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.145 ...RUE) : \\  object 'spend.data' not found}
+                                                  }\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.145 ...UE) : \\  object 'spend.data' not found}}
+                                                  \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 149--149
 []|\OT1/cmr/m/n/10.95 Unique iden-ti-fier for a sub-mis-sion
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 143--143
+Underfull \hbox (badness 1184) in paragraph at lines 149--149
 \OT1/cmr/m/n/10.95 (which may re-port sev-eral dis-burse-
  []
 
 
-Overfull \hbox (12.70885pt too wide) in alignment at lines 118--148
+Overfull \hbox (404.45709pt too wide) in alignment at lines 136--155
  [] [] [] [] [] 
  []
 
+[2
 
-Overfull \hbox (12.70885pt too wide) in alignment at lines 148--149
- [] [] [] [] [] 
- []
-
-[3
-
-] [4]
-Underfull \hbox (badness 6510) in paragraph at lines 158--158
+] [3] [4]
+Underfull \hbox (badness 6510) in paragraph at lines 164--164
 []|\OT1/cmr/m/n/10.95 Polling Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
 []|\OT1/cmr/m/n/10.95 Support for
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 161--162
+Underfull \hbox (badness 1460) in paragraph at lines 167--168
 []|\OT1/cmr/m/n/10.95 Integer rounded per-cent of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--162
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
 []|\OT1/cmr/m/n/10.95 Support for
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 162--163
+Underfull \hbox (badness 1460) in paragraph at lines 168--169
 []|\OT1/cmr/m/n/10.95 Integer rounded per-cent of
  []
 
 [5
 
 ]
-Package color Info: Redefining color shadecolor on input line 193.
- <figure/temporal_plot.pdf, id=84, 722.7pt x 578.16pt>
-File: figure/temporal_plot.pdf Graphic file (type pdf)
+! Argument of \@finalstrut has an extra }.
+<inserted text> 
+                \par 
+l.188 ...nd Worst) in the 2012 Presidential Race}}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-<use figure/temporal_plot.pdf> [6]
+Runaway argument?
+! Paragraph ended before \@finalstrut was complete.
+<to be read again> 
+                   \par 
+l.188 ...nd Worst) in the 2012 Presidential Race}}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+Runaway argument?
+Which Polls Fared Best (and Worst) in the 2012 Presidential Race.
+! Paragraph ended before \tryhyper@link was complete.
+<to be read again> 
+                   \par 
+l.188 ...nd Worst) in the 2012 Presidential Race}}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 ...nd Worst) in the 2012 Presidential Race}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--188
+[]\OT1/cmr/m/n/9 http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-poll
+s-fared-best-and-worst-in-the-2012-presidential-
+ []
+
+Package color Info: Redefining color shadecolor on input line 199.
+[6]
 Package color Info: Redefining color shadecolor on input line 214.
-
-<figure/type_plot1.pdf, id=92, 289.08pt x 289.08pt>
-File: figure/type_plot1.pdf Graphic file (type pdf)
-
-<use figure/type_plot1.pdf>
-<figure/type_plot2.pdf, id=93, 289.08pt x 289.08pt>
-File: figure/type_plot2.pdf Graphic file (type pdf)
-
-<use figure/type_plot2.pdf> [7 <//iastate.edu/cyfiles/ajkaplan/Documents/Projec
-ts/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/tempora
-l_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 231.
- <figure/PAC_plot.pdf, id=109, 722.7pt x 361.35pt>
-File: figure/PAC_plot.pdf Graphic file (type pdf)
-
-<use figure/PAC_plot.pdf> [8 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects
-/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/type_plot
-1.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Ele
-ction/Election-2012/FinalProject/Writeup/figure/type_plot2.pdf> <//iastate.edu/
-cyfiles/ajkaplan/Documents/Projects/2012 Presidential Election/Election-2012/Fi
-nalProject/Writeup/figure/PAC_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 252.
-
-<figure/type_swing_1.pdf, id=134, 722.7pt x 433.62pt>
-File: figure/type_swing_1.pdf Graphic file (type pdf)
-
-<use figure/type_swing_1.pdf>
-Package color Info: Redefining color shadecolor on input line 272.
-
-<figure/trend_plot.pdf, id=135, 722.7pt x 361.35pt>
-File: figure/trend_plot.pdf Graphic file (type pdf)
-
-<use figure/trend_plot.pdf> [9 <//iastate.edu/cyfiles/ajkaplan/Documents/Projec
-ts/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/type_sw
-ing_1.pdf>]
-Package color Info: Redefining color shadecolor on input line 290.
- <figure/effect_plot.pdf, id=151, 722.7pt x 361.35pt>
-File: figure/effect_plot.pdf Graphic file (type pdf)
-
-<use figure/effect_plot.pdf> [10 <//iastate.edu/cyfiles/ajkaplan/Documents/Proj
-ects/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/trend
-_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 307.
- <figure/support_spend1.pdf, id=166, 289.08pt x 289.08pt>
-File: figure/support_spend1.pdf Graphic file (type pdf)
-
-<use figure/support_spend1.pdf>
-<figure/support_spend2.pdf, id=167, 289.08pt x 289.08pt>
-File: figure/support_spend2.pdf Graphic file (type pdf)
-
-<use figure/support_spend2.pdf> [11 <//iastate.edu/cyfiles/ajkaplan/Documents/P
-rojects/2012 Presidential Election/Election-2012/FinalProject/Writeup/figure/ef
-fect_plot.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presiden
-tial Election/Election-2012/FinalProject/Writeup/figure/support_spend1.pdf> <//
-iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Election/Elec
-tion-2012/FinalProject/Writeup/figure/support_spend2.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
+Package color Info: Redefining color shadecolor on input line 227.
+Package color Info: Redefining color shadecolor on input line 242.
+ [7]
+Package color Info: Redefining color shadecolor on input line 256.
+Package color Info: Redefining color shadecolor on input line 268.
+Package color Info: Redefining color shadecolor on input line 279.
+ [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
 
 ("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
 Election-2012\FinalProject\Writeup\Hare-Kaplan-Election-Report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
 Package rerunfilecheck Info: File `Hare-Kaplan-Election-Report.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: 3AA0CE84E3879A1D4189D19D4F8257C8;763.
  ) 
 Here is how much of TeX's memory you used:
- 8848 strings out of 495285
- 130138 string characters out of 3179770
- 227388 words of memory out of 3000000
- 11810 multiletter control sequences out of 15000+200000
- 14391 words of font info for 56 fonts, out of 3000000 for 9000
+ 8779 strings out of 495285
+ 128772 string characters out of 3179770
+ 226820 words of memory out of 3000000
+ 11763 multiletter control sequences out of 15000+200000
+ 14364 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  33i,8n,37p,1141b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.8/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
-<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:
-/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
-Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program File
-s (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x
-86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86
-)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files (x86)/M
-iKTeX 2.8/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (12 pages, 364638 bytes).
+<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
+iles (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files
+ (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/M
+iKTeX 2.8/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiK
+TeX 2.8/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Hare-Kaplan-Election-Report.pdf (10 pages, 154038 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

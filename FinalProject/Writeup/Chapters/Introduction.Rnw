@@ -2,7 +2,7 @@ In 2010, the United States Supreme Court released its decision on Citizens Unite
 
 In this report, we analyze the independent expenditures data set from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
 
-<<importdata, echo=FALSE, warning=FALSE>>=
+<<importdata, echo=FALSE, warning=FALSE, message=FALSE>>=
 source("../../Code/MergedCleanup.R")
 @
 

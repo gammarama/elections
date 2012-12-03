@@ -71,12 +71,18 @@
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}
 
-\title{(First Draft) A Look at the 2012 Presidential Election}
+\title{A Look at the 2012 Presidential Election}
 \author{Eric Hare \& Andee Kaplan}
-\date{Nov. 15, 2012}
+\date{Dec. 12, 2012}
 
+\thispagestyle{empty}
 \maketitle
+\begin{abstract}
+Motivated by the 2010 Citizens United ruling and the subsequent birth of "Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and the packages XML, ggplot2, plyr, lubridate, knitr, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, we did not find a clear and direct relationship between increases in spending and changes in public support. However, our analysis does provide evidence for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
+\end{abstract}
+\clearpage
 
+\setcounter{page}{1}
 \section{Introduction}
 In 2010, the United States Supreme Court released its decision on Citizens United v. Federal Election Commission. The decision found that it is a violation of the constitutional right to free speech for limits to be placed on money spent by corporations and labor unions to support or oppose political candidates. For the first time since the passage of the Tillman Act in 1907, corporations and unions could spend unlimited amounts of their own money on the presidential election. Such power led to the coining of the term Super PAC, as well as a cloud of uncertainty as to what effect such money could have on the election outcome.
 
@@ -86,23 +92,7 @@ In this report, we analyze the independent expenditures data set from the Federa
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'zoo'}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:base':\\\#\# \\\#\#     as.Date, as.Date.numeric}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: parallel}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: tseries}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: quadprog}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: fracdiff}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: Rcpp}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: RcppArmadillo}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# This is forecast 3.25}}\end{kframe}
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: cannot open the connection}}\end{kframe}
 \end{knitrout}
 
 
@@ -127,16 +117,32 @@ can\_off\_dis &	Candidate District & Number &	District number for the candidate	
 can\_off & Office &	Character &	Office Sought by Candidate &	(H=House, S=Senate, P=President)\\
 can\_par\_aff &	Party	& Character &	Party abbreviation for candidate & Dem=Democrat \newline Rep=Republican \\
 exp\_amo & Expenditure Amount &	Currency & Dollar amount of specific expenditure & 
-Min: \$0.00 \newline
-Max: \$17661251.08 \newline
-Mean: \$11307.01 \newline
-Median: \$26.61\\
+Min: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in format(min(spend.data\$exp\_amo, na.rm = TRUE), nsmall = 2, scientific = FALSE) : \\  object 'spend.data' not found}} \newline
+Max: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in format(max(spend.data\$exp\_amo, na.rm = TRUE), nsmall = 2, scientific = FALSE) : \\  object 'spend.data' not found}} \newline
+Mean: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in mean(spend.data\$exp\_amo, na.rm = TRUE) : \\  object 'spend.data' not found}} \newline
+Median: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in median(spend.data\$exp\_amo, na.rm = TRUE) : \\  object 'spend.data' not found}}\\
 exp\_dat &	Expenditure date &	Date	& Date of specific Expenditure	MM/DD/YYYY & \\	 
 agg\_amo & Aggregate amount &	Currency &	Total amount expended during the calendar year, per election, per office sought & 
-Min: \$-39124.40 \newline
-Max: \$161321977.00 \newline
-Mean: \$514520.91 \newline
-Median: \$202014.82\\
+Min: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in format(min(spend.data\$agg\_amo, na.rm = TRUE), nsmall = 2, scientific = FALSE) : \\  object 'spend.data' not found}} \newline
+Max: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in format(max(spend.data\$agg\_amo, na.rm = TRUE), nsmall = 2, scientific = FALSE) : \\  object 'spend.data' not found}} \newline
+Mean: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in mean(spend.data\$agg\_amo, na.rm = TRUE) : \\  object 'spend.data' not found}} \newline
+Median: \$
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\\Error in median(spend.data\$agg\_amo, na.rm = TRUE) : \\  object 'spend.data' not found}}\\
 sup\_opp &	Support or Oppose &	Character &	S=Support, O=Oppose	& Describes whether the expenditure was made to support or oppose the candidate. \\	 
 pur &	Purpose of expenditure &	Character	&	description of the expenditure, e.g. television or radio ad & \\
 pay &	name of payee	& Character &	Name of the person or vendor or other entity receiving this payment &\\
@@ -179,7 +185,7 @@ One challenge we faced was that the purpose of independent expenditures column i
 
 An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits' from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 
-The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver. \footnote{\url{http://fivethirtyeight.blogs.nytimes.com/}}
+The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver. \footnote{\hyperref{http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-best-and-worst-in-the-2012-presidential-race/}{Which Polls Fared Best (and Worst) in the 2012 Presidential Race}}
 
 
 \section{Findings}
@@ -190,16 +196,10 @@ This plot displays the spending in each of the six categories by independent org
 Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates have increased since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Romney. There has also been a noticeable increase in spending on direct contact for Obama, while the Romney organizations have maintained consistent spending in negative direct contact for quite some time.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=\textwidth]{figure/temporal_plot} 
-
-}
-
-\caption[Spending by Super PACs in support or opposition of candidates]{Spending by Super PACs in support or opposition of candidates\label{fig:temporal_plot}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'num.weeks' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -211,16 +211,12 @@ Organizations supporting Romney are greatly outspent those supporting Obama, and
 %Organizations supporting Romney are spending a few large chunks of change, but those supporting Obama are spending more frequently and smaller amounts.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=.4\textwidth]{figure/type_plot1} \includegraphics[width=.4\textwidth]{figure/type_plot2} 
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'sum\_exp2' not found}}
 
-}
-
-\caption[Types of spending by category for Romney and Obama Super PACs]{Types of spending by category for Romney and Obama Super PACs\label{fig:type_plot}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'sum\_exp2\_p' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -228,16 +224,10 @@ Organizations supporting Romney are greatly outspent those supporting Obama, and
 This chart displays the total spending by the top independent organizations split by candidate. The cumulative amounts spent is displayed vertically, by the benefiting candidate. The organizations supporting Romney have spent significantly more than those for Obama. In fact, two Romney Super PACs (Restore our Future, Inc and Americans for Prosperity) have spent more than all the organizations supporting Obama combined.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=\textwidth]{figure/PAC_plot} 
-
-}
-
-\caption[Spending by Super PAC, stacked by candidate]{Spending by Super PAC, stacked by candidate\label{fig:PAC_plot}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'sum\_exp.spep' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -249,16 +239,10 @@ This plot displays the change in polling support for both Romney and Obama over 
 The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=\textwidth]{figure/type_swing_1} 
-
-}
-
-\caption[Polling Averages for Obama and Romney by swing state]{Polling Averages for Obama and Romney by swing state\label{fig:type_swing_1}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.data' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -269,16 +253,10 @@ Looking at weekly spending by PACs benefiting Romney, we can see a sharp increas
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=\textwidth]{figure/trend_plot} 
-
-}
-
-\caption[Weekly Spending by Super PACs supporting Obama and Romney]{Weekly Spending by Super PACs supporting Obama and Romney\label{fig:trend_plot}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'num.weeks.sum' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -287,16 +265,10 @@ Looking at weekly spending by PACs benefiting Romney, we can see a sharp increas
 This plot shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by Romney-supporting PACs. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\centering \includegraphics[width=\textwidth]{figure/effect_plot} 
-
-}
-
-\caption[Polling Margin (Obama - Romney) over time, swing states versus national polls]{Polling Margin (Obama - Romney) over time, swing states versus national polls\label{fig:effect_plot}}
-\end{figure}
-
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.data' not found}}\end{kframe}
 \end{knitrout}
 
 
@@ -304,10 +276,12 @@ This plot compares the difference in spending by week by the PACs to the differe
 In both Obama-supporting and Romney-supporting PACs we can see a weak positive relationship between spending and polling.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
-\includegraphics[width=.45\textwidth]{figure/support_spend1} \includegraphics[width=.45\textwidth]{figure/support_spend2} \caption[Change in polling over change in spending by candidate]{Change in polling over change in spending by candidate\label{fig:support_spend}}
-\end{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'final.df3' not found}}
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'final.df3' not found}}\end{kframe}
 \end{knitrout}
 
 
