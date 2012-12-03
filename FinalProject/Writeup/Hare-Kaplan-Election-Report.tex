@@ -82,7 +82,28 @@ In 2010, the United States Supreme Court released its decision on Citizens Unite
 
 In this report, we analyze the independent expenditures data set from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'zoo'}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:base':\\\#\# \\\#\#     as.Date, as.Date.numeric}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: parallel}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: tseries}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: quadprog}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: fracdiff}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: Rcpp}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: RcppArmadillo}}
+
+{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# This is forecast 3.25}}\end{kframe}
+\end{knitrout}
 
 
 
@@ -145,7 +166,7 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \subsection{Cleaning}
 Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read "oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as "ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read ``oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
 
 \begin{itemize}
     \item Ads - Advertisement spending, including television, radio, and online
@@ -156,16 +177,16 @@ One challenge we faced was that the purpose of independent expenditures column i
     \item Other - All expenses that do not fit into the above categories
 \end{itemize}
 
-An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits` from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
+An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits' from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 
-The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver.
+The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver. \footnote{\url{http://fivethirtyeight.blogs.nytimes.com/}}
 
 
 \section{Findings}
 Our key findings are summarized in the sections below.
 
 \subsection{Type of Spending by Week}
-This plot displays the spending in each of the 6 categories by independent organizations benefiting Barack Obama and Mitt Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are three markers which signify major events in the campaign: the selection of Paul Ryan as Mitt Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the debates. 
+This plot displays the spending in each of the six categories by independent organizations benefiting Barack Obama and Mitt Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are three markers which signify major events in the campaign: the selection of Paul Ryan as Mitt Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the debates. 
 Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates have increased since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Romney. There has also been a noticeable increase in spending on direct contact for Obama, while the Romney organizations have maintained consistent spending in negative direct contact for quite some time.
 
 \begin{knitrout}
@@ -244,7 +265,8 @@ The plots suggest that the reaction to these major campaign events was not consi
 
 \subsection{Spending By Week}
 
-Looking at weekly spending by PACs benefiting Romney, we can see a sharp increase in spending that occurred during the week of July 18th. Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. We look at the national and swing-state polls to determine if there is any noticeable effect due to these changes in spending.
+Looking at weekly spending by PACs benefiting Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We look at the national and swing-state polls to determine if there is any noticeable effect due to these changes in spending.
+%Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -265,68 +287,16 @@ Looking at weekly spending by PACs benefiting Romney, we can see a sharp increas
 This plot shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by Romney-supporting PACs. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'zoo'}}
+{\centering \includegraphics[width=\textwidth]{figure/effect_plot} 
 
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:base':\\\#\# \\\#\#     as.Date, as.Date.numeric}}
+}
 
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: parallel}}
+\caption[Polling Margin (Obama - Romney) over time, swing states versus national polls]{Polling Margin (Obama - Romney) over time, swing states versus national polls\label{fig:effect_plot}}
+\end{figure}
 
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: tseries}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: fracdiff}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: Rcpp}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: RcppArmadillo}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: colorspace}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: nnet}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: caret}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: lattice}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: reshape}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# \\\#\# Attaching package: 'reshape'}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:reshape2':\\\#\# \\\#\#     colsplit, melt, recast}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:plyr':\\\#\# \\\#\#     rename, round\_any}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# The following object(s) are masked from 'package:lubridate':\\\#\# \\\#\#     stamp}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: cluster}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# Loading required package: foreach}}
-
-{\ttfamily\noindent\itshape\textcolor{messagecolor}{\#\# This is forecast 4.00}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Nat' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Swing' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.Nat.Smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.avg.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}
-
-{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: object 'polls.smooth' not found}}\end{kframe}
 \end{knitrout}
 
 

@@ -8,6 +8,8 @@ suppressWarnings(library(ggplot2))
 library(plyr)
 library(reshape2)
 library(RColorBrewer)
+library(zoo)
+library(forecast)
 
 createBucket <- function(df, text, bucket, entryText = text) {
     empty <- (all(is.na(bucket)))
@@ -170,3 +172,4 @@ blue <- rev(brewer.pal(3, "Blues"))
 
 num.weeks.sum <- ddply(subset(num.weeks, week > 17), .(week, beneful_can), summarise, sum = sum(WeeklySum, na.rm = TRUE))
 num.weeks.sum$Date <- as.Date("2012-04-28") + (7 * (as.numeric(num.weeks.sum$week) - week(as.Date("2012-04-28"))))
+
