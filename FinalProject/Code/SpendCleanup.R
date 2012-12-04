@@ -24,7 +24,10 @@ createBucket <- function(df, text, bucket, entryText = text) {
 
 # This function accepts a year and returns the indepedent expenditures for that year
 getExpenditures <- function(year) {
-    data <- read.csv(paste("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=", year, sep = ""))
+    # Get the Data from the FEC
+    # However, the FEC is prone to failure so for now, hardcoding
+    #data <- read.csv(paste("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=", year, sep = ""))
+    data <- read.csv("../../Data/independent-expenditure.csv")
     
     # Format the dates and expenditure amounts
     data$rec_dat <- as.Date(data$rec_dat,format='%m/%d/%Y')
