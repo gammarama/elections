@@ -12,7 +12,7 @@ source("../../Code/MergedCleanup.R")
 # Motivation
 - 2010 Supreme Court Ruling: Citizens United
 - Super PACs
-## How did this impact the 2012 election?
+**How did this impact the 2012 election?**
 
 # Data
 - Independent Expenditures (FEC)
@@ -51,12 +51,15 @@ ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + geom_point() + g
 
 # Spending Categories
 ```{r SpendingByCategory, echo=FALSE, fig.cap='Types of spending by category for Romney and Obama Super PACs', message=FALSE, warning=FALSE, fig.show='hold', fig.width=5, fig.height=5}
+minValue <- min(c(sum_exp2$obama, sum_exp2$romney))
+maxValue <- max(c(sum_exp2$obama, sum_exp2$romney)) + 500000000
 qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
   geom_abline() + 
   geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
-  scale_x_log10() + 
-  scale_y_log10() +
-  theme(legend.position="bottom")
+  scale_x_log10(limits = c(minValue, maxValue)) + 
+  scale_y_log10(limits = c(minValue, maxValue)) +
+  theme(legend.position="none") +
+  coord_fixed()
 
 ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
   geom_bar(position = "dodge") + 

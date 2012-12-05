@@ -5,12 +5,15 @@ Organizations supporting Mr. Romney greatly outspent those supporting Mr. Obama,
 %Organizations supporting Romney are spending a few large chunks of change, but those supporting Obama are spending more frequently and smaller amounts.
 
 <<type_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.4\\textwidth', fig.pos='H', fig.align='center', fig.cap='Types of spending by category for Romney and Obama Super PACs', fig.show='hold'>>=
+minValue <- min(c(sum_exp2$obama, sum_exp2$romney))
+maxValue <- max(c(sum_exp2$obama, sum_exp2$romney)) + 500000000
 qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
   geom_abline() + 
   geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
-  scale_x_log10() + 
-  scale_y_log10() +
-  theme(legend.position="bottom")
+  scale_x_log10(limits = c(minValue, maxValue)) + 
+  scale_y_log10(limits = c(minValue, maxValue)) +
+  theme(legend.position="none") +
+  coord_fixed()
 
 ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
   geom_bar(position = "dodge") + 

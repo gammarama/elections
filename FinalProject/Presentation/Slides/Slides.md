@@ -10,7 +10,7 @@
 # Motivation
 - 2010 Supreme Court Ruling: Citizens United
 - Super PACs
-## How did this impact the 2012 election?
+**How did this impact the 2012 election?**
 
 # Data
 - Independent Expenditures (FEC)
