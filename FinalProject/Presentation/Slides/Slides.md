@@ -5,12 +5,13 @@
 
 
 #
-![Comic](http://imgs.xkcd.com/comics/poll_watching.png)
+![](http://imgs.xkcd.com/comics/poll_watching.png)
 
 # Motivation
 - 2010 Supreme Court Ruling: Citizens United
 - Super PACs
-**How did this impact the 2012 election?**
+
+## How did this impact the 2012 election?
 
 # Data
 - Independent Expenditures (FEC)
@@ -68,7 +69,7 @@ head(polls.data, n = 3)
 ## Bucket List
 - **Ads** Advertisement spending, including television, radio, and online
 - **Direct Contact** Direct voter contact, such as canvassing
-- **Salary Payments** made to staff of the organization
+- **Salary** Payments made to staff of the organization
 - **Swag** Clothing, signs, and other promotional material
 - **Transport** Transportation costs, such as taxis or van rentals
 - **Other** All expenses that do not fit into the above categories
