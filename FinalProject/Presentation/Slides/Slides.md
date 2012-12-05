@@ -5,7 +5,7 @@
 
 
 #
-![](http://imgs.xkcd.com/comics/poll_watching.png)
+![](poll_watching.png)
 
 # Motivation
 - 2010 Supreme Court Ruling: Citizens United
@@ -82,6 +82,7 @@ head(polls.data, n = 3)
 # Spending Categories
 ![Types of spending by category for Romney and Obama Super PACs](figure/SpendingByCategory1.png) ![NA](figure/SpendingByCategory2.png) 
 
+Types of spending by category for Romney and Obama Super PACs
 
 # Spending by Independent Organization
 ![Spending by Super PAC, stacked by candidate](figure/SpendingByIO.png) 
