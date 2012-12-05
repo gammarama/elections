@@ -1,4 +1,4 @@
-We are primarily working with two data sources to complete our analysis: independent expenditures (PAC) data and polling data. The PAC spending data comes from the \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commision} and the polling data comes from \url{http://nationalpolls.com/}. 
+We are primarily working with two data sources to complete our analysis: independent expenditures (PAC) data and polling data. The PAC spending data comes from the \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commision} and the polling data comes from \url{http://nationalpolls.com/}.  We are primarily working with the fields spe\_nam, exp\_amo, exp\_dat, and pur from the spending data.  These provide us with information on the organization filing the expense, the amount, the date, and the purpose of the expense.  We also make extensive use of our created field `beneful\_can', which describes the candidate benefiting from the expense.  A full description of the fields in our dataset are provided in the following table.
 
 \subsection{Variable Definitions}
 The variables present in the PAC spending data are defined as follows:
@@ -41,7 +41,7 @@ prev\_file\_num & Previous filing number &	Number &	Reference to a filing being 
 \noindent
 The variables present in the polling data are defined as follows:
 \begin{center}
-\begin{longtable}[\textwidth]{l p{0.15\textwidth} l p{0.3\textwidth}}
+\begin{longtable}[\textwidth]{l p{0.25\textwidth} l p{0.45\textwidth}}
 Tag & Field Name  & Data Type	& Description\\
 \hline
 Pollster & Polling Company & Character & Company that conducted the poll. \\
@@ -53,19 +53,19 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \end{center}
 
 \subsection{Cleaning}
-Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
+The majority of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read ``oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read ``oppose advertising-tv production (voted for)."  This description lists whether it was an ad in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patterns by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
 
-\begin{itemize}
-    \item Ads - Advertisement spending, including television, radio, and online
-    \item Direct Contact - Direct voter contact, such as canvassing
-    \item Salary - Payments made to staff of the organization
-    \item Swag - Clothing, signs, and other promotional material
-    \item Transport - Transportation costs, such as taxis or van rentals
-    \item Other - All expenses that do not fit into the above categories
-\end{itemize}
+\begin{description}
+    \item[Ads] Advertisement spending, including television, radio, and online
+    \item[Direct Contact] Direct voter contact, such as canvassing
+    \item[Salary] Payments made to staff of the organization
+    \item[Swag] Clothing, signs, and other promotional material
+    \item[Transport] Transportation costs, such as taxis or van rentals
+    \item[Other] All expenses that do not fit into the above categories
+\end{description}
 
-An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits' from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
+An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 
-The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver. \footnote{\hyperref{http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-best-and-worst-in-the-2012-presidential-race/}{Which Polls Fared Best (and Worst) in the 2012 Presidential Race}}
+The polling data did not require much data cleanup. We split the date range and formatted the end date as a date for our use. We also removed some differences in state naming by the different pollsters.  One limitation we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were likely to be excluded.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to columnist Nate Silver. \footnote{\href{http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-best-and-worst-in-the-2012-presidential-race/}{Which Polls Fared Best (and Worst) in the 2012 Presidential Race}} Unfortunately, we could not find a better source of polling data and therefore chose to perform our analysis without these online surveys.

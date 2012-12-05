@@ -1,4 +1,4 @@
-\subsection{Spending By Week}
+\subsection{Spending by Week}
 
 Looking at weekly spending by PACs benefiting Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We look at the national and swing-state polls to determine if there is any noticeable effect due to these changes in spending.
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
@@ -16,6 +16,8 @@ qplot(Date, sum, data = subset(num.weeks.sum, Date < as.Date("2012-10-10")), col
 \subsection{Effect of Spending on Polls}
 
 This plot shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by Romney-supporting PACs. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
+
+Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a LOESS smoother, as we have used in all other plots. When using the LOESS smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the LOESS smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method assigns exponentially decreasing weights over time utilizing past points. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages.
 
 <<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Margin (Obama - Romney) over time, swing states versus national polls'>>=
 labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))

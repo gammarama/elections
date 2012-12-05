@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  4 DEC 2012 07:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  4 DEC 2012 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,12 +671,12 @@ LaTeX Info: Redefining \nameref on input line 69.
 \@outlinefile=\write3
 \openout3 = `Hare-Kaplan-Election-Report.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 80.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -728,87 +728,15 @@ Overfull \hbox (12.70885pt too wide) in alignment at lines 133--134
 [2
 
 ] [3]
-Underfull \hbox (badness 6510) in paragraph at lines 143--143
-[]|\OT1/cmr/m/n/10.95 Polling Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--146
-[]|\OT1/cmr/m/n/10.95 Support for
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 146--147
-[]|\OT1/cmr/m/n/10.95 Integer rounded per-cent of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\OT1/cmr/m/n/10.95 Support for
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 147--148
-[]|\OT1/cmr/m/n/10.95 Integer rounded per-cent of
+Overfull \hbox (3.64513pt too wide) in alignment at lines 140--148
+ [] [] [] [] 
  []
 
 [4
 
 ]
-! Argument of \@finalstrut has an extra }.
-<inserted text> 
-                \par 
-l.167 ...nd Worst) in the 2012 Presidential Race}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \@finalstrut was complete.
-<to be read again> 
-                   \par 
-l.167 ...nd Worst) in the 2012 Presidential Race}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-Which Polls Fared Best (and Worst) in the 2012 Presidential Race.
-! Paragraph ended before \tryhyper@link was complete.
-<to be read again> 
-                   \par 
-l.167 ...nd Worst) in the 2012 Presidential Race}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 ...nd Worst) in the 2012 Presidential Race}}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[]\OT1/cmr/m/n/9 http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-poll
-s-fared-best-and-worst-in-the-2012-presidential-
- []
-
 Package color Info: Redefining color shadecolor on input line 178.
-<figure/temporal_plot.pdf, id=84, 722.7pt x 578.16pt>
+ <figure/temporal_plot.pdf, id=86, 722.7pt x 578.16pt>
 File: figure/temporal_plot.pdf Graphic file (type pdf)
 
 <use figure/temporal_plot.pdf>
@@ -817,14 +745,14 @@ Package pdftex.def Info: figure/temporal_plot.pdf used on input line 181.
  [5]
 Package color Info: Redefining color shadecolor on input line 199.
 
-<figure/type_plot1.pdf, id=93, 289.08pt x 289.08pt>
+<figure/type_plot1.pdf, id=96, 289.08pt x 289.08pt>
 File: figure/type_plot1.pdf Graphic file (type pdf)
 
 <use figure/type_plot1.pdf>
 Package pdftex.def Info: figure/type_plot1.pdf used on input line 202.
 (pdftex.def)             Requested size: 187.89914pt x 187.89977pt.
 
-<figure/type_plot2.pdf, id=94, 289.08pt x 289.08pt>
+<figure/type_plot2.pdf, id=97, 289.08pt x 289.08pt>
 File: figure/type_plot2.pdf Graphic file (type pdf)
 
 <use figure/type_plot2.pdf>
@@ -833,7 +761,7 @@ Package pdftex.def Info: figure/type_plot2.pdf used on input line 202.
  [6 <./figure/temporal_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 216.
 
-<figure/PAC_plot.pdf, id=110, 722.7pt x 361.35pt>
+<figure/PAC_plot.pdf, id=112, 722.7pt x 361.35pt>
 File: figure/PAC_plot.pdf Graphic file (type pdf)
  <use figure/PAC_plot.pdf>
 Package pdftex.def Info: figure/PAC_plot.pdf used on input line 219.
@@ -841,7 +769,7 @@ Package pdftex.def Info: figure/PAC_plot.pdf used on input line 219.
 
 [7 <./figure/type_plot1.pdf> <./figure/type_plot2.pdf> <./figure/PAC_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 237.
-<figure/type_swing_1.pdf, id=135, 722.7pt x 433.62pt>
+<figure/type_swing_1.pdf, id=137, 722.7pt x 433.62pt>
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
@@ -849,58 +777,58 @@ Package pdftex.def Info: figure/type_swing_1.pdf used on input line 240.
 (pdftex.def)             Requested size: 469.75502pt x 281.85628pt.
 Package color Info: Redefining color shadecolor on input line 257.
 
-<figure/trend_plot.pdf, id=136, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=138, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
 Package pdftex.def Info: figure/trend_plot.pdf used on input line 260.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
  [8 <./figure/type_swing_1.pdf>]
-Package color Info: Redefining color shadecolor on input line 275.
+Package color Info: Redefining color shadecolor on input line 277.
 
-<figure/effect_plot.pdf, id=153, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=155, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
-Package pdftex.def Info: figure/effect_plot.pdf used on input line 278.
+Package pdftex.def Info: figure/effect_plot.pdf used on input line 280.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
  [9 <./figure/trend_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 292.
+Package color Info: Redefining color shadecolor on input line 294.
 
-<figure/support_spend1.pdf, id=168, 289.08pt x 289.08pt>
+<figure/support_spend1.pdf, id=170, 289.08pt x 289.08pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
-Package pdftex.def Info: figure/support_spend1.pdf used on input line 293.
+Package pdftex.def Info: figure/support_spend1.pdf used on input line 295.
 (pdftex.def)             Requested size: 211.38832pt x 211.38834pt.
 
-<figure/support_spend2.pdf, id=169, 289.08pt x 289.08pt>
+<figure/support_spend2.pdf, id=171, 289.08pt x 289.08pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
-Package pdftex.def Info: figure/support_spend2.pdf used on input line 293.
+Package pdftex.def Info: figure/support_spend2.pdf used on input line 295.
 (pdftex.def)             Requested size: 211.38832pt x 211.38834pt.
  [10 <./figure/effect_plot.pdf> <./figure/support_spend1.pdf> <./figure/support
 _spend2.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
  [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
 
 (./Hare-Kaplan-Election-Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `Hare-Kaplan-Election-Report.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 6F1952BCD4E1AA6AB60362997067C939;751.
+(rerunfilecheck)             Checksum: E5C70EFAF5AA7613EAD8A5835F91F40E;751.
  ) 
 Here is how much of TeX's memory you used:
- 9584 strings out of 493485
- 137504 string characters out of 3143525
- 246114 words of memory out of 3000000
- 12677 multiletter control sequences out of 15000+200000
- 14364 words of font info for 55 fonts, out of 3000000 for 9000
+ 9586 strings out of 493485
+ 137534 string characters out of 3143525
+ 246115 words of memory out of 3000000
+ 12678 multiletter control sequences out of 15000+200000
+ 14840 words of font info for 57 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,8n,35p,1140b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,8n,35p,1251b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -911,10 +839,10 @@ amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (12 pages, 346743 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (12 pages, 348575 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

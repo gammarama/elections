@@ -2,7 +2,26 @@
 <head>
 <meta charset="utf-8">
   <meta name="author" content="Eric Hare &amp; Andee Kaplan" />
-  <title>A First Look at the 2012 Election</title>
+  <title>A Look at the 2012 Election</title>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 <style>
   html { background-color: black; }
   body { background-color: white; border-radius: 12px}
@@ -77,24 +96,119 @@
 </head>
 <body>
 <section>
-  <h1 class="title">A First Look at the 2012 Election</h1>
+  <h1 class="title">A Look at the 2012 Election</h1>
   <h2 class="author">Eric Hare &amp; Andee Kaplan</h2>
   <h3 class="date">Dec. 6th 2012</h3>
 </section>
+<section class="slide level1" id="section">
+<h1></h1>
+<figure>
+<img src="http://imgs.xkcd.com/comics/poll_watching.png" alt="Comic"><figcaption>Comic</figcaption>
+</figure>
+</section>
 <section class="slide level1" id="motivation">
 <h1>Motivation</h1>
+<ul class="incremental">
+<li>2010 Supreme Court Ruling: Citizens United</li>
+<li>Super PACs ## How did this impact the 2012 election?</li>
+</ul>
 </section>
-<section class="slide level1" id="data-sources">
-<h1>Data Sources</h1>
+<section class="slide level1" id="data">
+<h1>Data</h1>
+<ul class="incremental">
+<li>Independent Expenditures (FEC)</li>
+<li>National/State Polling (Nationalpolls.com)</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(spend.data, <span class="dt">n =</span> <span class="dv">3</span>)</code></pre>
+<pre><code>##   can_id       can_nam    spe_id
+## 5        obama, barack c00348540
+## 6        obama, barack c00348540
+## 7        obama, barack c00348540
+##                                                            spe_nam ele_typ
+## 5 1199 service employees int&#39;l union federal political action fund       g
+## 6 1199 service employees int&#39;l union federal political action fund       g
+## 7 1199 service employees int&#39;l union federal political action fund       g
+##   can_off_sta can_off_dis can_off can_par_aff exp_amo    exp_dat agg_amo
+## 5          fl           0       p              188589 2012-09-12  188589
+## 6          pa           0       p               18904 2012-09-12   18904
+## 7          fl           0       p               20006 2012-08-08   20006
+##   sup_opp                                   pur
+## 5 support reimburse staff salaries and benefits
+## 6 support reimburse staff salaries and benefits
+## 7 support reimburse staff salaries and benefits
+##                                        pay file_num amn_ind   tra_id
+## 5 1199 seiu united healthcare workers east   809454       n se.10744
+## 6 1199 seiu united healthcare workers east   809454       n se.10742
+## 7 1199 seiu united healthcare workers east   803862       n se.10722
+##     ima_num    rec_dat prev_file_num bucket bucket2 oflag beneful_can
+## 5 1.295e+10 2012-09-13            NA salary  salary     1       obama
+## 6 1.295e+10 2012-09-13            NA salary  salary     1       obama
+## 7 1.297e+10 2012-08-10            NA salary  salary     1       obama</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(polls.data, <span class="dt">n =</span> <span class="dv">3</span>)</code></pre>
+<pre><code>##                    Pollster    State       Date Obama Romney isNational
+## 1 Politico/GWU/Battleground National 2012-11-05    47     47       TRUE
+## 2          Gravis Marketing     Ohio 2012-11-05    49     48      FALSE
+## 3          Gravis Marketing  Florida 2012-11-05    49     49      FALSE
+##   Obama.Romney
+## 1            0
+## 2            1
+## 3            0</code></pre>
 </section>
 <section class="slide level1" id="cleanup">
 <h1>Cleanup</h1>
+<h2 id="bucket-list">Bucket List</h2>
+<ul class="incremental">
+<li><strong>Ads</strong> Advertisement spending, including television, radio, and online</li>
+<li><strong>Direct Contact</strong> Direct voter contact, such as canvassing</li>
+<li><strong>Salary Payments</strong> made to staff of the organization</li>
+<li><strong>Swag</strong> Clothing, signs, and other promotional material</li>
+<li><strong>Transport</strong> Transportation costs, such as taxis or van rentals</li>
+<li><strong>Other</strong> All expenses that do not fit into the above categories</li>
+</ul>
 </section>
 <section class="slide level1" id="types-of-spending-by-week">
 <h1>Types of Spending by Week</h1>
 <figure>
 <img src="figure/SpendingByWeek.png" alt="Spending by Super PACs in support or opposition of candidates"><figcaption>Spending by Super PACs in support or opposition of candidates</figcaption>
 </figure>
+</section>
+<section class="slide level1" id="spending-categories">
+<h1>Spending Categories</h1>
+<p><img src="figure/SpendingByCategory1.png" alt="Types of spending by category for Romney and Obama Super PACs"> <img src="figure/SpendingByCategory2.png" alt="NA"></p>
+</section>
+<section class="slide level1" id="spending-by-independent-organization">
+<h1>Spending by Independent Organization</h1>
+<figure>
+<img src="figure/SpendingByIO.png" alt="Spending by Super PAC, stacked by candidate"><figcaption>Spending by Super PAC, stacked by candidate</figcaption>
+</figure>
+</section>
+<section class="slide level1" id="swing-state-trends">
+<h1>Swing State Trends</h1>
+<figure>
+<img src="figure/SwingTrends.png" alt="Polling Averages for Obama and Romney by swing state"><figcaption>Polling Averages for Obama and Romney by swing state</figcaption>
+</figure>
+</section>
+<section class="slide level1" id="spending-by-week">
+<h1>Spending by Week</h1>
+<figure>
+<img src="figure/SpendingSwingWeek.png" alt="Weekly Spending by Super PACs supporting Obama and Romney"><figcaption>Weekly Spending by Super PACs supporting Obama and Romney</figcaption>
+</figure>
+</section>
+<section class="slide level1" id="effect-of-spending-on-polls">
+<h1>Effect of Spending on Polls</h1>
+<figure>
+<img src="figure/SpendEffect.png" alt="Polling Margin (Obama - Romney) over time, swing states versus national polls"><figcaption>Polling Margin (Obama - Romney) over time, swing states versus national polls</figcaption>
+</figure>
+</section>
+<section class="slide level1" id="conclusionsfuture-work">
+<h1>Conclusions/Future Work</h1>
+<ul class="incremental">
+<li>Effect of Super PACs difficult to measure</li>
+<li>Romney Super PACs spent more than Obama Super PACs</li>
+<li>Obama’s polling stronger in swing states</li>
+<li><em>Future Work</em> Candidate spending</li>
+<li><em>Future Work</em> Fully explore usability of expense purpose data</li>
+</ul>
 </section>
 <!-- {{{{ dzslides core
 #

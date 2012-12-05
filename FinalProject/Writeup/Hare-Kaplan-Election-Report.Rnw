@@ -20,10 +20,10 @@
 \author{Eric Hare \& Andee Kaplan}
 \date{Dec. 12, 2012}
 
-\thispagestyle{empty}
 \maketitle
+\thispagestyle{empty}
 \begin{abstract}
-Motivated by the 2010 Citizens United ruling and the subsequent birth of "Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and the packages XML, ggplot2, plyr, lubridate, knitr, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, we did not find a clear and direct relationship between increases in spending and changes in public support. However, our analysis does provide evidence for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
+Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and the packages \texttt{XML}, \texttt{ggplot2}, \texttt{plyr}, \texttt{lubridate}, \texttt{knitr}, \texttt{forecast}, and \texttt{zoo}, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, we did not find a clear and direct relationship between increases in spending and changes in public support. However, our analysis does provide evidence for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
 \end{abstract}
 \clearpage
 

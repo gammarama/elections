@@ -75,10 +75,10 @@
 \author{Eric Hare \& Andee Kaplan}
 \date{Dec. 12, 2012}
 
-\thispagestyle{empty}
 \maketitle
+\thispagestyle{empty}
 \begin{abstract}
-Motivated by the 2010 Citizens United ruling and the subsequent birth of "Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and the packages XML, ggplot2, plyr, lubridate, knitr, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, we did not find a clear and direct relationship between increases in spending and changes in public support. However, our analysis does provide evidence for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
+Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and the packages \texttt{XML}, \texttt{ggplot2}, \texttt{plyr}, \texttt{lubridate}, \texttt{knitr}, \texttt{forecast}, and \texttt{zoo}, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, we did not find a clear and direct relationship between increases in spending and changes in public support. However, our analysis does provide evidence for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
 \end{abstract}
 \clearpage
 
@@ -86,7 +86,7 @@ Motivated by the 2010 Citizens United ruling and the subsequent birth of "Super 
 \section{Introduction}
 In 2010, the United States Supreme Court released its decision on Citizens United v. Federal Election Commission. The decision found that it is a violation of the constitutional right to free speech for limits to be placed on money spent by corporations and labor unions to support or oppose political candidates. For the first time since the passage of the Tillman Act in 1907, corporations and unions could spend unlimited amounts of their own money on the presidential election. Such power led to the coining of the term Super PAC, as well as a cloud of uncertainty as to what effect such money could have on the election outcome.
 
-In this report, we analyze the independent expenditures data set from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
+In this report, we analyze the independent expenditures data set from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election.  We subset these expenditures to analyze only those which were filed after the Republican primary, so that we can focus on those which benefit President Barack Obama and Governor Mitt Romney. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
 
 
 
@@ -94,7 +94,7 @@ In this report, we analyze the independent expenditures data set from the Federa
 
 
 \section{Data}
-We are primarily working with two data sources to complete our analysis: independent expenditures (PAC) data and polling data. The PAC spending data comes from the \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commision} and the polling data comes from \url{http://nationalpolls.com/}. 
+We are primarily working with two data sources to complete our analysis: independent expenditures (PAC) data and polling data. The PAC spending data comes from the \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commision} and the polling data comes from \url{http://nationalpolls.com/}.  We are primarily working with the fields spe\_nam, exp\_amo, exp\_dat, and pur from the spending data.  These provide us with information on the organization filing the expense, the amount, the date, and the purpose of the expense.  We also make extensive use of our created field `beneful\_can', which describes the candidate benefiting from the expense.  A full description of the fields in our dataset are provided in the following table.
 
 \subsection{Variable Definitions}
 The variables present in the PAC spending data are defined as follows:
@@ -137,7 +137,7 @@ prev\_file\_num & Previous filing number &	Number &	Reference to a filing being 
 \noindent
 The variables present in the polling data are defined as follows:
 \begin{center}
-\begin{longtable}[\textwidth]{l p{0.15\textwidth} l p{0.3\textwidth}}
+\begin{longtable}[\textwidth]{l p{0.25\textwidth} l p{0.45\textwidth}}
 Tag & Field Name  & Data Type	& Description\\
 \hline
 Pollster & Polling Company & Character & Company that conducted the poll. \\
@@ -149,30 +149,30 @@ Romney & Support for Mr. Romney & Number & Integer rounded percent of support in
 \end{center}
 
 \subsection{Cleaning}
-Most of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
+The majority of the data cleaning had to be performed on the PAC spending data. We made sure all the columns were formatted correctly in regards to data type (dates are date, numbers are numeric, etc.) before cleaning and reformatting the data more extensively. 
 
-One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read ``oppose advertising-tv production (voted for)."  This description lists whether it was an add in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patters by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
+One challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. For example, the Conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose.  An entry from mid-August read ``oppose advertising-tv production (voted for)."  This description lists whether it was an ad in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC prefered short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patterns by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures.  The buckets we chose are: 
 
-\begin{itemize}
-    \item Ads - Advertisement spending, including television, radio, and online
-    \item Direct Contact - Direct voter contact, such as canvassing
-    \item Salary - Payments made to staff of the organization
-    \item Swag - Clothing, signs, and other promotional material
-    \item Transport - Transportation costs, such as taxis or van rentals
-    \item Other - All expenses that do not fit into the above categories
-\end{itemize}
+\begin{description}
+    \item[Ads] Advertisement spending, including television, radio, and online
+    \item[Direct Contact] Direct voter contact, such as canvassing
+    \item[Salary] Payments made to staff of the organization
+    \item[Swag] Clothing, signs, and other promotional material
+    \item[Transport] Transportation costs, such as taxis or van rentals
+    \item[Other] All expenses that do not fit into the above categories
+\end{description}
 
-An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose column is oppose and the candidate name is Romney, then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals support and the candidate name is Romney, then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that `benefits' from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
+An additional complication we faced was with the support/oppose column. This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney.
 
-The polling data did not require very much data cleanup. We needed to split the date range and format the second date as a date for our use. We also removed some differences in state naming by the different pollsters.  One complication we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were strong candidates for exclusion.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to Nate Silver. \footnote{\hyperref{http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-best-and-worst-in-the-2012-presidential-race/}{Which Polls Fared Best (and Worst) in the 2012 Presidential Race}}
+The polling data did not require much data cleanup. We split the date range and formatted the end date as a date for our use. We also removed some differences in state naming by the different pollsters.  One limitation we faced is that a fairly significant number of polls were excluded from the nationalpolls.com database.  Some new national polling outfits, such as the RAND Corporation, were excluded, as were a large number of online polls, including Google Consumer Surveys.  We were unable to find a methodology for the inclusion/exclusion of certain polls, but we suspect that polls without a track record in previous presidential elections were likely to be excluded.  As it turns out however, online surveys performed more strongly in the 2012 election than did automated phone surveys or live interviewer surveys according to columnist Nate Silver. \footnote{\href{http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-best-and-worst-in-the-2012-presidential-race/}{Which Polls Fared Best (and Worst) in the 2012 Presidential Race}} Unfortunately, we could not find a better source of polling data and therefore chose to perform our analysis without these online surveys.
 
 
 \section{Findings}
-Our key findings are summarized in the sections below.
+Our key findings are summarized in the following sections.  We begin by analyzing temporal and categoral trends in spending for Super PACs benefiting each of the candidates.  We then take a closer look at the organizations which are spending the most on each side.  Next, we analyze changes in the polling data with an emphasis on swing states.  We conclude by attempting to correlate these changes to spending changes over time.
 
 \subsection{Type of Spending by Week}
-This plot displays the spending in each of the six categories by independent organizations benefiting Barack Obama and Mitt Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are three markers which signify major events in the campaign: the selection of Paul Ryan as Mitt Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the debates. 
-Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates have increased since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Romney. There has also been a noticeable increase in spending on direct contact for Obama, while the Romney organizations have maintained consistent spending in negative direct contact for quite some time.
+Figure \ref{fig:temporal_plot} displays the spending in each of the six categories by independent organizations benefiting Mr. Obama and Mr. Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are three markers which signify major events in the campaign: the selection of Representative Paul Ryan as Mr. Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video, and the debates. 
+Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates show increases since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Mr. Romney. A noticeable increase in spending on direct contact for Obama is also evident beginning in August, while the organizations benefiting Mr. Romney have maintained consistent spending in negative direct contact beginning in mid-May.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -248,7 +248,7 @@ The plots suggest that the reaction to these major campaign events was not consi
 
 
 
-\subsection{Spending By Week}
+\subsection{Spending by Week}
 
 Looking at weekly spending by PACs benefiting Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We look at the national and swing-state polls to determine if there is any noticeable effect due to these changes in spending.
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
@@ -270,6 +270,8 @@ Looking at weekly spending by PACs benefiting Romney, we can see a sharp increas
 \subsection{Effect of Spending on Polls}
 
 This plot shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by Romney-supporting PACs. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
+
+Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a LOESS smoother, as we have used in all other plots. When using the LOESS smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the LOESS smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method assigns exponentially decreasing weights over time utilizing past points. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -299,7 +301,7 @@ In both Obama-supporting and Romney-supporting PACs we can see a weak positive r
 \section{Conclusions/Future Work}
 Ultimately, our findings suggest that while election spending itself was a very significant part of the 2012 elections, it is not clear whether the existence of Super PACs had a measurable impact on the outcome. Instead, the events that garnered large amounts of media coverage, such as the 47\% video and the first presidential debate, seemed to have the most noticeable effect on the polling.Furthermore, our analysis did not take into account the spending done by the candidates themselves. It may be that such spending muted the effect of Super PAC spending.
 
-Our analysis also makes clear that Mr. Obama's polling held up more strongly in the swing states than in the national polling throughout the campaign. This advantage was evident in the election results, as well. According to the current AP vote tally as of November 16th, Mr. Obama won the overall popular vote by 2.8\%. But he won Colorado, the state that put him over the 270 electoral votes needed for victory, by 4.7\%. This suggests that Mr. Obama could have lost the popular vote by nearly 2\% and still have been elected president of the United States.
+Our analysis also makes clear that Mr. Obama's polling held up more strongly in the swing states than in the national polling throughout the campaign. This advantage was evident in the election results, as well. According to the current certified vote tally as of December 4th\footnote{\href{https://docs.google.com/spreadsheet/lv?key=0AjYj9mXElO_QdHpla01oWE1jOFZRbnhJZkZpVFNKeVE&toomany=true}{Wasserman's 2012 National Popular Vote Tracker}}, Mr. Obama won the overall popular vote by 3.6\%. But he won Colorado, the state that put him over the 270 electoral votes needed for victory, by 5.4\%. This suggests that Mr. Obama could have lost the popular vote by nearly 2\% and still have been elected president of the United States.
 
 An extension of this project should take into account spending done by the candidates themselves, in addition to independent expenditures. This would allow for a more informed look at the relative spending difference, and how it may or may no correlate with changes in the polling averages. Another area of exploration would be the purpose field of the independent expenditures data set. Our analysis attempted to categorize spending entries into broad categories, but many of the entries in the database have more specific information. For instance, an ad buy may list the name of the ad, as well as the state the ad is running in. It may also be possible to incorporate another data source in order to link the expenditure entries with ad buys in particular states.
 
