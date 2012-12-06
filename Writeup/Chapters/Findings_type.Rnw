@@ -16,7 +16,7 @@ qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
   coord_fixed()
 
 ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
-  geom_bar(position = "dodge") + 
+  geom_bar(position = "dodge", stat = "identity") + 
   coord_flip() + 
   scale_y_log10() + 
   scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + 
@@ -30,7 +30,7 @@ Figure \ref{fig:PAC_plot} displays the total spending by the top independent org
 
 <<PAC_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap ='Spending by Super PAC, stacked by candidate'>>=
 ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) + 
-  geom_bar() + 
+  geom_bar(stat = "identity") + 
   xlab("Benefiting Candidate") + 
   ylab("Amount Spent") + 
   scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC")
