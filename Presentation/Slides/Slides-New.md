@@ -127,3 +127,9 @@ head(polls.data, n = 3)
 > - Obama's polling stronger in swing states
 > - [Future Work] Candidate spending
 > - [Future Work] Fully explore usability of expense purpose data
+
+---
+
+## Thank You
+Eric Hare, erichare@iastate.edu<br>
+Andee Kaplan, ajkaplan@iastate.edu

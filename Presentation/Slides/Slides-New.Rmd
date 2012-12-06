@@ -181,3 +181,9 @@ qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
 > - Obama's polling stronger in swing states
 > - [Future Work] Candidate spending
 > - [Future Work] Fully explore usability of expense purpose data
+
+---
+
+## Thank You
+Eric Hare, erichare@iastate.edu<br>
+Andee Kaplan, ajkaplan@iastate.edu
