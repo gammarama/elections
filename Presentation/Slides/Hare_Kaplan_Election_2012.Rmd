@@ -184,6 +184,11 @@ qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
 
 ---
 
-## Thank You
+## Questions?
 Eric Hare, erichare@iastate.edu<br>
-Andee Kaplan, ajkaplan@iastate.edu
+Andee Kaplan, ajkaplan@iastate.edu<br><br><br>
+
+## Acknowledgements
+Prof. Dianne Cook<br>
+Prof. Heike Hofmann<br>
+Susan VanderPlas

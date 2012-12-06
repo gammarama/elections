@@ -130,6 +130,11 @@ head(polls.data, n = 3)
 
 ---
 
-## Thank You
+## Questions?
 Eric Hare, erichare@iastate.edu<br>
-Andee Kaplan, ajkaplan@iastate.edu
+Andee Kaplan, ajkaplan@iastate.edu<br><br><br>
+
+## Acknowledgements
+Prof. Dianne Cook<br>
+Prof. Heike Hofmann<br>
+Susan VanderPlas
