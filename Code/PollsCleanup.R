@@ -49,6 +49,13 @@ x.Nat.df <- data.frame(dates=index(x.Nat), weight=coredata(x.Nat))
 x.Swing <- na.spline(x.Swing)
 x.Swing.df <- data.frame(dates=index(x.Swing), weight=coredata(x.Swing))
 
+
+##
+# Add exponential smoother to polling data
+# The code is not yet portable or cleaned up
+# We will fix that soon
+##
+
 polls.avg.Nat.Smooth<-HoltWinters(x.Nat, alpha=.1, beta=FALSE, gamma=FALSE, l.start=x.Nat[1])
 polls.avg.Swing.Smooth<-HoltWinters(x.Swing, alpha=.03, beta=FALSE, gamma=FALSE, l.start=x.Swing[1])
 
