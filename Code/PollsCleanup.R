@@ -35,38 +35,55 @@ polls.week$week <- as.numeric(as.character(polls.week$week))
 names(polls.week)[4] <- "Obama.Poll"
 names(polls.week)[5] <- "Romney.Poll"
 
-polls.avg<-ddply(polls.data, .(isNational, Date), summarise, Obama.Romney=mean(Obama.Romney))
-
-polls.zoo.Nat<-zoo(subset(polls.avg, isNational)[,3],subset(polls.avg, isNational)[,2])
-polls.zoo.Swing<-zoo(subset(polls.avg, !isNational)[,3],subset(polls.avg, !isNational)[,2])
-
-x.Nat <- merge(polls.zoo.Nat, zoo(order.by=seq(start(polls.zoo.Nat), end(polls.zoo.Nat), by="days")))
-x.Swing <- merge(polls.zoo.Swing, zoo(order.by=seq(start(polls.zoo.Swing), end(polls.zoo.Swing), by="days")))
-
-x.Nat <- na.spline(x.Nat)
-x.Nat.df <- data.frame(dates=index(x.Nat), weight=coredata(x.Nat))
-
-x.Swing <- na.spline(x.Swing)
-x.Swing.df <- data.frame(dates=index(x.Swing), weight=coredata(x.Swing))
-
-
 ##
-# Add exponential smoother to polling data
-# The code is not yet portable or cleaned up
-# We will fix that soon
+# Added exponential smoother function to polling data
 ##
 
-polls.avg.Nat.Smooth<-HoltWinters(x.Nat, alpha=.1, beta=FALSE, gamma=FALSE, l.start=x.Nat[1])
-polls.avg.Swing.Smooth<-HoltWinters(x.Swing, alpha=.03, beta=FALSE, gamma=FALSE, l.start=x.Swing[1])
 
-polls.avg.smooth<-ts.union(polls.avg.Nat.Smooth$fitted, polls.avg.Swing.Smooth$fitted)
+polls.Nat.smooth<-exp_smoother(time=subset(polls.data, isNational)[,"Date"], 
+                               data=subset(polls.data, isNational)[,"Obama.Romney"],
+                               unit="days",
+                               alpha=.1)
+polls.Nat.smooth$isNational<-TRUE
 
-polls.smooth<-data.frame(polls.avg.smooth)[,c(1,3)]
-polls.smooth$Date<-as.Date(as.numeric(time(polls.avg.smooth)))
+polls.Swing.smooth<-exp_smoother(time=subset(polls.data, !isNational)[,"Date"], 
+                                 data=subset(polls.data, !isNational)[,"Obama.Romney"],
+                                 unit="days",
+                                 alpha=.03)
+polls.Swing.smooth$isNational<-FALSE
 
-polls.smooth<-data.frame(rbind(cbind(polls.smooth$Date,rep("TRUE", nrow(polls.smooth)),polls.smooth[,1]),
-                               cbind(polls.smooth$Date,rep("FALSE", nrow(polls.smooth)),polls.smooth[,2])))
-colnames(polls.smooth)<-c("Date","isNational", "Obama.Romney")
-polls.smooth$Date<-as.Date(as.numeric(as.character(polls.smooth$Date)))
-polls.smooth$isNational<-as.factor(polls.smooth$isNational)
-polls.smooth$Obama.Romney<-as.numeric(as.character(polls.smooth$Obama.Romney))
+polls.smooth<-rbind(polls.Nat.smooth, polls.Swing.smooth)
+names(polls.smooth)<-c("Date","Obama.Romney","isNational")
+
+
+
+
+##Outdated code
+# polls.avg<-ddply(polls.data, .(isNational, Date), summarise, Obama.Romney=mean(Obama.Romney))
+# 
+# polls.zoo.Nat<-zoo(subset(polls.avg, isNational)[,3],subset(polls.avg, isNational)[,2])
+# polls.zoo.Swing<-zoo(subset(polls.avg, !isNational)[,3],subset(polls.avg, !isNational)[,2])
+# 
+# x.Nat <- merge(polls.zoo.Nat, zoo(order.by=seq(start(polls.zoo.Nat), end(polls.zoo.Nat), by="days")))
+# x.Swing <- merge(polls.zoo.Swing, zoo(order.by=seq(start(polls.zoo.Swing), end(polls.zoo.Swing), by="days")))
+# 
+# x.Nat <- na.spline(x.Nat)
+# x.Nat.df <- data.frame(dates=index(x.Nat), weight=coredata(x.Nat))
+# 
+# x.Swing <- na.spline(x.Swing)
+# x.Swing.df <- data.frame(dates=index(x.Swing), weight=coredata(x.Swing))
+# 
+# polls.avg.Nat.Smooth<-HoltWinters(x.Nat, alpha=.1, beta=FALSE, gamma=FALSE, l.start=x.Nat[1])
+# polls.avg.Swing.Smooth<-HoltWinters(x.Swing, alpha=.03, beta=FALSE, gamma=FALSE, l.start=x.Swing[1])
+# 
+# polls.avg.smooth<-ts.union(polls.avg.Nat.Smooth$fitted, polls.avg.Swing.Smooth$fitted)
+# 
+# polls.smooth<-data.frame(polls.avg.smooth)[,c(1,3)]
+# polls.smooth$Date<-as.Date(as.numeric(time(polls.avg.smooth)))
+# 
+# polls.smooth<-data.frame(rbind(cbind(polls.smooth$Date,rep("TRUE", nrow(polls.smooth)),polls.smooth[,1]),
+#                                cbind(polls.smooth$Date,rep("FALSE", nrow(polls.smooth)),polls.smooth[,2])))
+# colnames(polls.smooth)<-c("Date","isNational", "Obama.Romney")
+# polls.smooth$Date<-as.Date(as.numeric(as.character(polls.smooth$Date)))
+# polls.smooth$isNational<-as.factor(polls.smooth$isNational)
+# polls.smooth$Obama.Romney<-as.numeric(as.character(polls.smooth$Obama.Romney))

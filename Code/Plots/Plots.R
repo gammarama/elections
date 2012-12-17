@@ -77,7 +77,6 @@ qplot(Date, sum, data = num.weeks.sum, colour = beneful_can) + scale_y_log10() +
     theme(legend.position="bottom")
 
 labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
-
 qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
     scale_alpha(guide="none") +
     annotate("text", x=as.Date("18/7/2012","%d/%m/%Y"), y=20, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=5) +
