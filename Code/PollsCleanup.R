@@ -38,7 +38,7 @@ names(polls.week)[5] <- "Romney.Poll"
 ##
 # Added exponential smoother function to polling data
 ##
-
+source("../../Code/UDF_ExponentialSmoother.R")
 
 polls.Nat.smooth<-exp_smoother(time=subset(polls.data, isNational)[,"Date"], 
                                data=subset(polls.data, isNational)[,"Obama.Romney"],

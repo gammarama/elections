@@ -4,12 +4,12 @@
 \usepackage{amssymb,amsmath,amsthm} 
 %geometry (sets margin) and other useful packages
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx,ctable,booktabs}
+\usepackage{graphicx, ctable, booktabs}
 \usepackage{color}
 \usepackage{listings}
-\usepackage{ltablex,calc,enumerate,multirow, float, soul}
+\usepackage{ltablex, calc, enumerate, multirow, float, soul}
 \usepackage{hyperref}
-\usepackage{longtable, pdflscape}
+\usepackage{longtable, pdflscape, textcase}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}
@@ -17,9 +17,9 @@
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}
 
-\title{A Look at the 2012 Presidential Election}
+\title{Can you buy a president? \\ \vspace{.6cm} \Large Politics after the Tillman Act}
 \author{Eric Hare \& Andee Kaplan}
-\date{Dec. 12, 2012}
+\date{Dec. ??, 2012}
 
 \maketitle
 \thispagestyle{empty}

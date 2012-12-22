@@ -28,7 +28,7 @@ getExpenditures <- function(year) {
     # However, the FEC is prone to failure so for now, hardcoding
     #data <- read.csv(paste("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=", year, sep = ""))
     data <- read.csv("../../Data/independent-expenditure.csv")
-    
+
     # Format the dates and expenditure amounts
     data$rec_dat <- as.Date(data$rec_dat,format='%m/%d/%Y')
     data$exp_dat <- as.Date(data$exp_dat,format='%m/%d/%Y')
