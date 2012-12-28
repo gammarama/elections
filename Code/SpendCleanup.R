@@ -10,6 +10,7 @@ library(reshape2)
 library(RColorBrewer)
 library(zoo)
 library(forecast)
+library(scales)
 
 createBucket <- function(df, text, bucket, entryText = text) {
     empty <- (all(is.na(bucket)))
@@ -169,8 +170,8 @@ sum_exp.spep <- sum_exp.spep[with(sum_exp.spep, order(beneful_can, -Sum)), ]
 sum_exp.spep[which(substring(as.character(sum_exp.spep$spe_nam), 1, 5) == "Other"), ]$Sum <- sums.bak
 sum_exp.spep$spe_nam <- factor(sum_exp.spep$spe_nam, levels = sum_exp.spep$spe_nam)
 
-red <- rev(brewer.pal(9, "Reds"))
-blue <- rev(brewer.pal(3, "Blues"))
+red <- rev(brewer.pal(12, "Reds"))[1:9]
+blue <- rev(brewer.pal(6, "Blues"))[1:3]
 
 
 num.weeks.sum <- ddply(subset(num.weeks, week > 17), .(week, beneful_can), summarise, sum = sum(WeeklySum, na.rm = TRUE))

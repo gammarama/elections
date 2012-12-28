@@ -1,4 +1,4 @@
-\subsection{Spending by Week}
+%\subsection{Spending by Week}
 
 Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either candidate. Looking at weekly spending by PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We examine at the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
@@ -10,10 +10,11 @@ qplot(Date, sum, data = num.weeks.sum, colour = beneful_can) + scale_y_log10() +
   scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
   ylab("Total Spending (Log 10)") + 
   scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
+  theme_bw() +
   theme(legend.position="bottom")
 @
 
-\subsection{Effect of Spending on Polls}
+%\subsection{Effect of Spending on Polls}
 
 Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by PACs supporting Mr. Romney. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
@@ -22,7 +23,9 @@ Note that this plot utilizes exponential smoothing to show the trends in polls o
 <<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Margin (Obama - Romney) over time, swing states versus national polls'>>=
 labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
 
-qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
+ggplot(polls.data, aes(x=Date, y=Obama.Romney, colour = isNational, alpha=0.6)) +
+  geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE) +
+  geom_point() +
   scale_alpha(guide="none") +
   annotate("text", x=as.Date("18/7/2012","%d/%m/%Y"), y=20, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=5) +
   annotate("rect", xmin=as.Date("18/7/2012","%d/%m/%Y"), ymin=-20, xmax=as.Date("19/7/2012","%d/%m/%Y"), ymax=20, fill="#FF0000", alpha=0.4) +
@@ -35,16 +38,17 @@ qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
   geom_text(data=labels.tracking[1,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#FF0000"), size=5, alpha=I(0.2), shape=1) +
   geom_text(data=labels.tracking[2,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#330099"), size=5, alpha=I(0.2), shape=1) +
   theme_bw() +
-  theme(legend.position="bottom") +
-  geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE)
+  theme(legend.position="bottom")
 @
 
 Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated important events. The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
 
-<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate', fig.show='hold'>>=
+<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4.5, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate', fig.show='hold'>>=
 
 ## One Week Lag
-qplot(ObamaSpendChange, ObamaPollChange, data = final.df3[-1,], geom = "point", colour = week) + 
+ggplot(final.df3[-1,], aes(x=ObamaSpendChange, y=ObamaPollChange, colour = week)) +
+  geom_smooth(method="loess") +
+  geom_point() +
   ylab("Change in % Support (Weekly Average)") +
   xlab("Change in Super PAC Spending") +
   annotate("text", x = final.df3$ObamaSpendChange[15], y = final.df3$ObamaPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
@@ -52,11 +56,13 @@ qplot(ObamaSpendChange, ObamaPollChange, data = final.df3[-1,], geom = "point", 
   annotate("text", x = final.df3$ObamaSpendChange[19], y = final.df3$ObamaPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
   annotate("text", x = final.df3$ObamaSpendChange[21], y = final.df3$ObamaPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
   annotate("text", x = final.df3$ObamaSpendChange[24], y = final.df3$ObamaPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
-  geom_smooth(method="loess") +
+  theme_bw() +
   ylim(c(-6,11)) +
   theme(legend.position="bottom")
 
-qplot(RomneySpendChange, RomneyPollChange, data = final.df3[-1,], geom = "point", colour = week) + 
+ggplot(final.df3[-1,], aes(x=RomneySpendChange, y=RomneyPollChange, colour = week)) +
+  geom_smooth(method="loess",colour = I("red")) +
+  geom_point() +
   ylab("Change in % Support (Weekly Average)") +
   xlab("Change in Super PAC Spending") +
   annotate("text", x = final.df3$RomneySpendChange[15], y = final.df3$RomneyPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
@@ -65,7 +71,7 @@ qplot(RomneySpendChange, RomneyPollChange, data = final.df3[-1,], geom = "point"
   annotate("text", x = final.df3$RomneySpendChange[21], y = final.df3$RomneyPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
   annotate("text", x = final.df3$RomneySpendChange[24], y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
   scale_colour_gradientn(colours = c("#850707", "#F78686")) +
-  geom_smooth(method="loess",colour = I("red")) +
+  theme_bw() +
  # ylim(c(-6,12)) + 
   theme(legend.position="bottom")
 @
