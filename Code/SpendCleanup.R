@@ -55,12 +55,12 @@ getExpenditures <- function(year) {
     bucket <- createBucket(spend.data, "travel|lodging|diem|travel|hotel|airport|flight", bucket, "travel")
     bucket <- createBucket(spend.data, "flyer|flier|palm cards", bucket, "flyer")
     bucket <- createBucket(spend.data, "mail", bucket)
-    bucket <- createBucket(spend.data, "^(sign)|banner|billboard", bucket, "sign")
+    bucket <- createBucket(spend.data, "^(sign)|banner", bucket, "sign")
     bucket <- createBucket(spend.data, "design", bucket)
     bucket <- createBucket(spend.data, "yard|sign", bucket, "sign")
     bucket <- createBucket(spend.data, "vehicle|car|truck|van|bus|gas|transport|mileage", bucket, "transport")
     bucket <- createBucket(spend.data, "canvas", bucket, "canvass")
-    bucket <- createBucket(spend.data, "media", bucket, "media")
+    bucket <- createBucket(spend.data, "media|billboard", bucket, "media")
     bucket <- createBucket(spend.data, "printing", bucket, "printing")
     bucket <- createBucket(spend.data, "shirts|button|hat|bumper", bucket, "swag")
     bucket[bucket == "design"] <- NA
@@ -69,10 +69,9 @@ getExpenditures <- function(year) {
     spend.data$bucket <- bucket
     
     spend.data$bucket2 <- spend.data$bucket
-    spend.data[spend.data$bucket2 %in% c("tv", "radio", "media", "web"), "bucket2"] <- "ad"
-    spend.data[spend.data$bucket2 %in% c("sign", "flyer", "printing", "swag"), "bucket2"] <- "swag"
+    spend.data[spend.data$bucket2 %in% c("tv", "radio", "media", "web", "sign"), "bucket2"] <- "ad"
     spend.data[spend.data$bucket2 %in% c("travel", "transport"), "bucket2"] <- "transport"
-    spend.data[spend.data$bucket2 %in% c("email", "call", "mail", "canvass"), "bucket2"] <- "direct contact"
+    spend.data[spend.data$bucket2 %in% c("email", "call", "mail", "canvass", "flyer", "printing"), "bucket2"] <- "direct contact"
     
     
     spend.data$can_nam<-factor(spend.data$can_nam)
@@ -173,7 +172,7 @@ sum_exp.spep <- sum_exp.spep[with(sum_exp.spep, order(beneful_can, -Sum)), ]
 sum_exp.spep[which(substring(as.character(sum_exp.spep$spe_nam), 1, 5) == "Other"), ]$Sum <- sums.bak
 sum_exp.spep$spe_nam <- factor(sum_exp.spep$spe_nam, levels = sum_exp.spep$spe_nam)
 
-red <- rev(brewer.pal(12, "Reds"))[1:9]
+red <- div_gradient_pal(low="#000000", mid="#FF0000", high="#FFFFFF")(seq(.3,.7,length=9))
 blue <- rev(brewer.pal(6, "Blues"))[1:3]
 
 
