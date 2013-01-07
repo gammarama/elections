@@ -129,6 +129,9 @@ spend.data <- getExpenditures("2012")
 
 num.weeks <- ddply(spend.data, .(week = factor(week(exp_dat)), beneful_can, bucket2, sup_opp),.drop=FALSE, summarise, WeeklySum = sum(exp_amo))
 num.weeks[num.weeks$WeeklySum == 0,"WeeklySum"] = NA
+
+# Subset out the final week since it is incomplete
+num.weeks <- subset(num.weeks, week < 45)
 num.weeks$date <- as.Date("1/1/2012",format="%d/%m/%Y") + weeks(as.numeric(num.weeks$week))
 
 

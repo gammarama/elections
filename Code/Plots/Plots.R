@@ -12,7 +12,7 @@ ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + geom_point() + g
     annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "#3D64FF") + 
     annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "grey50") + 
     annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "grey50") + 
-    scale_y_log10() + 
+    scale_y_log10(label = math_format())
     theme(legend.position="bottom")
 
 minValue <- min(c(sum_exp2$obama, sum_exp2$romney))
