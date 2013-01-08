@@ -24,10 +24,10 @@ pay &	name of payee &	Name of the person or vendor or other entity receiving thi
 \multicolumn{3}{l}{\MakeTextUppercase{Currency Variables}}\\
 \hline
 exp\_amo & Expenditure Amount & Dollar amount of specific expenditure. \newline 
-Min: \$\Sexpr{format(min(spend.data$exp_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-Max: \$\Sexpr{format(max(spend.data$exp_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-Mean: \$\Sexpr{format(mean(spend.data$exp_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-Median: \$\Sexpr{format(median(spend.data$exp_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)}\\
+Min: \\Sexpr{dollar_format()(min(spend.data$exp_amo, na.rm=TRUE))} \newline
+Max: \\Sexpr{dollar_format()(max(spend.data$exp_amo, na.rm=TRUE))} \newline
+Mean: \\Sexpr{dollar_format()(mean(spend.data$exp_amo, na.rm=TRUE))} \newline
+Median: \\Sexpr{dollar_format()(median(spend.data$exp_amo, na.rm=TRUE))}\\
 %agg\_amo & Aggregate amount &	Total amount expended during the calendar year, per election, per office sought. \newline 
 %Min: \$\Sexpr{format(min(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
 %Max: \$\Sexpr{format(max(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline

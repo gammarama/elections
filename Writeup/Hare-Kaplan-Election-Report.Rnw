@@ -12,7 +12,9 @@
 \usepackage{longtable, pdflscape, textcase}
 
 \begin{document}
+<<concordance, echo=FALSE>>=
 opts_chunk$set(concordance=TRUE)
+@
 
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}

@@ -5,6 +5,6 @@ Figure \ref{fig:temporal_plot} displays the spending in each of the six categori
 
 Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates show increases since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Mr. Romney. A noticeable increase in spending on direct contact for Obama is also evident beginning in August, while the organizations benefiting Mr. Romney have maintained consistent spending in negative direct contact beginning in mid-May.
 
-<<temporal_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=12, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47% video leaked, (5) first presidential debate, and (6) election day.', dependson='importdata'>>=
+<<temporal_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=12, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, (5) first presidential debate, and (6) election day.', dependson='importdata'>>=
 temporalPlot
 @

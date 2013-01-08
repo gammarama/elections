@@ -67,7 +67,8 @@
 \usepackage{longtable, pdflscape, textcase}
 
 \begin{document}
-opts_chunk$set(concordance=TRUE)
+
+
 
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}
@@ -124,9 +125,9 @@ pay &	name of payee &	Name of the person or vendor or other entity receiving thi
 \multicolumn{3}{l}{\MakeTextUppercase{Currency Variables}}\\
 \hline
 exp\_amo & Expenditure Amount & Dollar amount of specific expenditure. \newline 
-Min: \$0.00 \newline
-Max: \$17661251.08 \newline
-Mean: \$11306.42 \newline
+Min: \$0 \newline
+Max: \$17,661,251 \newline
+Mean: \$11,306.42 \newline
 Median: \$26.61\\
 %agg\_amo & Aggregate amount &	Total amount expended during the calendar year, per election, per office sought. \newline 
 %Min: \$format(min(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE) \newline
@@ -214,9 +215,8 @@ Interesting trends can be observed in advertisement spending, and direct contact
 
 }
 
-\caption[Total weekly spending by Super PACs in support or opposition of candidates]{Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47% video leaked, (5) first presidential debate, and (6) election day.\label{fig:temporal_plot}}
+\caption[Total weekly spending by Super PACs in support or opposition of candidates]{Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.\label{fig:temporal_plot}}
 \end{figure}
-
 
 \end{knitrout}
 
@@ -243,7 +243,6 @@ Figure \ref{fig:PAC_plot} displays the total spending by the top independent org
 \caption[Spending by Super PAC, stacked by candidate]{Spending by Super PAC, stacked by candidate.\label{fig:PAC_plot}}
 \end{figure}
 
-
 \end{knitrout}
 
 
@@ -263,9 +262,8 @@ The plots suggest that the reaction to these major campaign events was not consi
 
 }
 
-\caption[Polling averages for Mr]{Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47% video leaked, (5) first presidential debate, and (6) election day.\label{fig:type_swing_1}}
+\caption[Polling averages for Mr]{Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.\label{fig:type_swing_1}}
 \end{figure}
-
 
 \end{knitrout}
 
@@ -287,7 +285,6 @@ Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either cand
 \caption[Weekly spending by Super PACs supporting Mr]{Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.\label{fig:trend_plot}}
 \end{figure}
 
-
 \end{knitrout}
 
 
@@ -308,7 +305,6 @@ Note that this plot utilizes exponential smoothing to show the trends in polls o
 \caption[Polling margin (Obama - Romney) over time, swing states versus national polls]{Polling margin (Obama - Romney) over time, swing states versus national polls. Shaded region indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region indicates a period of higher spending.\label{fig:effect_plot}}
 \end{figure}
 
-
 \end{knitrout}
 
 
@@ -318,14 +314,12 @@ Figure \ref{fig:support_spend} compares the difference in PAC spending by week t
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 
-{\centering \includegraphics[width=.45\textwidth]{figure/support_spend1} 
-\includegraphics[width=.45\textwidth]{figure/support_spend2} 
+{\centering \includegraphics[width=.45\textwidth]{figure/support_spend1} \includegraphics[width=.45\textwidth]{figure/support_spend2} 
 
 }
 
-\caption[Change in polling over change in spending by candidate]{Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47% video leaked, and (5) first presidential debate.\label{fig:support_spend}}
+\caption[Change in polling over change in spending by candidate]{Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, and (5) first presidential debate.\label{fig:support_spend}}
 \end{figure}
-
 
 \end{knitrout}
 
