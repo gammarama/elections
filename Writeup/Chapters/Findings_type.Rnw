@@ -29,11 +29,6 @@
 Figure \ref{fig:PAC_plot} displays the total spending by the top independent organizations split by candidate. The cumulative amounts spent are displayed vertically, by the benefiting candidate. The organizations supporting Mr. Romney have spent significantly more than those supporting Mr. Obama. In fact, two Super PACs supporting Mr. Romney (Restore our Future, Inc and Americans for Prosperity) have spent more than all the organizations supporting Mr. Obama combined.
 
 <<PAC_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap ='Spending by Super PAC, stacked by candidate'>>=
-ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) + 
-  geom_bar(stat = "identity") + 
-  xlab("Benefiting Candidate") + 
-  ylab("Amount Spent") + 
-  scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC") +
-  theme_bw()
+pacPlot
 @
 

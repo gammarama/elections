@@ -6,6 +6,6 @@ In 2010, the United States Supreme Court released its decision on Citizens Unite
 In this report, we analyze independent expenditures filings from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election.  We subset these expenditures to analyze only those which were filed after the Republican primary, so that we can focus on those which benefit President Barack Obama and Governor Mitt Romney. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
 
 <<importdata, echo=FALSE, warning=FALSE, message=FALSE>>=
-source("../../Code/MergedCleanup.R")
+source("../../Code/Plots/Plots.R", chdir = TRUE)
 @
 

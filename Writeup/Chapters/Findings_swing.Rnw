@@ -5,34 +5,5 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 
 <<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=10, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Averages for Obama and Romney by swing state'>>=
-
-analyzeStateTrends <- function(state) {
-  polls.chosen <- subset(polls.data[-(6:7)], State %in% state)
-  polls.chosenm <- melt(polls.chosen, id = c("Date", "Pollster", "State"))
-  ggplot(polls.chosenm, aes(x=Date, y=value,colour=variable)) + 
-    scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
-    facet_wrap(facets = ~State) +
-    geom_smooth(method="loess") +
-    geom_point() +
-    scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
-    ylab("Percentage Support") +
-    annotate("text", x=as.Date("11/8/2012","%d/%m/%Y"), y=30, label="1", color="#FF0000", hjust=-0.5, alpha=0.2, size=3) + 
-    annotate("rect", xmin=as.Date("10/8/2012","%d/%m/%Y"), ymin=30, xmax=as.Date("11/8/2012","%d/%m/%Y"), ymax=45, fill="#FF0000", alpha=0.2) + 
-    annotate("text", x=as.Date("28/8/2012","%d/%m/%Y"), y=30, label="2", color="#FF0000", hjust=-0.7, alpha=0.2, size=3) + 
-    annotate("rect", xmin=as.Date("27/8/2012","%d/%m/%Y"), ymin=30, xmax=as.Date("30/8/2012","%d/%m/%Y"), ymax=45, fill="#FF0000", alpha=0.2) +
-    annotate("text", x=as.Date("5/9/2012","%d/%m/%Y"), y=60, label="3", color="#330099", hjust=-0.5, alpha=0.2, size=3) + 
-    annotate("rect", xmin=as.Date("4/9/2012","%d/%m/%Y"), ymin=45, xmax=as.Date("6/9/2012","%d/%m/%Y"), ymax=60, fill="#330099", alpha=0.2) +
-    annotate("text", x=as.Date("17/9/2012","%d/%m/%Y"), y=60, label="4", color="grey50", hjust=-0.5, alpha=0.4, size=3) + 
-    annotate("text", x=as.Date("17/9/2012","%d/%m/%Y"), y=30, label="4", color="grey50", hjust=-0.5, alpha=0.4, size=3) +
-    annotate("rect", xmin=as.Date("17/9/2012","%d/%m/%Y"), ymin=30, xmax=as.Date("18/9/2012","%d/%m/%Y"), ymax=60, fill="grey50", alpha=0.4) +
-    annotate("text", x=as.Date("3/10/2012","%d/%m/%Y"), y=60, label="5", color="grey50", hjust=-0.5, alpha=0.4, size=3) + 
-    annotate("text", x=as.Date("3/10/2012","%d/%m/%Y"), y=30, label="5", color="grey50", hjust=-0.5, alpha=0.4, size=3) +
-    annotate("rect", xmin=as.Date("3/10/2012","%d/%m/%Y"), ymin=30, xmax=as.Date("4/10/2012","%d/%m/%Y"), ymax=60, fill="grey50", alpha=0.4) +
-    theme_bw() +
-    theme(legend.position="bottom")
-}
-
-#list taken from http://www.realclearpolitics.com
-swing.states <- c("Colorado", "Florida", "Iowa", "Michigan", "Missouri", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin")
-analyzeStateTrends(swing.states)
+swingPlot
 @

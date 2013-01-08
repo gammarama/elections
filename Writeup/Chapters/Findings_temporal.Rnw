@@ -6,17 +6,5 @@ Figure \ref{fig:temporal_plot} displays the spending in each of the six categori
 Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates show increases since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Mr. Romney. A noticeable increase in spending on direct contact for Obama is also evident beginning in August, while the organizations benefiting Mr. Romney have maintained consistent spending in negative direct contact beginning in mid-May.
 
 <<temporal_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=12, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Total Weekly Spending by Super PACs in support or opposition of candidates', dependson='importdata'>>=
-ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + geom_point() + geom_line() + facet_grid(facets=bucket2~sup_opp) + 
-    scale_colour_manual(name = "Candidate who benefits", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) + 
-    xlab("Weeks") + 
-    ylab("Amount Spent (Log 10)") + 
-    annotate(geom = "rect", xmin = as.Date("2012-8-11", format="%Y-%m-%d"), xmax = as.Date("2012-8-12", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "#CC0033") + 
-    annotate(geom = "rect", xmin = as.Date("2012-8-28", format="%Y-%m-%d"), xmax = as.Date("2012-8-30", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "#CC0033") + 
-    annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "#3D64FF") + 
-    annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "grey50") + 
-    annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .2, fill = "grey50") + 
-    scale_y_log10(labels=scientific) +
-    theme_bw() +
-    theme(legend.position="bottom")
-
+temporalPlot
 @
