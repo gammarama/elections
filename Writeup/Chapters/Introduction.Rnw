@@ -7,5 +7,6 @@ In this report, we analyze independent expenditures filings from the Federal Ele
 
 <<importdata, echo=FALSE, warning=FALSE, message=FALSE>>=
 source("../../Code/Plots/Plots.R", chdir = TRUE)
+source("../../Code/Plots/MapPlots.R", chdir = TRUE)
 @
 
