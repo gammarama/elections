@@ -12,7 +12,7 @@
 \usepackage{longtable, pdflscape, textcase}
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+opts_chunk$set(concordance=TRUE)
 
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}

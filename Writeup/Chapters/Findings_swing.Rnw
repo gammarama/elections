@@ -4,6 +4,6 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 
 The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 
-<<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=10, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling Averages for Obama and Romney by swing state'>>=
+<<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=10, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47% video leaked, (5) first presidential debate, and (6) election day.'>>=
 swingPlot
 @
