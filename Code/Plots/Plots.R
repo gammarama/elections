@@ -48,10 +48,10 @@ temporalPlot <- ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + 
 #     theme_bw() +
 #     theme(legend.position="bottom")
 
-pacPlot <- ggplot(sum_exp.spep, aes(beneful_can, Sum, fill = spe_nam)) + 
+pacPlot <- ggplot(sum_exp.spep, aes(beneful_can, Sum/1000000, fill = spe_nam)) + 
     geom_bar(stat = "identity") + 
     xlab("Benefiting Candidate") + 
-    ylab("Amount Spent") + 
+    ylab("Amount Spent (In Millions of $)") +
     scale_fill_manual(values=c(blue, red), labels = substring(sum_exp.spep$spe_nam, 1, 30), name = "Super PAC") +
     theme_bw()
 
@@ -61,7 +61,6 @@ analyzeStateTrends <- function(state) {
   ggplot(polls.chosenm, aes(x=Date, y=value,colour=variable)) + 
     scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
     facet_wrap(facets = ~State, ncol = 2) +
-    scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
     ylab("Percentage Support") +
     annotate(geom = "rect", xmin = as.Date("2012-8-11", format="%Y-%m-%d"), xmax = as.Date("2012-8-12", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-8-28", format="%Y-%m-%d"), xmax = as.Date("2012-8-30", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
@@ -69,7 +68,7 @@ analyzeStateTrends <- function(state) {
     annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") +theme_bw() +
-    geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.5), y = 33.5, inherit.aes = FALSE, legend = FALSE) +
+    geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.5), y = 33.5, inherit.aes = FALSE, show_guide = FALSE) +
     geom_smooth(method="loess") +
     geom_point() +
     theme_bw() +
@@ -81,14 +80,16 @@ swing.states <- c("Colorado", "Florida", "Iowa", "Michigan", "Missouri", "Nevada
 swingPlot <- analyzeStateTrends(swing.states)
 
 labels.spending <- data.frame(yval=c(1e+04, 1e+04), xval=c(as.Date("28/5/2012","%d/%m/%Y"), as.Date("10/9/2012","%d/%m/%Y")), text=c("1", "2"))
-trendPlot <- qplot(Date, sum, data = num.weeks.sum, colour = beneful_can) + scale_y_log10() + geom_line() +
+trendPlot <- qplot(Date, sum, data = num.weeks.sum, colour = beneful_can) + 
+    scale_y_log10(label = math_format(format = log10)) +
+    geom_line() +
     #annotate("text", x=as.Date("14/7/2012","%d/%m/%Y"), y=5e+07, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=10) +
     scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
     ylab("Total Spending (Log 10)") + 
     scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
     annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = 0, ymax = Inf, fill="grey", alpha=0.3) +
-    geom_text(data=labels.spending[1,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE) +
-    geom_text(data=labels.spending[2,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE) +
+    geom_text(data=labels.spending[1,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE, show_guide = FALSE) +
+    geom_text(data=labels.spending[2,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE, show_guide = FALSE) +
     theme_bw() +
     theme(legend.position="bottom")
 
@@ -109,30 +110,30 @@ effectPlot <- qplot(Date, Obama.Romney, data = polls.data, colour = isNational, 
     theme(legend.position="bottom") +
     geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE)
 
-obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange, y=ObamaPollChange, colour = week)) +
+obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=ObamaPollChange, colour = week)) +
     geom_smooth(method="loess") +
     geom_point() +
     ylab("Change in % Support (Weekly Average)") +
-    xlab("Change in Super PAC Spending") +
-    annotate("text", x = final.df3$ObamaSpendChange[15], y = final.df3$ObamaPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$ObamaSpendChange[18], y = final.df3$ObamaPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$ObamaSpendChange[19], y = final.df3$ObamaPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$ObamaSpendChange[21], y = final.df3$ObamaPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$ObamaSpendChange[24], y = final.df3$ObamaPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
+    xlab("Change in Super PAC Spending (In Millions of $)") +
+    annotate("text", x = final.df3$ObamaSpendChange[15]/1000000, y = final.df3$ObamaPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$ObamaSpendChange[18]/1000000, y = final.df3$ObamaPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$ObamaSpendChange[19]/1000000, y = final.df3$ObamaPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$ObamaSpendChange[21]/1000000, y = final.df3$ObamaPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$ObamaSpendChange[24]/1000000, y = final.df3$ObamaPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
     theme_bw() +
     ylim(c(-6,11)) +
     theme(legend.position="bottom")
 
-romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange, y=RomneyPollChange, colour = week)) +
+romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange/1000000, y=RomneyPollChange, colour = week)) +
     geom_smooth(method="loess",colour = I("red")) +
     geom_point() +
     ylab("Change in % Support (Weekly Average)") +
-    xlab("Change in Super PAC Spending") +
-    annotate("text", x = final.df3$RomneySpendChange[15], y = final.df3$RomneyPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$RomneySpendChange[18], y = final.df3$RomneyPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$RomneySpendChange[19], y = final.df3$RomneyPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$RomneySpendChange[21], y = final.df3$RomneyPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
-    annotate("text", x = final.df3$RomneySpendChange[24], y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
+    xlab("Change in Super PAC Spending (In Millions of $)") +
+    annotate("text", x = final.df3$RomneySpendChange[15]/1000000, y = final.df3$RomneyPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$RomneySpendChange[18]/1000000, y = final.df3$RomneyPollChange[18], label = "2", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$RomneySpendChange[19]/1000000, y = final.df3$RomneyPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$RomneySpendChange[21]/1000000, y = final.df3$RomneyPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
+    annotate("text", x = final.df3$RomneySpendChange[24]/1000000, y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
     scale_colour_gradientn(colours = c("#850707", "#F78686")) +
     theme_bw() +
     # ylim(c(-6,12)) + 

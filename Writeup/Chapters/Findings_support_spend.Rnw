@@ -19,7 +19,7 @@ effectPlot
 
 Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated important events. The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
 
-<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4.5, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate', fig.show='hold'>>=
+<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4.5, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate', fig.show='hold', fig.align='center'>>=
 obamaEffectPlot
 romneyEffectPlot
 @
