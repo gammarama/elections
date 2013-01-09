@@ -11,10 +11,20 @@ swing.states <- c("Colorado", "Florida", "Iowa", "Missouri", "Michigan", "Nevada
 
 states$swing <- states$region %in% tolower(swing.states)
 
-swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = I("#9999FF"), alpha = swing) +
+swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = I("forestgreen"), alpha = swing) +
     theme_bw() +
     theme(aspect.ratio=1/1.5, legend.position = "none") +
-    geom_path(size = .1)
+    geom_path(size = .1) +
+    theme(axis.ticks = element_blank(),
+          axis.line=element_blank(),
+          axis.text.x=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+          panel.border=element_blank(),
+          panel.grid.major=element_blank(),
+          panel.grid.minor=element_blank())
 
 # 
 # pastElectionResults <- read.csv("../../Data/elections-1900-to-2012.csv")

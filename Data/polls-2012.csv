@@ -1,0 +1,1260 @@
+"Pollster","State","Date","Obama","Romney","isNational","Obama.Romney"
+"Politico/GWU/Battleground","National","2012-11-05",47,47,TRUE,0
+"Gravis Marketing","Ohio","2012-11-05",49,48,FALSE,1
+"Gravis Marketing","Florida","2012-11-05",49,49,FALSE,0
+"Rasmussen Reports","National","2012-11-05",48,49,TRUE,-1
+"IBD/TIPP","National","2012-11-05",50,49,TRUE,1
+"Mitchell Research","Michigan","2012-11-04",51,46,FALSE,5
+"Rasmussen Reports","New Hampshire","2012-11-04",50,48,FALSE,2
+"Gravis Marketing","Pennsylvania","2012-11-04",49,46,FALSE,3
+"Rasmussen Reports","Ohio","2012-11-04",49,49,FALSE,0
+"Florida Times Union/InAdv","Florida","2012-11-04",47,52,FALSE,-5
+"Rasmussen Reports","Virginia","2012-11-04",48,50,FALSE,-2
+"Huffington Post Projection","Washington DC","2012-11-04",87,8,FALSE,79
+"Huffington Post Projection","Louisiana","2012-11-04",37,58,FALSE,-21
+"Huffington Post Projection","Idaho","2012-11-04",30,65,FALSE,-35
+"New England College","New Hampshire","2012-11-04",50,46,FALSE,4
+"PPP","Colorado","2012-11-04",52,46,FALSE,6
+"PPP","Nevada","2012-11-04",51,47,FALSE,4
+"PPP","Ohio","2012-11-04",52,47,FALSE,5
+"PPP","Virginia","2012-11-04",51,47,FALSE,4
+"PPP","Florida","2012-11-04",50,49,FALSE,1
+"PPP","North Carolina","2012-11-04",49,49,FALSE,0
+"PPP","Iowa","2012-11-04",50,48,FALSE,2
+"PPP","New Hampshire","2012-11-04",50,48,FALSE,2
+"Rasmussen Reports","National","2012-11-04",48,49,TRUE,-1
+"ARG","Iowa","2012-11-04",48,49,FALSE,-1
+"ARG","New Hampshire","2012-11-04",49,49,FALSE,0
+"CNN/Opinion Research","National","2012-11-04",49,49,TRUE,0
+"Ipsos Poll for Reuters","Virginia","2012-11-04",47,46,FALSE,1
+"Ipsos Poll for Reuters","Ohio","2012-11-04",48,44,FALSE,4
+"Ipsos Poll for Reuters","Florida","2012-11-04",46,46,FALSE,0
+"Ipsos Poll for Reuters","Colorado","2012-11-04",48,48,FALSE,0
+"ABC News/Wash Post","National","2012-11-04",50,47,TRUE,3
+"Gallup","National","2012-11-04",48,49,TRUE,-1
+"Monmouth/SurveyUSA/Braun","National","2012-11-04",48,48,TRUE,0
+"SurveyUSA","Ohio","2012-11-04",49,44,FALSE,5
+"WMUR/UNH","New Hampshire","2012-11-04",51,48,FALSE,3
+"Nelson Brothers","South Dakota","2012-11-04",41,53,FALSE,-12
+"Ohio poll/Univ of Cin","Ohio","2012-11-04",50,49,FALSE,1
+"PPP","Missouri","2012-11-03",45,53,FALSE,-8
+"PPP","Montana","2012-11-03",45,52,FALSE,-7
+"PPP","Arizona","2012-11-03",46,53,FALSE,-7
+"PPP","Wisconsin","2012-11-03",51,48,FALSE,3
+"PPP","Pennsylvania","2012-11-03",52,46,FALSE,6
+"PPP","Minnesota","2012-11-03",53,45,FALSE,8
+"KSTP/Survey USA","Minnesota","2012-11-03",52,41,FALSE,11
+"JZ Analytics","National","2012-11-03",47,47,TRUE,0
+"JZ Analytics","Ohio","2012-11-03",50,42,FALSE,8
+"JZ Analytics","Virginia","2012-11-03",50,44,FALSE,6
+"JZ Analytics","Florida","2012-11-03",47,49,FALSE,-2
+"Morning Call","Pennsylvania","2012-11-03",49,46,FALSE,3
+"NBC News/Wall St. Jrnl","National","2012-11-03",48,47,TRUE,1
+"Rasmussen Reports","National","2012-11-03",49,49,TRUE,0
+"PPP","Michigan","2012-11-03",52,46,FALSE,6
+"PPP","Washington","2012-11-03",53,46,FALSE,7
+"Umass/Boston Herald","Massachusetts","2012-11-03",57,37,FALSE,20
+"Pew Research","National","2012-11-03",50,47,TRUE,3
+"ABC News/Wash Post","National","2012-11-03",49,48,TRUE,1
+"YouGov","Colorado","2012-11-03",48,47,FALSE,1
+"YouGov","Florida","2012-11-03",47,48,FALSE,-1
+"YouGov","Iowa","2012-11-03",48,47,FALSE,1
+"YouGov","North Carolina","2012-11-03",47,49,FALSE,-2
+"YouGov","Virginia","2012-11-03",48,46,FALSE,2
+"YouGov","New Hampshire","2012-11-03",47,43,FALSE,4
+"YouGov","Nevada","2012-11-03",49,45,FALSE,4
+"YouGov","Ohio","2012-11-03",49,46,FALSE,3
+"YouGov","Wisconsin","2012-11-03",50,46,FALSE,4
+"YouGov","California","2012-11-03",55,40,FALSE,15
+"YouGov","Connecticut","2012-11-03",54,39,FALSE,15
+"YouGov","Illinois","2012-11-03",57,38,FALSE,19
+"YouGov","Massachusetts","2012-11-03",57,37,FALSE,20
+"YouGov","Maryland","2012-11-03",59,37,FALSE,22
+"YouGov","Michigan","2012-11-03",51,44,FALSE,7
+"YouGov","Minnesota","2012-11-03",50,43,FALSE,7
+"YouGov","New Jersey","2012-11-03",53,41,FALSE,12
+"YouGov","New Mexico","2012-11-03",49,43,FALSE,6
+"YouGov","New York","2012-11-03",59,36,FALSE,23
+"YouGov","Pennsylvania","2012-11-03",52,44,FALSE,8
+"YouGov","Washington","2012-11-03",54,40,FALSE,14
+"YouGov","Arizona","2012-11-03",44,52,FALSE,-8
+"YouGov","Georgia","2012-11-03",44,52,FALSE,-8
+"YouGov","Indiana","2012-11-03",44,51,FALSE,-7
+"YouGov","Missouri","2012-11-03",42,53,FALSE,-11
+"YouGov","Tennessee","2012-11-03",42,53,FALSE,-11
+"YouGov","Texas","2012-11-03",38,57,FALSE,-19
+"SurveyUSA","Missouri","2012-11-03",43,50,FALSE,-7
+"Columbus Dispatch","Ohio","2012-11-03",50,48,FALSE,2
+"Baydoun/Foster","Michigan","2012-11-02",46,47,FALSE,-1
+"NBC/WSJ/Marist","Virginia","2012-11-02",48,47,FALSE,1
+"PPP","Maine","2012-11-02",55,42,FALSE,13
+"PPP","Connecticut","2012-11-02",55,42,FALSE,13
+"PPP","Massachusetts","2012-11-02",57,42,FALSE,15
+"WMUR/UNH","New Hampshire","2012-11-02",48,48,FALSE,0
+"Rasmussen Reports","National","2012-11-02",48,48,TRUE,0
+"ABC News/Wash Post","National","2012-11-02",48,48,TRUE,0
+"Des Moines Register","Iowa","2012-11-02",47,42,FALSE,5
+"Rasmussen Reports","Indiana","2012-11-01",43,52,FALSE,-9
+"Rasmussen Reports","Ohio","2012-11-01",49,49,FALSE,0
+"Gravis Marketing","New Hampshire","2012-11-01",50,49,FALSE,1
+"Rasmussen Reports","Michigan","2012-11-01",52,47,FALSE,5
+"Gravis Marketing","Iowa","2012-11-01",49,45,FALSE,4
+"WeAskAmerica","Nebraska","2012-11-01",41,54,FALSE,-13
+"NBC/WSJ/Marist","Ohio","2012-11-01",51,45,FALSE,6
+"TBT/Herald/Mason Dixon","Florida","2012-11-01",45,51,FALSE,-6
+"NBC/WSJ/Marist","Florida","2012-11-01",49,47,FALSE,2
+"WeAskAmerica","Ohio","2012-11-01",50,46,FALSE,4
+"WeAskAmerica","Virginia","2012-11-01",49,48,FALSE,1
+"WeAskAmerica","Wisconsin","2012-11-01",52,45,FALSE,7
+"CNN/Opinion Research","Ohio","2012-11-01",50,47,FALSE,3
+"Rasmussen Reports","National","2012-11-01",48,48,TRUE,0
+"Politico/GWU/Battleground","National","2012-11-01",48,48,TRUE,0
+"ABC News/Wash Post","National","2012-11-01",48,49,TRUE,-1
+"Western NE University","Massachusetts","2012-11-01",58,40,FALSE,18
+"NMB Research/AFF","Minnesota","2012-10-31",45,46,FALSE,-1
+"Critical Insights","Maine","2012-10-31",49,42,FALSE,7
+"NMB Research/AFF","Minnesota","2012-10-31",45,46,FALSE,-1
+"Tribune Review/Susquehana","Pennsylvania","2012-10-31",47,47,FALSE,0
+"Mason Dixon","Montana","2012-10-31",43,53,FALSE,-10
+"New England College","New Hampshire","2012-10-31",50,44,FALSE,6
+"Rasmussen Reports","National","2012-10-31",47,49,TRUE,-2
+"PPP","North Carolina","2012-10-31",49,49,FALSE,0
+"Denver Post/SurveyUSA","Colorado","2012-10-31",47,45,FALSE,2
+"ABC News/Wash Post","National","2012-10-31",49,48,TRUE,1
+"SurveyUSA","Washington","2012-10-31",54,40,FALSE,14
+"CNN/Opinion Research","Colorado","2012-10-31",50,48,FALSE,2
+"The Washington Poll","Washington","2012-10-31",57,36,FALSE,21
+"Rasmussen Reports","Iowa","2012-10-30",48,49,FALSE,-1
+"WeAskAmerica","Florida","2012-10-30",49,50,FALSE,-1
+"WeAskAmerica","Colorado","2012-10-30",50,47,FALSE,3
+"WeAskAmerica","Iowa","2012-10-30",49,47,FALSE,2
+"WeAskAmerica","Missouri","2012-10-30",42,54,FALSE,-12
+"Gravis Marketing","Florida","2012-10-30",47,50,FALSE,-3
+"WeAskAmerica","Illinois","2012-10-30",57,41,FALSE,16
+"Howey/DePauw","Indiana","2012-10-30",41,51,FALSE,-10
+"Fox News","National","2012-10-30",46,46,TRUE,0
+"Rasmussen Reports","National","2012-10-30",47,49,TRUE,-2
+"ABC News/Wash Post","National","2012-10-30",49,49,TRUE,0
+"Field","California","2012-10-30",54,39,FALSE,15
+"Ohio poll/Univ of Cin","Ohio","2012-10-30",48,46,FALSE,2
+"Rasmussen Reports","Montana","2012-10-29",43,53,FALSE,-10
+"Rasmussen Reports","Wisconsin","2012-10-29",49,49,FALSE,0
+"Rasmussen Reports","Colorado","2012-10-29",47,50,FALSE,-3
+"NBC/WSJ/Marist","Wisconsin","2012-10-29",49,46,FALSE,3
+"NBC/WSJ/Marist","New Hampshire","2012-10-29",49,47,FALSE,2
+"NBC/WSJ/Marist","Iowa","2012-10-29",50,44,FALSE,6
+"Detroit News","Michigan","2012-10-29",48,45,FALSE,3
+"Rasmussen Tracking","National","2012-10-29",47,49,TRUE,-2
+"EPIC MRA","Michigan","2012-10-29",48,42,FALSE,6
+"ABC News/Wash Post","National","2012-10-29",48,49,TRUE,-1
+"SurveyUSA","Ohio","2012-10-29",48,45,FALSE,3
+"SurveyUSA","North Carolina","2012-10-29",45,50,FALSE,-5
+"WPR/St.Norbert","Wisconsin","2012-10-29",51,42,FALSE,9
+"LVRJ/SurveyUSA","Nevada","2012-10-29",50,46,FALSE,4
+"Rasmussen Reports","Ohio","2012-10-28",48,50,FALSE,-2
+"KSTP/Survey USA","Minnesota","2012-10-28",50,43,FALSE,7
+"Mason Dixon","North Dakota","2012-10-28",40,54,FALSE,-14
+"Rasmussen Tracking","National","2012-10-28",47,49,TRUE,-2
+"PPP","Ohio","2012-10-28",51,47,FALSE,4
+"PPP","Florida","2012-10-28",49,48,FALSE,1
+"PPP","New Hampshire","2012-10-28",49,47,FALSE,2
+"ARG","National","2012-10-28",48,48,TRUE,0
+"National Journal","National","2012-10-28",50,45,TRUE,5
+"Marquette University","Wisconsin","2012-10-28",51,43,FALSE,8
+"CBS News/NY Times","National","2012-10-28",48,47,TRUE,1
+"The Oregonian","Oregon","2012-10-28",47,41,FALSE,6
+"SurveyUSA","Georgia","2012-10-28",44,52,FALSE,-8
+"Suffolk/7News","Massachusetts","2012-10-28",63,31,FALSE,32
+"CNN/Opinion Research","Florida","2012-10-28",49,50,FALSE,-1
+"ARG","Colorado","2012-10-28",47,48,FALSE,-1
+"Pew Research","National","2012-10-28",47,47,TRUE,0
+"Boston Globe","Massachusetts","2012-10-28",52,38,FALSE,14
+"CBS/NYT/Quinnipiac","Virginia","2012-10-28",49,47,FALSE,2
+"CBS/NYT/Quinnipiac","Ohio","2012-10-28",50,45,FALSE,5
+"CBS/NYT/Quinnipiac","Florida","2012-10-28",48,47,FALSE,1
+"Franklin Marshall","Pennsylvania","2012-10-28",49,45,FALSE,4
+"Rasmussen Reports","Battleground State","2012-10-28",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-28",46,51,TRUE,-5
+"Gravis Marketing","Ohio","2012-10-27",50,49,FALSE,1
+"SurveyUSA","Florida","2012-10-27",47,47,FALSE,0
+"Rasmussen Tracking","National","2012-10-27",47,50,TRUE,-3
+"WPRI/Fleming","Rhode Island","2012-10-27",54,33,FALSE,21
+"ABC News/Wash Post","National","2012-10-27",48,49,TRUE,-1
+"IBD/TIPP","National","2012-10-27",45,44,TRUE,1
+"Rasmussen Reports","Battleground State","2012-10-27",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-27",46,50,TRUE,-4
+"Univ. of Iowa","Iowa","2012-10-27",44,45,FALSE,-1
+"Gravis Marketing","Virginia","2012-10-26",48,48,FALSE,0
+"Honolulu Civil Beat/MRG","Hawaii","2012-10-26",61,34,FALSE,27
+"Rasmussen Tracking","National","2012-10-26",46,52,TRUE,-6
+"Roanoke College","Virginia","2012-10-26",44,49,FALSE,-5
+"ABC News/Wash Post","National","2012-10-26",48,49,TRUE,-1
+"Washington Post","Virginia","2012-10-26",51,47,FALSE,4
+"Elon Univ.","North Carolina","2012-10-26",45,45,FALSE,0
+"IBD/TIPP","National","2012-10-26",47,45,TRUE,2
+"Rasmussen Reports","Battleground State","2012-10-26",45,51,FALSE,-6
+"Gallup Tracking","National","2012-10-26",46,51,TRUE,-5
+"Rasmussen Reports","Massachusetts","2012-10-25",59,40,FALSE,19
+"Rasmussen Reports","North Carolina","2012-10-25",46,52,FALSE,-6
+"Rasmussen Reports","Wisconsin","2012-10-25",49,49,FALSE,0
+"Rasmussen Reports","Florida","2012-10-25",48,50,FALSE,-2
+"NPR","National","2012-10-25",47,48,TRUE,-1
+"Star Tribune/Mason Dixon","Minnesota","2012-10-25",47,44,FALSE,3
+"Philadelphia Inquirer","Pennsylvania","2012-10-25",49,43,FALSE,6
+"Philadelphia Inquirer","New Jersey","2012-10-25",51,41,FALSE,10
+"Post Dispatch/Mason Dixon","Missouri","2012-10-25",41,54,FALSE,-13
+"CNN/Opinion Research","Ohio","2012-10-25",50,46,FALSE,4
+"Purple Strategies","Ohio","2012-10-25",46,44,FALSE,2
+"Purple Strategies","Virginia","2012-10-25",47,47,FALSE,0
+"Purple Strategies","Colorado","2012-10-25",47,46,FALSE,1
+"Rasmussen Tracking","National","2012-10-25",47,50,TRUE,-3
+"ARG","Ohio","2012-10-25",49,47,FALSE,2
+"New England College","New Hampshire","2012-10-25",49,46,FALSE,3
+"PPP","Colorado","2012-10-25",51,47,FALSE,4
+"PPP","North Carolina","2012-10-25",48,48,FALSE,0
+"Politicio/GWU/Battleground","National","2012-10-25",49,48,TRUE,1
+"ABC News/Wash Post","National","2012-10-25",48,49,TRUE,-1
+"IBD/TIPP","National","2012-10-25",47,45,TRUE,2
+"Rasmussen Reports","Battleground State","2012-10-25",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-25",46,51,TRUE,-5
+"Gravis Marketing","North Carolina","2012-10-24",45,53,FALSE,-8
+"Gravis marketing","Iowa","2012-10-24",50,46,FALSE,4
+"Gravis marketing","Nevada","2012-10-24",50,49,FALSE,1
+"Rasmussen Reports","Virginia","2012-10-24",48,50,FALSE,-2
+"Gravis Marketing","Florida","2012-10-24",49,50,FALSE,-1
+"Rasmussen Reports","Pennsylvania","2012-10-24",51,46,FALSE,5
+"Fox News","Virginia","2012-10-24",45,47,FALSE,-2
+"NBC/WSJ/Marist","Nevada","2012-10-24",50,47,FALSE,3
+"NBC/WSJ/Marist","Colorado","2012-10-24",48,48,FALSE,0
+"Siena","New York","2012-10-24",59,35,FALSE,24
+"Sunshine State News/VSS","Florida","2012-10-24",46,51,FALSE,-5
+"Rasmussen Tracking","National","2012-10-24",47,50,TRUE,-3
+"PPP","Nevada","2012-10-24",51,47,FALSE,4
+"IBD/TIPP","National","2012-10-24",47,45,TRUE,2
+"Sooner Poll","Oklahoma","2012-10-24",33,59,FALSE,-26
+"Rasmussen Reports","Battleground State","2012-10-24",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-24",47,50,TRUE,-3
+"Rasmussen Reports","Ohio","2012-10-23",48,48,FALSE,0
+"Rasmussen Reports","New Hampshire","2012-10-23",48,50,FALSE,-2
+"Rasmussen Reports","Nevada","2012-10-23",50,48,FALSE,2
+"Baydoun/Foster","Michigan","2012-10-23",47,47,FALSE,0
+"Time","Ohio","2012-10-23",49,44,FALSE,5
+"Rasmussen Tracking","National","2012-10-23",46,50,TRUE,-4
+"Baltimore Sun","Maryland","2012-10-23",55,36,FALSE,19
+"ABC News/Wash Post","National","2012-10-23",48,49,TRUE,-1
+"Associated Press/GFK","National","2012-10-23",45,47,TRUE,-2
+"Cincinati Enquirer/Ohio","Ohio","2012-10-23",49,49,FALSE,0
+"IBD/TIPP","National","2012-10-23",47,44,TRUE,3
+"Rasmussen Reports","Battleground State","2012-10-23",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-23",47,50,TRUE,-3
+"WBUR/MassINC","Massachusetts","2012-10-22",46,36,FALSE,10
+"SurveyUSA","Ohio","2012-10-22",47,44,FALSE,3
+"Rasmussen Tracking","National","2012-10-22",46,50,TRUE,-4
+"Quinnipiac","Connecticut","2012-10-22",55,41,FALSE,14
+"ABC News/Wash Post","National","2012-10-22",48,49,TRUE,-1
+"ARG","New Hampshire","2012-10-22",47,49,FALSE,-2
+"ARG","Nevada","2012-10-22",49,47,FALSE,2
+"IBD/TIPP","National","2012-10-22",47,45,TRUE,2
+"Rasmussen Reports","Battleground State","2012-10-22",45,50,FALSE,-5
+"Gallup Tracking","National","2012-10-22",46,51,TRUE,-5
+"Rasmussen Reports","Connecticut","2012-10-21",52,45,FALSE,7
+"Rasmussen Reports","Minnesota","2012-10-21",51,46,FALSE,5
+"Gravis Marketing","Pennsylvania","2012-10-21",48,45,FALSE,3
+"Rasmussen Reports","Colorado","2012-10-21",46,50,FALSE,-4
+"Rasmussen Reports","Iowa","2012-10-21",48,48,FALSE,0
+"Civitas","North Carolina","2012-10-21",47,48,FALSE,-1
+"SurveyUSA","Connecticut","2012-10-21",53,40,FALSE,13
+"Rasmussen Tracking","National","2012-10-21",47,49,TRUE,-2
+"PPP","Missouri","2012-10-21",46,52,FALSE,-6
+"ARG","National","2012-10-21",47,49,TRUE,-2
+"Marist","New York","2012-10-21",61,35,FALSE,26
+"ABC News/Wash Post","National","2012-10-21",49,48,TRUE,1
+"Monmouth/SurveyUSA/Braun","National","2012-10-21",45,48,TRUE,-3
+"Suffolk","Ohio","2012-10-21",47,47,FALSE,0
+"UNH","New Hampshire","2012-10-21",51,42,FALSE,9
+"Morning Call","Pennsylvania","2012-10-21",50,45,FALSE,5
+"IBD/TIPP tracking","National","2012-10-21",47,43,TRUE,4
+"St. Cloud State U.","Minnesota","2012-10-21",53,45,FALSE,8
+"LA Times/USC","California","2012-10-21",54,40,FALSE,14
+"Rasmussen Reports","Battleground State","2012-10-21",46,49,FALSE,-3
+"Gallup Tracking","National","2012-10-21",45,51,TRUE,-6
+"PPIC","California","2012-10-21",53,41,FALSE,12
+"WashTimes/JZ Analytics","National","2012-10-20",50,47,TRUE,3
+"Rasmussen Tracking","National","2012-10-20",47,49,TRUE,-2
+"PPP","Ohio","2012-10-20",49,48,FALSE,1
+"Strategies 360","Washington","2012-10-20",52,39,FALSE,13
+"CBS News","National","2012-10-20",48,46,TRUE,2
+"CBS/Quinnipiac","Ohio","2012-10-20",50,45,FALSE,5
+"NBC News/Wall St. Jrnl","National","2012-10-20",47,47,TRUE,0
+"IBD/TIPP tracking","National","2012-10-20",48,42,TRUE,6
+"Rasmussen Reports","Battleground State","2012-10-20",46,50,FALSE,-4
+"Gravis Marketing","Ohio","2012-10-19",47,47,FALSE,0
+"Rasmussen Tracking","National","2012-10-19",48,49,TRUE,-1
+"PPP","New Hampshire","2012-10-19",48,49,FALSE,-1
+"PPP","Iowa","2012-10-19",48,49,FALSE,-1
+"IBD/TIPP tracking","National","2012-10-19",47,44,TRUE,3
+"Rasmussen Reports","Battleground State","2012-10-19",46,50,FALSE,-4
+"Gallup Tracking","National","2012-10-19",45,51,TRUE,-6
+"Rasmussen Reports","Wisconsin","2012-10-18",50,48,FALSE,2
+"Rasmussen Reports","Florida","2012-10-18",46,51,FALSE,-5
+"Rasmussen Reports","Virginia","2012-10-18",47,50,FALSE,-3
+"SurveyUSA","New York","2012-10-18",62,33,FALSE,29
+"Rasmussen Reports","North Dakota","2012-10-18",40,51,FALSE,-11
+"PPP","Florida","2012-10-18",47,48,FALSE,-1
+"SurveyUSA","Florida","2012-10-18",47,46,FALSE,1
+"SurveyUSA","New Jersey","2012-10-18",54,40,FALSE,14
+"Fox News","Ohio","2012-10-18",46,43,FALSE,3
+"Fox News","Florida","2012-10-18",45,48,FALSE,-3
+"CNN/Opinion Research","Florida","2012-10-18",48,49,FALSE,-1
+"Rasmussen Tracking","National","2012-10-18",48,48,TRUE,0
+"SurveyUSA","Oregon","2012-10-18",49,42,FALSE,7
+"PPP","Colorado","2012-10-18",50,47,FALSE,3
+"Politico/GWU/Battleground","National","2012-10-18",47,49,TRUE,-2
+"IBD/TIPP Tracking","National","2012-10-18",47,45,TRUE,2
+"Rasmussen Reports","Battleground State","2012-10-18",47,49,FALSE,-2
+"Richard Stockton Col","New Jersey","2012-10-18",53,38,FALSE,15
+"Gallup Tracking","National","2012-10-18",45,51,TRUE,-6
+"Rasmussen Reports","Missouri","2012-10-17",43,54,FALSE,-11
+"EPIC MRA","Michigan","2012-10-17",52,46,FALSE,6
+"Rasmussen Reports","Ohio","2012-10-17",49,48,FALSE,1
+"Rasmussen Reports","North Carolina","2012-10-17",46,52,FALSE,-6
+"NBC/WSJ/Marist","Iowa","2012-10-17",51,43,FALSE,8
+"NBC/WSJ/Marist","Wisconsin","2012-10-17",51,45,FALSE,6
+"Rasmussen Tracking","National","2012-10-17",47,49,TRUE,-2
+"IBD/TIPP Tracking","National","2012-10-17",46,46,TRUE,0
+"Rasmussen Reports","Battleground State","2012-10-17",48,49,FALSE,-1
+"Gallup Tracking","National","2012-10-17",45,52,TRUE,-7
+"Rasmussen Tracking","National","2012-10-16",48,49,TRUE,-1
+"Hartford Courant/Uconn","National","2012-10-16",48,45,TRUE,3
+"Hartford Courant/Uconn","Connecticut","2012-10-16",51,37,FALSE,14
+"IBD/TIPP Tracking","National","2012-10-16",47,45,TRUE,2
+"Rasmussen Reports","Battleground State","2012-10-16",50,47,FALSE,3
+"Gallup Tracking","National","2012-10-16",45,51,TRUE,-6
+"The Washington Poll","Washington","2012-10-16",52,43,FALSE,9
+"Rasmussen Reports","New Hampshire","2012-10-15",50,49,FALSE,1
+"Rasmussen Reports","Nevada","2012-10-15",50,47,FALSE,3
+"Rasmussen Reports","Washington","2012-10-15",55,42,FALSE,13
+"WeAskAmerica","Colorado","2012-10-15",47,48,FALSE,-1
+"WeAskAmerica","Iowa","2012-10-15",49,46,FALSE,3
+"Rasmussen Tracking","National","2012-10-15",47,49,TRUE,-2
+"Forum/ESSman","North Dakota","2012-10-15",32,57,FALSE,-25
+"SurveyUSA","Ohio","2012-10-15",45,42,FALSE,3
+"Washington Post","Maryland","2012-10-15",60,36,FALSE,24
+"Reason Rupe","California","2012-10-15",53,38,FALSE,15
+"LVRJ/SurveyUSA","Nevada","2012-10-15",48,45,FALSE,3
+"IBD/TIPP Tracking","National","2012-10-15",47,46,TRUE,1
+"Rasmussen Reports","Battleground State","2012-10-15",49,47,FALSE,2
+"Gallup Tracking","National","2012-10-15",46,50,TRUE,-4
+"Rasmussen Reports","Montana","2012-10-14",45,53,FALSE,-8
+"Siena","Connecticut","2012-10-14",53,38,FALSE,15
+"Gravis Marketing","Florida","2012-10-14",48,49,FALSE,-1
+"KSTP/Survey USA","Minnesota","2012-10-14",50,40,FALSE,10
+"SurveyUSA","Washington","2012-10-14",54,40,FALSE,14
+"Suffolk/7News","New Hampshire","2012-10-14",47,47,FALSE,0
+"Quinnipiac","Pennsylvania","2012-10-14",50,46,FALSE,4
+"PPP","Pennsylvania","2012-10-14",51,44,FALSE,7
+"Rasmussen Tracking","National","2012-10-14",48,49,TRUE,-1
+"ARG","Virginia","2012-10-14",47,48,FALSE,-1
+"PPP","North Carolina","2012-10-14",47,49,FALSE,-2
+"PPP","Florida","2012-10-14",48,49,FALSE,-1
+"ARG","National","2012-10-14",47,48,TRUE,-1
+"Marquette University","Wisconsin","2012-10-14",49,48,FALSE,1
+"ARG","Iowa","2012-10-14",48,48,FALSE,0
+"Neighborhood Research","New Jersey","2012-10-14",48,41,FALSE,7
+"Quinnipiac","New Jersey","2012-10-14",51,43,FALSE,8
+"Morning Call","Pennsylvania","2012-10-14",49,45,FALSE,4
+"The Arkansas Poll","Arkansas","2012-10-14",31,58,FALSE,-27
+"IBD/TIPP Tracking","National","2012-10-14",47,47,TRUE,0
+"Rasmussen Reports","Battleground State","2012-10-14",48,48,FALSE,0
+"Gallup Tracking","National","2012-10-14",47,49,TRUE,-2
+"Wenzel Strategies","Missouri","2012-10-13",41,55,FALSE,-14
+"PPP","Ohio","2012-10-13",51,46,FALSE,5
+"Susquehanna","Pennsylvania","2012-10-13",45,49,FALSE,-4
+"Rasmussen Tracking","National","2012-10-13",47,49,TRUE,-2
+"ABC News/Wash Post","National","2012-10-13",49,46,TRUE,3
+"IBD/TIPP Tracking","National","2012-10-13",47,46,TRUE,1
+"Gallup Tracking","National","2012-10-13",47,49,TRUE,-2
+"Rasmussen Tracking","National","2012-10-12",48,49,TRUE,-1
+"Atlanta journal","Georgia","2012-10-12",43,51,FALSE,-8
+"IBD/TIPP Tracking","National","2012-10-12",46,46,TRUE,0
+"Gallup Tracking","National","2012-10-12",47,49,TRUE,-2
+"Rasmussen Reports","Virginia","2012-10-11",47,49,FALSE,-2
+"Rasmussen Reports","Florida","2012-10-11",47,51,FALSE,-4
+"Rasmussen Reports","Michigan","2012-10-11",52,45,FALSE,7
+"Rasmussen Reports","Indiana","2012-10-11",41,54,FALSE,-13
+"Albuquerque Journal","New Mexico","2012-10-11",49,39,FALSE,10
+"Rasmussen Tracking","National","2012-10-11",47,48,TRUE,-1
+"ARG","New Hampshire","2012-10-11",46,50,FALSE,-4
+"PPP","Massachusetts","2012-10-11",55,41,FALSE,14
+"ARG","Florida","2012-10-11",46,49,FALSE,-3
+"Politico/GWU/Battleground","National","2012-10-11",49,48,TRUE,1
+"IBD/TIPP Tracking","National","2012-10-11",46,46,TRUE,0
+"Gravis Marketing","Colorado","2012-10-11",48,46,FALSE,2
+"Gallup Tracking","National","2012-10-11",47,49,TRUE,-2
+"Rasmussen Reports","Massachusetts","2012-10-10",57,42,FALSE,15
+"Rasmussen Reports","Ohio","2012-10-10",48,47,FALSE,1
+"LE&A/Demo Research","Michigan","2012-10-10",44,41,FALSE,3
+"Denver Post/SurveyUSA","Colorado","2012-10-10",47,48,FALSE,-1
+"TBT/Herald/Mason Dixon","Florida","2012-10-10",44,51,FALSE,-7
+"Monmouth/SurveyUSA/Braun","National","2012-10-10",46,47,TRUE,-1
+"Rasmussen Tracking","National","2012-10-10",48,47,TRUE,1
+"PPP","Nevada","2012-10-10",51,47,FALSE,4
+"PPP","Montana","2012-10-10",41,52,FALSE,-11
+"Gravis Marketing","Ohio","2012-10-10",45,46,FALSE,-1
+"Behavior Research Center","Arizona","2012-10-10",44,42,FALSE,2
+"Gallup Tracking","National","2012-10-10",47,48,TRUE,-1
+"Rasmussen Reports","North Carolina","2012-10-09",48,51,FALSE,-3
+"CBS/NYT/Quinnipiac","Wisconsin","2012-10-09",50,47,FALSE,3
+"Rasmussen Reports","New Hampshire","2012-10-09",48,48,FALSE,0
+"Rasmussen Reports","Wisconsin","2012-10-09",51,49,FALSE,2
+"Rasmussen Reports","Pennsylvania","2012-10-09",51,46,FALSE,5
+"NBC/WSJ/Marist","Ohio","2012-10-09",51,45,FALSE,6
+"NBC/WSJ/Marist","Florida","2012-10-09",48,47,FALSE,1
+"NBC/WSJ/Marist","Virginia","2012-10-09",47,48,FALSE,-1
+"SurveyUSA","California","2012-10-09",53,39,FALSE,14
+"Fox News","National","2012-10-09",45,46,TRUE,-1
+"Rasmussen Tracking","National","2012-10-09",47,48,TRUE,-1
+"Suffolk/KSNV","Nevada","2012-10-09",47,45,FALSE,2
+"CBS/NYT/Quinnipiac","Colorado","2012-10-09",47,48,FALSE,-1
+"CBS/NYT/Quinnipiac","Virginia","2012-10-09",51,46,FALSE,5
+"IBD/TIPP Tracking","National","2012-10-09",44,49,TRUE,-5
+"Gallup Tracking","National","2012-10-09",48,48,TRUE,0
+"UNF","Florida","2012-10-09",49,45,FALSE,4
+"Rasmussen Reports","New Mexico","2012-10-08",54,43,FALSE,11
+"Rasmussen Reports","Nevada","2012-10-08",47,47,FALSE,0
+"NMB Research/AFF","Minnesota","2012-10-08",47,43,FALSE,4
+"Detroit News","Michigan","2012-10-08",49,42,FALSE,7
+"Rasmussen Tracking","National","2012-10-08",48,48,TRUE,0
+"Gravis Marketing","North Carolina","2012-10-08",41,50,FALSE,-9
+"ARG","National","2012-10-08",47,48,TRUE,-1
+"Gravis Marketing","Michigan","2012-10-08",46,44,FALSE,2
+"SurveyUSA","Ohio","2012-10-08",45,44,FALSE,1
+"CNN/Opinion Research","Ohio","2012-10-08",51,47,FALSE,4
+"ARG","Ohio","2012-10-08",47,48,FALSE,-1
+"ARG","Colorado","2012-10-08",46,50,FALSE,-4
+"PPP","Minnesota","2012-10-08",53,43,FALSE,10
+"Philadelphia Inquirer","Pennsylvania","2012-10-08",50,42,FALSE,8
+"Philadelphia Inquirer","New Jersey","2012-10-08",51,40,FALSE,11
+"LVRJ/SurveyUSA","Nevada","2012-10-08",47,46,FALSE,1
+"IBD/TIPP Tracking","National","2012-10-08",45,47,TRUE,-2
+"Gallup Tracking","National","2012-10-08",47,49,TRUE,-2
+"Rasmussen Reports","Connecticut","2012-10-07",51,45,FALSE,6
+"Rasmussen Reports","Colorado","2012-10-07",49,48,FALSE,1
+"Rasmussen Reports","Iowa","2012-10-07",49,47,FALSE,2
+"WBUR/MassINC","Massachusetts","2012-10-07",52,36,FALSE,16
+"Rasmussen Tracking","National","2012-10-07",48,48,TRUE,0
+"Pew Research","National","2012-10-07",45,49,TRUE,-4
+"PPP","Virginia","2012-10-07",50,47,FALSE,3
+"EPIC MRA","Michigan","2012-10-06",48,45,FALSE,3
+"Susquehanna","Pennsylvania","2012-10-06",47,45,FALSE,2
+"Gallup Tracking","National","2012-10-06",47,47,TRUE,0
+"Rasmussen Tracking","National","2012-10-06",47,49,TRUE,-2
+"PPP","Wisconsin","2012-10-06",49,47,FALSE,2
+"WMUR/UNH","New Hampshire","2012-10-06",47,41,FALSE,6
+"Gallup Tracking","National","2012-10-06",49,46,TRUE,3
+"Baydoun/Foster","Michigan","2012-10-05",49,46,FALSE,3
+"University of Denver","Colorado","2012-10-05",47,43,FALSE,4
+"Mason Dixon","North Dakota","2012-10-05",40,54,FALSE,-14
+"Rasmussen Tracking","National","2012-10-05",47,49,TRUE,-2
+"Siena","Pennsylvania","2012-10-05",43,40,FALSE,3
+"Gallup Tracking","National","2012-10-05",49,46,TRUE,3
+"Brown University","Rhode Island","2012-10-05",58,32,FALSE,26
+"WeAskAmerica","Florida","2012-10-04",46,49,FALSE,-3
+"Rasmussen Tracking","Florida","2012-10-04",47,49,FALSE,-2
+"Rasmussen Reports","Virginia","2012-10-04",48,49,FALSE,-1
+"WeAskAmerica","Virginia","2012-10-04",45,48,FALSE,-3
+"Rasmussen Reports","Ohio","2012-10-04",50,49,FALSE,1
+"WeAskAmerica","Ohio","2012-10-04",46,47,FALSE,-1
+"Gravis Marketing","Colorado","2012-10-04",46,49,FALSE,-3
+"Rasmussen Tracking","National","2012-10-04",49,47,TRUE,2
+"Politico/GWU/Battleground","National","2012-10-04",49,48,TRUE,1
+"Western NE University","Massachusetts","2012-10-04",63,33,FALSE,30
+"Gallup Tracking","National","2012-10-04",50,45,TRUE,5
+"Gravis Marketing","Nevada","2012-10-03",49,48,FALSE,1
+"Rasmussen Tracking","National","2012-10-03",49,47,TRUE,2
+"PPP","Missouri","2012-10-03",45,51,FALSE,-6
+"PPP","Arizona","2012-10-03",44,53,FALSE,-9
+"Gallup Tracking","National","2012-10-03",49,45,TRUE,4
+"Rasmussen Reports","Missouri","2012-10-02",46,49,FALSE,-3
+"Rasmussen Reports","North Carolina","2012-10-02",47,51,FALSE,-4
+"McLaughlin/ACU","Colorado","2012-10-02",46,50,FALSE,-4
+"Rasmussen Tracking","National","2012-10-02",49,47,TRUE,2
+"Quinnipiac","Connecticut","2012-10-02",54,42,FALSE,12
+"Gallup Tracking","National","2012-10-02",49,45,TRUE,4
+"NBC/WSJ/Marist","Florida","2012-10-01",47,46,FALSE,1
+"NBC/WSJ/Marist","Virginia","2012-10-01",48,46,FALSE,2
+"NBC/WSJ/Marist","Ohio","2012-10-01",51,43,FALSE,8
+"SurveyUSA","North Carolina","2012-10-01",49,47,FALSE,2
+"Rasmussen Tracking","National","2012-10-01",48,47,TRUE,1
+"Gallup Tracking","National","2012-10-01",50,44,TRUE,6
+"Gravis Marketing","Florida","2012-09-30",49,48,FALSE,1
+"SurveyUSA","Washington","2012-09-30",56,36,FALSE,20
+"CNN/Opinion Research","National","2012-09-30",50,47,TRUE,3
+"Rasmussen Tracking","National","2012-09-30",50,47,TRUE,3
+"ARG","North Carolina","2012-09-30",46,50,FALSE,-4
+"ARG","National","2012-09-30",49,46,TRUE,3
+"Montana State University","Montana","2012-09-30",35,49,FALSE,-14
+"Marquette University","Wisconsin","2012-09-30",53,42,FALSE,11
+"Rutgers Eagleton","New Jersey","2012-09-30",56,39,FALSE,17
+"National Journal","National","2012-09-30",47,47,TRUE,0
+"Suffolk/WSVN","Florida","2012-09-30",46,43,FALSE,3
+"WMUR/UNH","New Hampshire","2012-09-30",54,39,FALSE,15
+"PPP","Ohio","2012-09-30",49,45,FALSE,4
+"PPP","North Carolina","2012-09-30",48,48,FALSE,0
+"NPR","National","2012-09-30",51,44,TRUE,7
+"NBC/Wall St. Jrnl","National","2012-09-30",49,46,TRUE,3
+"Quinnipiac","National","2012-09-30",49,45,TRUE,4
+"Gallup Tracking","National","2012-09-30",49,45,TRUE,4
+"Rasmussen Tracking","National","2012-09-29",48,46,TRUE,2
+"WPRI/Fleming","Rhode Island","2012-09-29",57,33,FALSE,24
+"ABC News/Wash Post","National","2012-09-29",49,47,TRUE,2
+"Gallup Tracking","National","2012-09-29",49,44,TRUE,5
+"Columbus Dispatch","Ohio","2012-09-29",51,42,FALSE,9
+"Honolulu Civil Beat/MRG","Hawaii","2012-09-28",62,30,FALSE,32
+"WBUR/MassINC","Massachusetts","2012-09-28",60,32,FALSE,28
+"Rasmussen Tracking","National","2012-09-28",48,46,TRUE,2
+"Pan Atlantic SMS","Maine","2012-09-28",51,37,FALSE,14
+"Gallup Tracking","National","2012-09-28",50,44,TRUE,6
+"Roanoke College","Virginia","2012-09-28",48,40,FALSE,8
+"Rasmussen Reports","New Mexico","2012-09-27",51,40,FALSE,11
+"WeAskAmerica","Nevada","2012-09-27",53,42,FALSE,11
+"WeAskAmerica","Missouri","2012-09-27",45,48,FALSE,-3
+"Baltimore Sun","Maryland","2012-09-27",57,34,FALSE,23
+"WeAskAmerica","Colorado","2012-09-27",49,46,FALSE,3
+"WeAskAmerica","New Mexico","2012-09-27",51,41,FALSE,10
+"WeAskAmerica","Iowa","2012-09-27",48,44,FALSE,4
+"WeAskAmerica","Michigan","2012-09-27",52,40,FALSE,12
+"Rasmussen Tracking","National","2012-09-27",47,46,TRUE,1
+"ARG","New Hampshire","2012-09-27",50,45,FALSE,5
+"Politico/GWU/Battleground","National","2012-09-27",49,47,TRUE,2
+"ARG","Virginia","2012-09-27",49,47,FALSE,2
+"Boston Globe","Massachusetts","2012-09-27",57,30,FALSE,27
+"Gallup Tracking","National","2012-09-27",50,44,TRUE,6
+"Rasmussen Reports","Washington","2012-09-26",52,41,FALSE,11
+"Fox News","National","2012-09-26",48,43,TRUE,5
+"Suffolk/WWBT","Virginia","2012-09-26",46,44,FALSE,2
+"PPP","Connecticut","2012-09-26",54,41,FALSE,13
+"Rasmussen Tracking","National","2012-09-26",46,46,TRUE,0
+"PPP","Iowa","2012-09-26",51,44,FALSE,7
+"Des Moines Register","Iowa","2012-09-26",49,45,FALSE,4
+"Morning Call","Pennsylvania","2012-09-26",49,42,FALSE,7
+"Gallup Tracking","National","2012-09-26",50,44,TRUE,6
+"Texas Lyceum","Texas","2012-09-26",39,58,FALSE,-19
+"Rasmussen Reports","Maine","2012-09-25",52,40,FALSE,12
+"Rasmussen Reports","Arizona","2012-09-25",42,52,FALSE,-10
+"NBC/WSJ/Marist","Nevada","2012-09-25",49,47,FALSE,2
+"NBC/WSJ/Marist","New Hampshire","2012-09-25",51,44,FALSE,7
+"NBC/WSJ/Marist","North Carolina","2012-09-25",48,46,FALSE,2
+"Voter/Consumer Res/TIR","Iowa","2012-09-25",46,47,FALSE,-1
+"Rasmussen Tracking","National","2012-09-25",46,46,TRUE,0
+"Florida Times Union/InAdv","Florida","2012-09-24",49,46,FALSE,3
+"Rasmussen Reports","Massachusetts","2012-09-24",55,40,FALSE,15
+"Rasmussen Tracking","National","2012-09-24",47,46,TRUE,1
+"Bloomberg","National","2012-09-24",49,43,TRUE,6
+"CBS/NYT/Quinnipiac","Florida","2012-09-24",53,44,FALSE,9
+"CBS/NYT/Quinnipiac","Ohio","2012-09-24",53,43,FALSE,10
+"CBS/NYT/Quinnipiac","Pennsylvania","2012-09-24",54,42,FALSE,12
+"Gallup Tracking","National","2012-09-24",48,45,TRUE,3
+"Rasmussen Tracking","National","2012-09-23",47,46,TRUE,1
+"PPP","Colorado","2012-09-23",51,45,FALSE,6
+"ARG","Nevada","2012-09-23",51,44,FALSE,7
+"ARG","Iowa","2012-09-23",51,44,FALSE,7
+"WeAskAmerica","Wisconsin","2012-09-23",53,41,FALSE,12
+"PPP","Florida","2012-09-23",50,46,FALSE,4
+"Howey/DePauw","Indiana","2012-09-23",40,52,FALSE,-12
+"Washington Post","Florida","2012-09-23",51,47,FALSE,4
+"Washington Post","Ohio","2012-09-23",52,44,FALSE,8
+"Monmouth University","New Jersey","2012-09-23",52,37,FALSE,15
+"Franklin Marshall","Pennsylvania","2012-09-23",52,43,FALSE,9
+"Gonzales Research","Maryland","2012-09-23",55,36,FALSE,19
+"Gallup Tracking","National","2012-09-23",48,46,TRUE,2
+"Gravis Marketing","Michigan","2012-09-22",50,46,FALSE,4
+"Gravis Marketing","Washington","2012-09-22",56,39,FALSE,17
+"Gravis Marketing","Colorado","2012-09-22",50,46,FALSE,4
+"Gravis Marketing","Ohio","2012-09-22",45,44,FALSE,1
+"ARG","Florida","2012-09-22",50,45,FALSE,5
+"Rasmussen Tracking","National","2012-09-22",46,46,TRUE,0
+"Gallup Tracking","National","2012-09-22",48,46,TRUE,2
+"Rasmussen Tracking","National","2012-09-21",46,46,TRUE,0
+"Gallup Tracking","National","2012-09-21",47,47,TRUE,0
+"Rasmussen Reports","Michigan","2012-09-20",54,42,FALSE,12
+"Retail Assoc. of Nevada/POS","Nevada","2012-09-20",46,46,FALSE,0
+"PPP","Nevada","2012-09-20",52,43,FALSE,9
+"Tribune Review/Susquehana","Pennsylvania","2012-09-20",47,45,FALSE,2
+"Rasmussen Tracking","National","2012-09-20",46,45,TRUE,1
+"ARG","National","2012-09-20",49,47,TRUE,2
+"Omaha World Herald","Nebraska","2012-09-20",40,51,FALSE,-11
+"Politico/GWU/Battleground","National","2012-09-20",50,47,TRUE,3
+"Gallup Tracking","National","2012-09-20",47,47,TRUE,0
+"Mercyhurst University","Pennsylvania","2012-09-20",48,40,FALSE,8
+"Rasmussen Reports","Pennsylvania","2012-09-19",51,39,FALSE,12
+"Rasmussen Reports","Iowa","2012-09-19",44,47,FALSE,-3
+"Civitas","North Carolina","2012-09-19",49,45,FALSE,4
+"PPP","Wisconsin","2012-09-19",52,45,FALSE,7
+"Star Tribune/Mason Dixon","Minnesota","2012-09-19",48,40,FALSE,8
+"Mason Dixon","Montana","2012-09-19",42,51,FALSE,-9
+"Miami Herald/Mason Dixon","Florida","2012-09-19",48,47,FALSE,1
+"Rasmussen Tracking","National","2012-09-19",47,45,TRUE,2
+"National Journal","National","2012-09-19",50,43,TRUE,7
+"Purple Strategies","Ohio","2012-09-19",48,44,FALSE,4
+"Purple Strategies","Florida","2012-09-19",47,48,FALSE,-1
+"Purple Strategies","Virginia","2012-09-19",46,43,FALSE,3
+"Purple Strategies","Colorado","2012-09-19",48,45,FALSE,3
+"Purple Strategies","Arizona","2012-09-19",45,48,FALSE,-3
+"Purple Strategies","North Carolina","2012-09-19",48,46,FALSE,2
+"Gallup Tracking","National","2012-09-19",47,47,TRUE,0
+"InsiderAdvantage","Georgia","2012-09-18",35,56,FALSE,-21
+"Rasmussen Reports","Nevada","2012-09-18",47,45,FALSE,2
+"WeAskAmerica","Florida","2012-09-18",49,46,FALSE,3
+"WeAskAmerica","Pennsylvania","2012-09-18",48,42,FALSE,6
+"Rasmussen Reports","New Hampshire","2012-09-18",45,48,FALSE,-3
+"PPP","Maine","2012-09-18",55,39,FALSE,16
+"NBC/WSJ/Marist","Colorado","2012-09-18",50,45,FALSE,5
+"NBC/WSJ/Marist","Iowa","2012-09-18",50,42,FALSE,8
+"NBC/WSJ/Marist","Wisconsin","2012-09-18",50,45,FALSE,5
+"Fox News","Ohio","2012-09-18",49,42,FALSE,7
+"Fox News","Florida","2012-09-18",49,44,FALSE,5
+"Fox News","Virginia","2012-09-18",50,43,FALSE,7
+"Rasmussen Tracking","National","2012-09-18",46,47,TRUE,-1
+"CNN/Opinion Research","Nevada","2012-09-18",49,46,FALSE,3
+"CNN/Opinion Research","Michigan","2012-09-18",52,44,FALSE,8
+"Ohio poll/Univ of Cin","Ohio","2012-09-18",51,46,FALSE,5
+"Gallup Tracking","National","2012-09-18",47,46,TRUE,1
+"High Point","North Carolina","2012-09-18",48,44,FALSE,4
+"Talk Business Poll","Arkansas","2012-09-17",35,56,FALSE,-21
+"Rasmussen Reports","Wisconsin","2012-09-17",49,46,FALSE,3
+"WeAskAmerica","Virginia","2012-09-17",49,46,FALSE,3
+"Rasmussen Reports","Colorado","2012-09-17",45,47,FALSE,-2
+"Detroit News","Michigan","2012-09-17",52,38,FALSE,14
+"MPRC","Maine","2012-09-17",54,37,FALSE,17
+"WBUR/MassINC","Massachusetts","2012-09-17",59,31,FALSE,28
+"Rasmussen Tracking","National","2012-09-17",45,47,TRUE,-2
+"Reason Rupe","National","2012-09-17",52,45,TRUE,7
+"Umass/Boston Herald","Massachusetts","2012-09-17",59,36,FALSE,23
+"Assoociated Press/GFK","National","2012-09-17",47,46,TRUE,1
+"CBS/NYT/Quinnipiac","Colorado","2012-09-17",48,47,FALSE,1
+"CBS/NYT/Quinnipiac","Virginia","2012-09-17",50,46,FALSE,4
+"CBS/NYT/Quinnipiac","Wisconsin","2012-09-17",51,45,FALSE,6
+"Gallup Tracking","National","2012-09-17",47,46,TRUE,1
+"Field","California","2012-09-17",58,34,FALSE,24
+"Gravis Marketing","Florida","2012-09-16",47,48,FALSE,-1
+"Rasmussen Reports","National","2012-09-16",45,47,TRUE,-2
+"Marquette University","Wisconsin","2012-09-16",54,40,FALSE,14
+"PPP","Massachusetts","2012-09-16",57,39,FALSE,18
+"Monmouth/SurveyUSA/Braun","National","2012-09-16",48,45,TRUE,3
+"PPP","Virginia","2012-09-16",51,46,FALSE,5
+"Pew Research","National","2012-09-16",51,43,TRUE,8
+"NBC News/WSJ","National","2012-09-16",50,45,TRUE,5
+"Washington Post","Virginia","2012-09-16",52,44,FALSE,8
+"Uconn/Hartford Courant","Connecticut","2012-09-16",53,32,FALSE,21
+"Morning Call","Pennsylvania","2012-09-16",50,41,FALSE,9
+"Gallup Tracking","National","2012-09-16",48,45,TRUE,3
+"PPIC","California","2012-09-16",53,39,FALSE,14
+"Rasmussen Reports","National","2012-09-15",46,47,TRUE,-1
+"MRG","Michigan","2012-09-15",48,42,FALSE,6
+"Gallup Tracking","National","2012-09-15",48,45,TRUE,3
+"Rasmussen Reports","National","2012-09-14",46,48,TRUE,-2
+"Gallup Tracking","National","2012-09-14",49,45,TRUE,4
+"Rasmussen Reports","Virginia","2012-09-13",49,48,FALSE,1
+"Rasmussen Reports","North Carolina","2012-09-13",45,51,FALSE,-6
+"Courier Journal/SurveyUSA","Kentucky","2012-09-13",39,53,FALSE,-14
+"Rasmussen Reports","National","2012-09-13",45,48,TRUE,-3
+"SurveyUSA","Oregon","2012-09-13",50,41,FALSE,9
+"Gallup Tracking","National","2012-09-13",49,44,TRUE,5
+"Baydoun/Foster","Michigan","2012-09-12",46,44,FALSE,2
+"Rasmussen Reports","Ohio","2012-09-12",47,46,FALSE,1
+"Rasmussen Reports","Florida","2012-09-12",48,46,FALSE,2
+"Rasmussen Reports","National","2012-09-12",46,47,TRUE,-1
+"Philadelphia Inquirer","Pennsylvania","2012-09-12",50,39,FALSE,11
+"Philadelphia Inquirer","New Jersey","2012-09-12",51,37,FALSE,14
+"Denver PosSurveyUSA","Colorado","2012-09-12",47,46,FALSE,1
+"Elway Poll","Washington","2012-09-12",53,36,FALSE,17
+"CBS News/NY Times","National","2012-09-12",49,46,TRUE,3
+"Democracy Corps","National","2012-09-12",50,45,TRUE,5
+"Fairleigh Dickinson","New Jersey","2012-09-12",52,38,FALSE,14
+"Gallup Tracking","National","2012-09-12",50,44,TRUE,6
+"Rasmussen Reports","Missouri","2012-09-11",45,48,FALSE,-3
+"Project New America/Keating","Colorado","2012-09-11",49,44,FALSE,5
+"PPP","Minnesota","2012-09-11",51,44,FALSE,7
+"PPP","Montana","2012-09-11",45,50,FALSE,-5
+"NBC/WSJ/Marist","Virginia","2012-09-11",49,44,FALSE,5
+"NBC/WSJ/Marist","Florida","2012-09-11",49,44,FALSE,5
+"NBC/WSJ/Marist","Ohio","2012-09-11",50,43,FALSE,7
+"SurveyUSA","California","2012-09-11",57,35,FALSE,22
+"Fox News","National","2012-09-11",48,43,TRUE,5
+"WPA","Texas","2012-09-11",40,55,FALSE,-15
+"EPIC MRA","Michigan","2012-09-11",47,37,FALSE,10
+"Rasmussen Tracking","National","2012-09-11",46,45,TRUE,1
+"AIF/McLaughlin","Florida","2012-09-10",47,50,FALSE,-3
+"Esquire/Yahoo! News","National","2012-09-10",50,46,TRUE,4
+"Reuters Ipsos","National","2012-09-10",48,45,TRUE,3
+"The Simon Poll/SIU","Illinois","2012-09-10",47,34,FALSE,13
+"WMUR/UNH","New Hampshire","2012-09-10",45,40,FALSE,5
+"Gallup Tracking","National","2012-09-10",50,44,TRUE,6
+"Rasmussen Tracking","National","2012-09-10",48,45,TRUE,3
+"Gravis Marketing","Virginia","2012-09-09",44,49,FALSE,-5
+"PPP","New Mexico","2012-09-09",53,42,FALSE,11
+"SurveyUSA","Florida","2012-09-09",48,44,FALSE,4
+"PPP","Arizona","2012-09-09",44,53,FALSE,-9
+"ABC News/Wash Post","National","2012-09-09",49,48,TRUE,1
+"CNN/Opinion Research","National","2012-09-09",52,46,TRUE,6
+"SurveyUSA","Washington","2012-09-09",54,38,FALSE,16
+"PPP","Ohio","2012-09-09",50,45,FALSE,5
+"PPP","North Carolina","2012-09-09",49,48,FALSE,1
+"KSTP/Survey USA","Minnesota","2012-09-09",50,40,FALSE,10
+"Quinnipiac","New York","2012-09-09",62,34,FALSE,28
+"IBD/CSM/TIPP","National","2012-09-09",46,44,TRUE,2
+"Gallup Tracking","National","2012-09-09",49,44,TRUE,5
+"Rasmussen Tracking","National","2012-09-09",50,45,TRUE,5
+"Gravis Marketing","Ohio","2012-09-08",47,43,FALSE,4
+"Gallup Tracking","National","2012-09-08",49,44,TRUE,5
+"Rasmussen Tracking","National","2012-09-08",49,45,TRUE,4
+"Gallup Tracking","National","2012-09-07",49,45,TRUE,4
+"Rasmussen Tracking","National","2012-09-07",46,44,TRUE,2
+"ARG","National","2012-09-06",46,49,TRUE,-3
+"SurveyUS/Civitas","North Carolina","2012-09-06",43,53,FALSE,-10
+"Albuquerque Journal","New Mexico","2012-09-06",45,40,FALSE,5
+"Gallup Tracking","National","2012-09-06",48,45,TRUE,3
+"Rasmussen Tracking","National","2012-09-06",45,46,TRUE,-1
+"WeAskAmerica","Illinois","2012-09-05",54,37,FALSE,17
+"Gallup Tracking","National","2012-09-05",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-09-05",44,47,TRUE,-3
+"Gallup Tracking","National","2012-09-04",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-09-04",45,48,TRUE,-3
+"CNN/Opinion Research","National","2012-09-03",48,48,TRUE,0
+"Gallup Tracking","National","2012-09-03",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-09-03",45,47,TRUE,-2
+"Gravis Marketing","Ohio","2012-09-02",44,47,FALSE,-3
+"Gravis Marketing","Florida","2012-09-02",47,48,FALSE,-1
+"PPP","Michigan","2012-09-02",51,44,FALSE,7
+"PPP","Colorado","2012-09-02",49,46,FALSE,3
+"PPP","Florida","2012-09-02",48,47,FALSE,1
+"PPP","North Carolina","2012-09-02",48,48,FALSE,0
+"Quinnipiac","New Jersey","2012-09-02",51,44,FALSE,7
+"Gallup Tracking","National","2012-09-02",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-09-02",44,48,TRUE,-4
+"Rasmussen Tracking","National","2012-09-01",44,48,TRUE,-4
+"Gallup Tracking","National","2012-09-01",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-08-31",44,47,TRUE,-3
+"Gallup Tracking","National","2012-08-31",47,46,TRUE,1
+"Rasmussen Tracking","National","2012-08-30",44,45,TRUE,-1
+"High Point/SurveyUSA","North Carolina","2012-08-30",43,46,FALSE,-3
+"Elon Univ./Charlotte Observer","North Carolina","2012-08-30",43,47,FALSE,-4
+"Gallup Tracking","National","2012-08-30",47,46,TRUE,1
+"PPP","Missouri","2012-08-29",41,53,FALSE,-12
+"Rasmussen Tracking","National","2012-08-29",45,45,TRUE,0
+"Gallup Tracking","National","2012-08-29",47,46,TRUE,1
+"EPIC MRA","Michigan","2012-08-28",49,46,FALSE,3
+"Rasmussen Tracking","National","2012-08-28",46,45,TRUE,1
+"Gallup Tracking","National","2012-08-28",47,46,TRUE,1
+"Democracy Corps","National","2012-08-27",49,47,TRUE,2
+"Rasmussen Tracking","National","2012-08-26",47,44,TRUE,3
+"PPP","Nevada","2012-08-26",50,47,FALSE,3
+"PPP","Iowa","2012-08-26",47,45,FALSE,2
+"CBS News","National","2012-08-26",46,45,TRUE,1
+"Quinnipiac","Connecticut","2012-08-26",52,45,FALSE,7
+"CNN/Time","Florida","2012-08-26",50,46,FALSE,4
+"CNN/Time","North Carolina","2012-08-26",47,48,FALSE,-1
+"Gallup Tracking","National","2012-08-26",46,47,TRUE,-1
+"Rutgers Eagleton","New Jersey","2012-08-25",51,37,FALSE,14
+"Rasmussen Tracking","National","2012-08-25",47,45,TRUE,2
+"ABC News/Wash Post","National","2012-08-25",46,47,TRUE,-1
+"Gallup Tracking","National","2012-08-25",46,46,TRUE,0
+"Columbus Dispatch","Ohio","2012-08-25",45,45,FALSE,0
+"Rasmussen Tracking","National","2012-08-24",46,45,TRUE,1
+"Gallup Tracking","National","2012-08-24",46,46,TRUE,0
+"Mitchell Research","Michigan","2012-08-23",47,47,FALSE,0
+"Rasmussen Reports","Virginia","2012-08-23",47,47,FALSE,0
+"PPP","Connecticut","2012-08-23",53,40,FALSE,13
+"Post Dispatch/Mason Dixon","Missouri","2012-08-23",43,50,FALSE,-7
+"CNN/Opinion Research","National","2012-08-23",49,47,TRUE,2
+"Philadelphia Inquirer","Pennsylvania","2012-08-23",51,42,FALSE,9
+"Rasmussen Tracking","National","2012-08-23",45,46,TRUE,-1
+"High Point/SurveyUSA","North Carolina","2012-08-23",43,43,FALSE,0
+"Gallup Tracking","National","2012-08-23",46,46,TRUE,0
+"Townhall Polling","Delaware","2012-08-22",52,37,FALSE,15
+"Rasmussen Reports","Missouri","2012-08-22",47,46,FALSE,1
+"Keating","Colorado","2012-08-22",48,44,FALSE,4
+"Townhall Polling","Wyoming","2012-08-22",36,54,FALSE,-18
+"Morning Call","Pennsylvania","2012-08-22",49,40,FALSE,9
+"Rasmussen Tracking","National","2012-08-22",45,45,TRUE,0
+"Resurgent Republic","National","2012-08-22",46,45,TRUE,1
+"Gallup Tracking","National","2012-08-22",46,46,TRUE,0
+"Rasmussen Reports","Connecticut","2012-08-21",51,43,FALSE,8
+"Rasmussen Reports","New Mexico","2012-08-21",52,38,FALSE,14
+"Fox News","National","2012-08-21",44,45,TRUE,-1
+"Rasmussen Tracking","National","2012-08-21",44,46,TRUE,-2
+"Ohio poll/Univ of Cin","Ohio","2012-08-21",49,46,FALSE,3
+"LVRJ/SurveyUSA","Nevada","2012-08-21",47,45,FALSE,2
+"CBS/NYT/Quinnipiac","Florida","2012-08-21",49,46,FALSE,3
+"CBS/NYT/Quinnipiac","Ohio","2012-08-21",50,44,FALSE,6
+"CBS/NYT/Quinnipiac","Wisconsin","2012-08-21",49,47,FALSE,2
+"Gallup Tracking","National","2012-08-21",45,47,TRUE,-2
+"Castleton State College","Vermont","2012-08-21",62,25,FALSE,37
+"Rasmussen Reports","Montana","2012-08-20",38,55,FALSE,-17
+"Detroit News","Michigan","2012-08-20",48,42,FALSE,6
+"Rasmussen Tracking","National","2012-08-20",44,45,TRUE,-1
+"NBC/Wall St. Jrnl","National","2012-08-20",48,44,TRUE,4
+"Assoociated Press/GFK","National","2012-08-20",47,46,TRUE,1
+"Gallup Tracking","National","2012-08-20",45,47,TRUE,-2
+"Rasmussen Tracking","National","2012-08-19",43,44,TRUE,-1
+"Marquette University","Wisconsin","2012-08-19",49,46,FALSE,3
+"PPP","Massachusetts","2012-08-19",55,39,FALSE,16
+"PPP","Wisconsin","2012-08-19",47,48,FALSE,-1
+"Monmouth/SurveyUSA/Braun","National","2012-08-19",46,45,TRUE,1
+"Siena","New York","2012-08-19",62,33,FALSE,29
+"LA Times/USC","National","2012-08-19",48,46,TRUE,2
+"Gallup Tracking","National","2012-08-19",45,47,TRUE,-2
+"Gallup Tracking","National","2012-08-18",45,47,TRUE,-2
+"Rasmussen Tracking","National","2012-08-17",46,44,TRUE,2
+"Gallup Tracking","National","2012-08-17",45,47,TRUE,-2
+"Baydoun/Foster","Michigan","2012-08-16",44,48,FALSE,-4
+"Rasmussen Tracking","National","2012-08-16",46,45,TRUE,1
+"Gallup Tracking","National","2012-08-16",45,47,TRUE,-2
+"Rasmussen Reports","Wisconsin","2012-08-15",47,48,FALSE,-1
+"Rasmussen Reports","Florida","2012-08-15",43,45,FALSE,-2
+"Rasmussen Tracking","National","2012-08-15",44,45,TRUE,-1
+"Gallup Tracking","National","2012-08-15",45,47,TRUE,-2
+"CNN/Opinion Research","Wisconsin","2012-08-14",49,45,FALSE,4
+"Purple Strategies","Ohio","2012-08-14",44,46,FALSE,-2
+"Purple Strategies","Florida","2012-08-14",47,48,FALSE,-1
+"Purple Strategies","Colorado","2012-08-14",49,46,FALSE,3
+"Purple Strategies","Virginia","2012-08-14",45,48,FALSE,-3
+"Rasmussen Tracking","National","2012-08-14",43,47,TRUE,-4
+"Gallup Tracking","National","2012-08-14",45,47,TRUE,-2
+"Gallup Tracking","National","2012-08-14",45,47,TRUE,-2
+"Sooner Poll","Oklahoma","2012-08-14",29,58,FALSE,-29
+"Rasmussen Reports","Ohio","2012-08-13",45,45,FALSE,0
+"Rasmussen Tracking","National","2012-08-13",44,47,TRUE,-3
+"Rasmussen Tracking","National","2012-08-12",44,47,TRUE,-3
+"PPP","Ohio","2012-08-12",48,45,FALSE,3
+"PPP","New Hampshire","2012-08-12",51,45,FALSE,6
+"SurveyUSA","Missouri","2012-08-12",44,45,FALSE,-1
+"Franklin Marshall","Pennsylvania","2012-08-12",47,42,FALSE,5
+"Gallup Tracking","National","2012-08-12",46,46,TRUE,0
+"WMUR/UNH","New Hampshire","2012-08-12",49,46,FALSE,3
+"Rasmussen Tracking","National","2012-08-11",44,46,TRUE,-2
+"Gallup Tracking","National","2012-08-11",46,46,TRUE,0
+"Rasmussen Tracking","National","2012-08-10",44,46,TRUE,-2
+"Gallup Tracking","National","2012-08-10",46,46,TRUE,0
+"IBD/CSM/TIPP","National","2012-08-10",46,39,TRUE,7
+"Rasmussen Tracking","National","2012-08-09",43,47,TRUE,-4
+"Politico/GWU/Battleground","National","2012-08-09",48,47,TRUE,1
+"Gallup Tracking","National","2012-08-09",46,46,TRUE,0
+"Rasmussen Reports","Iowa","2012-08-08",44,46,FALSE,-2
+"CNN/Opinion Research","National","2012-08-08",52,45,TRUE,7
+"Rasmussen Tracking","National","2012-08-08",43,47,TRUE,-4
+"Gallup Tracking","National","2012-08-08",47,45,TRUE,2
+"Rasmussen Reports","Virginia","2012-08-07",48,46,FALSE,2
+"Fox","National","2012-08-07",49,40,TRUE,9
+"Rasmussen Tracking","National","2012-08-07",45,45,TRUE,0
+"Rasmussen Reports","Colorado","2012-08-06",47,47,FALSE,0
+"Rasmussen Tracking","National","2012-08-06",46,45,TRUE,1
+"Reuters Ipsos","National","2012-08-06",49,42,TRUE,7
+"CBS/NYT/Quinnipiac","Virginia","2012-08-06",49,45,FALSE,4
+"CBS/NYT/Quinnipiac","Colorado","2012-08-06",45,50,FALSE,-5
+"CBS/NYT/Quinnipiac","Wisconsin","2012-08-06",51,45,FALSE,6
+"Gallup Tracking","National","2012-08-06",46,46,TRUE,0
+"Rasmussen Tracking","National","2012-08-05",47,45,TRUE,2
+"Marquette University","Wisconsin","2012-08-05",50,45,FALSE,5
+"PPP","Colorado","2012-08-05",49,43,FALSE,6
+"PPP","North Carolina","2012-08-05",49,46,FALSE,3
+"Gallup Tracking","National","2012-08-05",46,45,TRUE,1
+"Rasmussen Tracking","National","2012-08-04",45,47,TRUE,-2
+"Rasmussen Tracking","National","2012-08-03",44,46,TRUE,-2
+"Gallup Tracking","National","2012-08-03",47,45,TRUE,2
+"Survey USA","Washington","2012-08-02",54,37,FALSE,17
+"Rasmussen Tracking","National","2012-08-02",43,47,TRUE,-4
+"Gallup Tracking","National","2012-08-02",47,45,TRUE,2
+"Rasmussen Reports","North Carolina","2012-08-01",44,49,FALSE,-5
+"Rasmussen Reports","Indiana","2012-08-01",35,51,FALSE,-16
+"Rasmussen Tracking","National","2012-08-01",44,46,TRUE,-2
+"Gallup Tracking","National","2012-08-01",47,45,TRUE,2
+"Rasmussen Tracking","National","2012-07-31",44,47,TRUE,-3
+"Gallup Tracking","National","2012-07-31",47,45,TRUE,2
+"EPIC MRA","Michigan","2012-07-31",48,42,FALSE,6
+"Rasmussen Reports","Missouri","2012-07-30",44,50,FALSE,-6
+"Rasmussen Tracking","National","2012-07-30",44,47,TRUE,-3
+"CBS/NYT/Quinnipiac","Ohio","2012-07-30",50,44,FALSE,6
+"CBS/NYT/Quinnipiac","Florida","2012-07-30",51,45,FALSE,6
+"CBS/NYT/Quinnipiac","Pennsylvania","2012-07-30",53,42,FALSE,11
+"Gallup Tracking","National","2012-07-30",47,45,TRUE,2
+"Rasmussen Tracking","National","2012-07-29",44,47,TRUE,-3
+"","ConnecticutPPP","2012-07-29",51,43,FALSE,8
+"PPP","Florida","2012-07-29",48,47,FALSE,1
+"Fairleigh Dickinson","New Jersey","2012-07-29",49,36,FALSE,13
+"Gallup Tracking","National","2012-07-29",46,46,TRUE,0
+"Rasmussen Tracking","National","2012-07-28",45,47,TRUE,-2
+"Gallup Tracking","National","2012-07-28",46,46,TRUE,0
+"Rasmussen Tracking","National","2012-07-27",44,48,TRUE,-4
+"Rasmussen Tracking","National","2012-07-26",44,49,TRUE,-5
+"Pew Research","National","2012-07-26",51,41,TRUE,10
+"Rasmussen Reports","Wisconsin","2012-07-25",49,46,FALSE,3
+"PPP","Arizona","2012-07-25",41,52,FALSE,-11
+"Post Dispatch/Mason Dixon","Missouri","2012-07-25",42,51,FALSE,-9
+"Rasmussen Tracking","National","2012-07-25",44,48,TRUE,-4
+"Democracy Corps","National","2012-07-25",50,46,TRUE,4
+"Gallup Tracking","National","2012-07-25",44,48,TRUE,-4
+"WeAskAmerica","Ohio","2012-07-24",48,40,FALSE,8
+"Rasmussen Reports","Nevada","2012-07-24",50,45,FALSE,5
+"WeAskAmerica","Missouri","2012-07-24",40,49,FALSE,-9
+"Rasmussen Tracking","National","2012-07-24",44,47,TRUE,-3
+"Gallup Tracking","National","2012-07-24",45,46,TRUE,-1
+"Mitchell Research","Michigan","2012-07-23",44,45,FALSE,-1
+"Rasmussen Reports","Michigan","2012-07-23",48,42,FALSE,6
+"PPP","Michigan","2012-07-23",53,39,FALSE,14
+"PPP","Pennsylvania","2012-07-23",49,43,FALSE,6
+"Rasmussen Tracking","National","2012-07-23",44,45,TRUE,-1
+"Quinnipiac","New York","2012-07-23",55,32,FALSE,23
+"Gallup Tracking","National","2012-07-23",46,45,TRUE,1
+"Rasmussen Tracking","National","2012-07-22",43,46,TRUE,-3
+"Townhall Polling","Wyoming","2012-07-22",34,55,FALSE,-21
+"Townhall Polling","Delaware","2012-07-22",53,39,FALSE,14
+"Monmouth University","New Jersey","2012-07-22",50,42,FALSE,8
+"NBC News/Wall St. Jrnl","National","2012-07-22",49,43,TRUE,6
+"Gallup Tracking","National","2012-07-22",46,45,TRUE,1
+"Rasmussen Tracking","National","2012-07-21",44,46,TRUE,-2
+"Gallup Tracking","National","2012-07-21",46,45,TRUE,1
+"Rasmussen Tracking","National","2012-07-20",46,46,TRUE,0
+"Gallup Tracking","National","2012-07-20",48,44,TRUE,4
+"KSTP/Survey USA","Minnesota","2012-07-19",46,40,FALSE,6
+"Survey USA","Florida","2012-07-19",48,43,FALSE,5
+"Rasmussen Tracking","National","2012-07-19",47,46,TRUE,1
+"Gallup Tracking","National","2012-07-19",48,44,TRUE,4
+"Rasmussen Reports","Pennsylvania","2012-07-18",48,44,FALSE,4
+"Rasmussen Reports","Ohio","2012-07-18",47,45,FALSE,2
+"WeAskAmerica","Nevada","2012-07-18",49,43,FALSE,6
+"WeAskAmerica","Wisconsin","2012-07-18",49,42,FALSE,7
+"Civitas","North Carolina","2012-07-18",48,49,FALSE,-1
+"Survey USA","Washington","2012-07-18",46,37,FALSE,9
+"Rasmussen Tracking","National","2012-07-18",46,47,TRUE,-1
+"Gallup Tracking","National","2012-07-18",46,46,TRUE,0
+"AFP/Magellan","Nevada","2012-07-17",50,46,FALSE,4
+"Rasmussen Reports","Virginia","2012-07-17",47,46,FALSE,1
+"Fox","National","2012-07-17",45,41,TRUE,4
+"Rasmussen Tracking","National","2012-07-17",46,47,TRUE,-1
+"Gallup Tracking","National","2012-07-17",47,45,TRUE,2
+"Rasmussen Tracking","National","2012-07-16",44,47,TRUE,-3
+"PPP","New Mexico","2012-07-16",49,44,FALSE,5
+"CBS News   New York Times","National","2012-07-16",46,47,TRUE,-1
+"Quinnipiac","Virginia","2012-07-16",44,44,FALSE,0
+"Gallup Tracking","National","2012-07-16",47,45,TRUE,2
+"Rasmussen Tracking","National","2012-07-15",44,46,TRUE,-2
+"PPP","Iowa","2012-07-15",48,43,FALSE,5
+"Siena","New York","2012-07-15",61,34,FALSE,27
+"Quinnipiac","New Jersey","2012-07-15",49,38,FALSE,11
+"Gallup Tracking","National","2012-07-15",47,45,TRUE,2
+"WMUR/UNH","New Hampshire","2012-07-15",49,45,FALSE,4
+"Rasmussen Tracking","National","2012-07-14",45,45,TRUE,0
+"Gallup Tracking","National","2012-07-14",47,45,TRUE,2
+"Rasmussen Tracking","National","2012-07-13",46,45,TRUE,1
+"Purple Strategies","Ohio","2012-07-13",48,45,FALSE,3
+"Purple Strategies","Florida","2012-07-13",45,48,FALSE,-3
+"Purple Strategies","Virginia","2012-07-13",46,44,FALSE,2
+"Purple Strategies","Colorado","2012-07-13",45,44,FALSE,1
+"Gallup Tracking","National","2012-07-13",46,46,TRUE,0
+"Rasmussen Tracking","National","2012-07-12",46,45,TRUE,1
+"NPR","National","2012-07-12",47,45,TRUE,2
+"Gallup Tracking","National","2012-07-12",46,46,TRUE,0
+"Rasmussen Reports","North Dakota","2012-07-11",36,51,FALSE,-15
+"McClatchy Marist","National","2012-07-11",48,46,TRUE,2
+"Mason Dixon","Florida","2012-07-11",46,45,FALSE,1
+"Rasmussen Reports","National","2012-07-11",45,46,TRUE,-1
+"Gallup Tracking","National","2012-07-11",47,44,TRUE,3
+"WeAskAmerica","Pennsylvania","2012-07-10",47,40,FALSE,7
+"WeAskAmerica","New Mexico","2012-07-10",51,40,FALSE,11
+"Rasmussen Reports","National","2012-07-10",45,46,TRUE,-1
+"Gallup Tracking","National","2012-07-10",45,47,TRUE,-2
+"Rasmussen Reports","Florida","2012-07-09",45,46,FALSE,-1
+"Rasmussen Reports","National","2012-07-09",44,47,TRUE,-3
+"Reuters Ipsos","National","2012-07-09",49,43,TRUE,6
+"Gallup Tracking","National","2012-07-09",46,46,TRUE,0
+"Pew Research","National","2012-07-09",50,43,TRUE,7
+"Wash Times/JZ Analytics","National","2012-07-08",42,43,TRUE,-1
+"Rasmussen Reports","National","2012-07-08",45,46,TRUE,-1
+"Marquette University","Wisconsin","2012-07-08",51,43,FALSE,8
+"PPP","Wisconsin","2012-07-08",50,44,FALSE,6
+"ABC Wash Post","National","2012-07-08",47,47,TRUE,0
+"PPP","Virginia","2012-07-08",50,42,FALSE,8
+"PPP","North Carolina","2012-07-08",47,46,FALSE,1
+"Project New America/myers","North Carolina","2012-07-08",48,49,FALSE,-1
+"Quinnipiac","National","2012-07-08",46,43,TRUE,3
+"Gallup Tracking","National","2012-07-08",47,45,TRUE,2
+"Rasmussen Reports","National","2012-07-07",45,45,TRUE,0
+"Gallup Tracking","National","2012-07-07",47,45,TRUE,2
+"Rasmussen Reports","National","2012-07-06",45,45,TRUE,0
+"Gallup Tracking","National","2012-07-06",47,45,TRUE,2
+"Rasmussen Reports","National","2012-07-05",44,46,TRUE,-2
+"Gallup Tracking","National","2012-07-05",48,44,TRUE,4
+"Gallup Tracking","National","2012-07-03",48,44,TRUE,4
+"Gallup Tracking","National","2012-07-02",48,44,TRUE,4
+"WeAskAmerica","Florida","2012-07-02",46,45,FALSE,1
+"Rasmussen Reports","National","2012-07-02",44,47,TRUE,-3
+"Field","California","2012-07-02",55,37,FALSE,18
+"Civitas","North Carolina","2012-07-01",45,50,FALSE,-5
+"Rasmussen Reports","National","2012-07-01",44,46,TRUE,-2
+"CNN/Opinion Research","National","2012-07-01",49,46,TRUE,3
+"Gallup Tracking","National","2012-07-01",48,43,TRUE,5
+"Rasmussen Reports","National","2012-06-30",45,45,TRUE,0
+"Gallup Tracking","National","2012-06-30",47,44,TRUE,3
+"Rasmussen Reports","National","2012-06-29",46,44,TRUE,2
+"Gallup Tracking","National","2012-06-29",47,44,TRUE,3
+"Newsweek/Daily Beast","National","2012-06-28",47,44,TRUE,3
+"Rasmussen Reports","National","2012-06-28",45,44,TRUE,1
+"Gallup Tracking","National","2012-06-28",48,43,TRUE,5
+"Rasmussen Reports","National","2012-06-27",45,45,TRUE,0
+"Democracy Corps Poll","National","2012-06-27",49,46,TRUE,3
+"Gallup Tracking","National","2012-06-27",47,44,TRUE,3
+"Rasmussen Reports","Arizona","2012-06-26",41,54,FALSE,-13
+"Fox","National","2012-06-26",45,40,TRUE,5
+"Rasmussen Reports","National","2012-06-26",45,46,TRUE,-1
+"Gallup Tracking","National","2012-06-26",46,44,TRUE,2
+"Rasmussen Reports","North Carolina","2012-06-25",44,47,FALSE,-3
+"WeAskAmerica","Virginia","2012-06-25",43,48,FALSE,-5
+"WeAskAmerica","Colorado","2012-06-25",47,43,FALSE,4
+"NBC News/Marist","New Hampshire","2012-06-25",45,45,FALSE,0
+"NBC News/Marist","Michigan","2012-06-25",47,43,FALSE,4
+"NBC News/Marist","North Carolina","2012-06-25",46,44,FALSE,2
+"Rasmussen Reports","National","2012-06-25",45,47,TRUE,-2
+"Critical Insights","Maine","2012-06-25",49,35,FALSE,14
+"Quinnipiac","Florida","2012-06-25",45,41,FALSE,4
+"Quinnipiac","Ohio","2012-06-25",47,38,FALSE,9
+"Quinnipiac","Pennsylvania","2012-06-25",45,39,FALSE,6
+"Gallup Tracking","National","2012-06-25",45,46,TRUE,-1
+"PPP","Massachusetts","2012-06-24",55,39,FALSE,16
+"Rasmussen Reports","National","2012-06-24",45,47,TRUE,-2
+"PPP","Ohio","2012-06-24",47,44,FALSE,3
+"NBC News/Wall St. Jrnl","National","2012-06-24",47,44,TRUE,3
+"Gallup Tracking","National","2012-06-24",45,46,TRUE,-1
+"Rasmussen Reports","National","2012-06-23",43,48,TRUE,-5
+"Gallup Tracking","National","2012-06-23",46,45,TRUE,1
+"Rasmussen Reports","National","2012-06-22",43,48,TRUE,-5
+"Gallup Tracking","National","2012-06-22",46,46,TRUE,0
+"Rasmussen Reports","National","2012-06-21",43,48,TRUE,-5
+"Desert News/KSL","Utah","2012-06-21",26,68,FALSE,-42
+"Gallup Tracking","National","2012-06-21",45,46,TRUE,-1
+"Rasmussen Reports","New Hampshire","2012-06-20",48,43,FALSE,5
+"Rasmussen Reports","National","2012-06-20",43,47,TRUE,-4
+"Gallup Tracking","National","2012-06-20",45,47,TRUE,-2
+"Rasmussen Reports","National","2012-06-19",45,47,TRUE,-2
+"Gallup Tracking","National","2012-06-19",45,47,TRUE,-2
+"Mitchell Research","Michigan","2012-06-18",47,46,FALSE,1
+"Rasmussen Reports","Montana","2012-06-18",42,51,FALSE,-9
+"WeAskAmerica","Michigan","2012-06-18",43,45,FALSE,-2
+"WeAskAmerica","Iowa","2012-06-18",45,44,FALSE,1
+"Rasmussen Reports","National","2012-06-18",44,48,TRUE,-4
+"Bloomberg","National","2012-06-18",53,40,TRUE,13
+"Assoociated Press/GFK","National","2012-06-18",47,44,TRUE,3
+"Quinnipiac","Florida","2012-06-18",46,42,FALSE,4
+"Gallup Tracking","National","2012-06-18",45,46,TRUE,-1
+"Rasmussen Reports","National","2012-06-17",44,47,TRUE,-3
+"PPP","Washington","2012-06-17",54,41,FALSE,13
+"PPP","Colorado","2012-06-17",49,42,FALSE,7
+"Gallup Tracking","National","2012-06-17",46,46,TRUE,0
+"Pew Research","National","2012-06-17",50,46,TRUE,4
+"Gallup Tracking","National","2012-06-16",45,46,TRUE,-1
+"Marquette University","Wisconsin","2012-06-16",49,43,FALSE,6
+"Elway Poll","Washington","2012-06-16",49,41,FALSE,8
+"Rasmussen Reports","National","2012-06-16",44,47,TRUE,-3
+"Rasmussen Reports","National","2012-06-15",45,47,TRUE,-2
+"Gallup Tracking","National","2012-06-15",45,46,TRUE,-1
+"Rasmussen Reports","Michigan","2012-06-14",50,42,FALSE,8
+"WBUR/MassINC","Maine","2012-06-14",48,34,FALSE,14
+"Rasmussen Reports","National","2012-06-14",45,47,TRUE,-2
+"Gallup Tracking","National","2012-06-14",45,46,TRUE,-1
+"Rasmussen Reports","National","2012-06-13",44,48,TRUE,-4
+"Gallup Tracking","National","2012-06-13",46,45,TRUE,1
+"Baydoun/Foster","Michigan","2012-06-12",56,33,FALSE,23
+"Gallup Tracking","National","2012-06-12",46,45,TRUE,1
+"Rasmussen","National","2012-06-12",44,48,TRUE,-4
+"Rasmussen Reports","Wisconsin","2012-06-12",44,47,FALSE,-3
+"Rasmussen Reports","Iowa","2012-06-11",46,47,FALSE,-1
+"Rasmussen","National","2012-06-11",45,46,TRUE,-1
+"Reuters Ipsos","National","2012-06-11",45,44,TRUE,1
+"Gallup Tracking","National","2012-06-11",46,45,TRUE,1
+"Rasmussen","National","2012-06-10",44,47,TRUE,-3
+"PPP","Nevada","2012-06-10",48,42,FALSE,6
+"PPP","North Carolina","2012-06-10",46,48,FALSE,-2
+"Quinnipiac","Pennsylvania","2012-06-10",46,40,FALSE,6
+"Gallup Tracking","National","2012-06-10",45,46,TRUE,-1
+"Rasmussen","National","2012-06-09",45,46,TRUE,-1
+"Gallup Tracking","National","2012-06-09",45,46,TRUE,-1
+"Rasmussen","National","2012-06-08",45,46,TRUE,-1
+"Gallup Tracking","National","2012-06-08",46,45,TRUE,1
+"IBD CSM TIPP","National","2012-06-08",46,42,TRUE,4
+"Rasmussen Reports","Missouri","2012-06-07",42,49,FALSE,-7
+"Rasmussen","National","2012-06-07",47,45,TRUE,2
+"Gallup Tracking","National","2012-06-07",46,45,TRUE,1
+"Rasmussen","Colorado","2012-06-06",45,45,FALSE,0
+"WeAskAmerica","Wisconsin","2012-06-06",48,43,FALSE,5
+"Mason Dixon","North Dakota","2012-06-06",39,52,FALSE,-13
+"Monmouth/SurveyUSA/Braun","National","2012-06-06",47,46,TRUE,1
+"Rasmussen","National","2012-06-06",46,46,TRUE,0
+"Rasmussen","National","2012-06-06",46,46,TRUE,0
+"Siena","New York","2012-06-06",59,35,FALSE,24
+"Gallup Tracking","National","2012-06-06",45,47,TRUE,-2
+"Project New America/PPP","Arizona","2012-06-05",46,49,FALSE,-3
+"Fox","National","2012-06-05",43,43,TRUE,0
+"Rasmussen","National","2012-06-05",46,46,TRUE,0
+"EPIC MRA","Michigan","2012-06-05",45,46,FALSE,-1
+"Purple Strategies","Ohio","2012-06-05",45,48,FALSE,-3
+"Purple Strategies","Virginia","2012-06-05",49,46,FALSE,3
+"Purple Strategies","Florida","2012-06-05",49,45,FALSE,4
+"Purple Strategies","Colorado","2012-06-05",48,46,FALSE,2
+"Gallup Tracking","National","2012-06-05",46,45,TRUE,1
+"Rasmussen","National","2012-06-04",45,46,TRUE,-1
+"Rutgers Eagleton","New Jersey","2012-06-04",47,46,FALSE,1
+"Quinnipiac","Virginia","2012-06-04",47,42,FALSE,5
+"Quinnipiac","Virginia","2012-06-04",47,42,FALSE,5
+"Franklin Marshall","Pennsylvania","2012-06-04",48,36,FALSE,12
+"Gallup Tracking","National","2012-06-04",46,45,TRUE,1
+"Rasmussen","Virginia","2012-06-03",47,47,FALSE,0
+"Rasmussen","National","2012-06-03",44,47,TRUE,-3
+"PPP","Florida","2012-06-03",46,50,FALSE,-4
+"PPP","Minnesota","2012-06-03",54,39,FALSE,15
+"Quinnipiac","Connecticut","2012-06-03",50,38,FALSE,12
+"Gallup Tracking","National","2012-06-03",46,45,TRUE,1
+"Rasmussen","National","2012-06-02",44,48,TRUE,-4
+"Gallup Tracking","National","2012-06-02",47,45,TRUE,2
+"Rasmussen","National","2012-06-01",44,48,TRUE,-4
+"Gallup Tracking","National","2012-06-01",46,45,TRUE,1
+"Western NE University","Massachusetts","2012-05-31",56,34,FALSE,22
+"CNN/Opinion Research","National","2012-05-31",49,46,TRUE,3
+"Rasmussen","National","2012-05-31",45,46,TRUE,-1
+"Boston Globe","Massachusetts","2012-05-31",46,34,FALSE,12
+"Gallup Tracking","National","2012-05-31",45,46,TRUE,-1
+"Rasmussen","National","2012-05-30",45,46,TRUE,-1
+"Gallup Tracking","National","2012-05-30",47,44,TRUE,3
+"Rasmussen","Ohio","2012-05-29",44,46,FALSE,-2
+"Survey USA","California","2012-05-29",57,36,FALSE,21
+"Rasmussen","National","2012-05-29",45,45,TRUE,0
+"Gallup Tracking","National","2012-05-29",46,46,TRUE,0
+"Field","California","2012-05-29",48,32,FALSE,16
+"Rasmussen","National","2012-05-28",46,45,TRUE,1
+"Quinnipiac","New York","2012-05-28",56,31,FALSE,25
+"Rasmussen","National","2012-05-27",44,45,TRUE,-1
+"PPP","Missouri","2012-05-27",45,44,FALSE,1
+"PPP","Michigan","2012-05-27",53,39,FALSE,14
+"Gallup Tracking","National","2012-05-27",47,45,TRUE,2
+"Rasmussen","National","2012-05-26",45,45,TRUE,0
+"Marquette University","Wisconsin","2012-05-26",51,43,FALSE,8
+"Gallup Tracking","National","2012-05-26",47,45,TRUE,2
+"Rasmussen","National","2012-05-25",44,45,TRUE,-1
+"Gallup Tracking","National","2012-05-25",47,45,TRUE,2
+"NBC News/Marist","Nevada","2012-05-24",48,46,FALSE,2
+"NBC News/Marist","Colorado","2012-05-24",46,45,FALSE,1
+"NBC News/Marist","Iowa","2012-05-24",44,44,FALSE,0
+"Rasmussen","National","2012-05-24",44,45,TRUE,-1
+"Project New America/Keating","Colorado","2012-05-24",48,44,FALSE,4
+"Gallup Tracking","National","2012-05-24",47,46,TRUE,1
+"Rasmussen","National","2012-05-23",45,44,TRUE,1
+"Gallup Tracking","National","2012-05-23",47,46,TRUE,1
+"InsiderAdvantage","Georgia","2012-05-22",40,52,FALSE,-12
+"Suffolk/7News","Massachusetts","2012-05-22",59,34,FALSE,25
+"Rasmussen","National","2012-05-22",46,45,TRUE,1
+"WPR/St.Norbert","Wisconsin","2012-05-22",49,43,FALSE,6
+"Gallup Tracking","National","2012-05-22",46,46,TRUE,0
+"Rasmussen","Pennsylvania","2012-05-21",47,41,FALSE,6
+"Rasmussen","National","2012-05-21",46,44,TRUE,2
+"Survey USA","North Carolina","2012-05-21",44,45,FALSE,-1
+"LA Times/USC","California","2012-05-21",56,37,FALSE,19
+"Quinnipiac","Florida","2012-05-21",41,47,FALSE,-6
+"Gallup Tracking","National","2012-05-21",46,46,TRUE,0
+"Civitas","North Carolina","2012-05-20",45,47,FALSE,-2
+"Rasmussen","National","2012-05-20",47,44,TRUE,3
+"NBC News/Marist","Ohio","2012-05-20",48,42,FALSE,6
+"NBC News/Marist","Florida","2012-05-20",48,44,FALSE,4
+"NBC News/Marist","Virginia","2012-05-20",48,44,FALSE,4
+"PPP","Pennsylvania","2012-05-20",50,42,FALSE,8
+"ABC Wash Post","National","2012-05-20",49,46,TRUE,3
+"NBC/WSJ","National","2012-05-20",47,43,TRUE,4
+"PPIC","California","2012-05-20",50,39,FALSE,11
+"Gallup Tracking","National","2012-05-20",46,46,TRUE,0
+"Rasmussen","National","2012-05-19",46,44,TRUE,2
+"Gallup Tracking","National","2012-05-19",45,46,TRUE,-1
+"Rasmussen","National","2012-05-18",46,45,TRUE,1
+"Gallup Tracking","National","2012-05-18",44,47,TRUE,-3
+"Rasmussen","National","2012-05-17",44,46,TRUE,-2
+"Gallup Tracking","National","2012-05-17",45,46,TRUE,-1
+"Rasmussen","Nebraska","2012-05-16",39,53,FALSE,-14
+"Rasmussen","National","2012-05-16",45,46,TRUE,-1
+"Gallup Tracking","National","2012-05-16",45,45,TRUE,0
+"IBD CSM TIPP","National","2012-05-16",43,40,TRUE,3
+"Castleton State College","Vermont","2012-05-16",59,28,FALSE,31
+"Fox","National","2012-05-15",46,39,TRUE,7
+"Rasmussen","National","2012-05-15",46,47,TRUE,-1
+"Gallup Tracking","National","2012-05-15",45,45,TRUE,0
+"Rasmussen","North Carolina","2012-05-14",43,51,FALSE,-8
+"Rasmussen","National","2012-05-14",45,47,TRUE,-2
+"Mason Dixon","National","2012-05-14",44,47,TRUE,-3
+"Quinnipiac","New Jersey","2012-05-14",49,39,FALSE,10
+"Gallup Tracking","National","2012-05-14",46,45,TRUE,1
+"Daily Kos/PPP","Wisconsin","2012-05-13",47,46,FALSE,1
+"CBS News   New York Times","National","2012-05-13",43,46,TRUE,-3
+"PPP","North Carolina","2012-05-13",48,47,FALSE,1
+"PPP","New Hampshire","2012-05-13",53,41,FALSE,12
+"Gallup Tracking","National","2012-05-13",46,45,TRUE,1
+"Wash Times/JZ Analytics","National","2012-05-12",43,44,TRUE,-1
+"Rasmussen","National","2012-05-12",44,48,TRUE,-4
+"Marquette University","Wisconsin","2012-05-12",46,46,FALSE,0
+"Gallup Tracking","National","2012-05-12",46,45,TRUE,1
+"Glengariff Group","Michigan","2012-05-11",45,40,FALSE,5
+"Rasmussen","National","2012-05-11",42,50,TRUE,-8
+"Gallup Tracking","National","2012-05-11",46,45,TRUE,1
+"Landmark/Rosetta Stone","Georgia","2012-05-10",40,51,FALSE,-11
+"Survey USA","Minnesota","2012-05-10",52,38,FALSE,14
+"Rasmussen","National","2012-05-10",43,50,TRUE,-7
+"Sooner Poll","Oklahoma","2012-05-10",27,62,FALSE,-35
+"Survey USA","Oregon","2012-05-10",47,43,FALSE,4
+"Siena","New York","2012-05-10",57,37,FALSE,20
+"Gallup Tracking","National","2012-05-10",45,46,TRUE,-1
+"Rasmussen","Wisconsin","2012-05-09",49,45,FALSE,4
+"Survey USA","Washington","2012-05-09",50,36,FALSE,14
+"Rasmussen","National","2012-05-09",45,49,TRUE,-4
+"Gallup Tracking","National","2012-05-09",44,47,TRUE,-3
+"Tennessean/Vanderbilt","Tennessee","2012-05-09",40,47,FALSE,-7
+"Suffolk/7News","Florida","2012-05-08",46,45,FALSE,1
+"Rasmussen","National","2012-05-08",44,49,TRUE,-5
+"Gallup Tracking","National","2012-05-08",44,47,TRUE,-3
+"Rasmussen","Massachusetts","2012-05-07",56,35,FALSE,21
+"Rasmussen","National","2012-05-07",44,49,TRUE,-5
+"Assoociated Press/GFK","National","2012-05-07",50,42,TRUE,8
+"Reuters Ipsos","National","2012-05-07",49,42,TRUE,7
+"Critical Insights","Maine","2012-05-07",50,42,FALSE,8
+"Quinnipiac","Ohio","2012-05-07",45,44,FALSE,1
+"Gallup Tracking","National","2012-05-07",44,47,TRUE,-3
+"Rasmussen","National","2012-05-06",45,47,TRUE,-2
+"PPP","Iowa","2012-05-06",51,41,FALSE,10
+"PPP","Ohio","2012-05-06",50,43,FALSE,7
+"Rasmussen","National","2012-05-05",46,47,TRUE,-1
+"Gallup Tracking","National","2012-05-05",45,46,TRUE,-1
+"Rasmussen","National","2012-05-04",47,46,TRUE,1
+"Gallup Tracking","National","2012-05-04",46,45,TRUE,1
+"IBD CSM TIPP","National","2012-05-04",46,43,TRUE,3
+"Rasmussen","National","2012-05-03",47,45,TRUE,2
+"Politico GWU Battleground","National","2012-05-03",47,48,TRUE,-1
+"Gallup Tracking","National","2012-05-03",45,45,TRUE,0
+"Rasmussen","Montana","2012-05-02",44,51,FALSE,-7
+"Magellan","Arizona","2012-05-02",43,52,FALSE,-9
+"Washinton Post","Virginia","2012-05-02",51,44,FALSE,7
+"Rasmussen","National","2012-05-01",47,45,TRUE,2
+"Rasmussen","National","2012-05-01",47,44,TRUE,3
+"Democracy Corps Poll","National","2012-05-01",47,47,TRUE,0
+"Gallup Tracking","National","2012-05-01",45,46,TRUE,-1
+"Quinnipiac","Ohio","2012-05-01",44,42,FALSE,2
+"Quinnipiac","Florida","2012-05-01",43,44,FALSE,-1
+"Quinnipiac","Pennsylvania","2012-05-01",47,39,FALSE,8
+"Rasmussen","Nevada","2012-04-30",52,44,FALSE,8
+"Rasmussen","National","2012-04-30",46,46,TRUE,0
+"Survey USA","North Carolina","2012-04-30",47,43,FALSE,4
+"Gallup Tracking","National","2012-04-30",46,46,TRUE,0
+"Rasmussen","National","2012-04-29",45,47,TRUE,-2
+"Marquette University","Wisconsin","2012-04-29",51,42,FALSE,9
+"PPP","Montana","2012-04-29",43,48,FALSE,-5
+"PPP","Virginia","2012-04-29",51,43,FALSE,8
+"Gallup Tracking","National","2012-04-29",46,47,TRUE,-1
+"Gallup Tracking","National","2012-04-28",47,46,TRUE,1
+"Rasmussen","National","2012-04-27",47,45,TRUE,2
+"Gallup Tracking","National","2012-04-27",48,45,TRUE,3
+"Rasmussen","National","2012-04-26",47,46,TRUE,1
+"Gallup Tracking","National","2012-04-26",47,46,TRUE,1

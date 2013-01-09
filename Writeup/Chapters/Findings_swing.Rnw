@@ -2,7 +2,7 @@
 
 Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr. Romney and Mr. Obama over time, in 12 swing states.  Figure \ref{fig:swing_map} highlights these particular states.
 
-<<swing_map, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Map of United States with swing states highlighted'>>=
+<<swing_map, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Map of United States with swing states highlighted.'>>=
 swingStatePlot
 @
 

@@ -11,24 +11,28 @@ library(RColorBrewer)
 suppressWarnings(library(zoo))
 suppressWarnings(library(forecast))
 
+# NOTE: Commenting out the old code to parse the website since the WEBSITE IS DOWN
+# 
+# getDate <- function(x) {
+#     return(strsplit(as.character(x), split = "-")[[1]][2])
+# }
+# 
+# url <- "http://webcache.googleusercontent.com/search?q=cache:EkORMQMGsskJ:www.nationalpolls.com/2012/obama-vs-romney.html+&cd=1&hl=en&ct=clnk&gl=us"
+# polls.data <- readHTMLTable(url, colClasses = c("character", "factor", "character", "numeric", "numeric"))[6][[1]]
+# 
+# names(polls.data)[c(2, 4:5)] <- c("State", "Obama", "Romney")
+# 
+# polls.data$Date <- sapply(polls.data$Date, getDate)
+# polls.data$Date <- as.Date(polls.data$Date, "%m/%d/%y")
+# polls.data$isNational <- (polls.data$State == "National")
+# 
+# polls.data$State <- gsub("-", " ", as.character(polls.data$State))
+# polls.data$Obama.Romney <- polls.data$Obama - polls.data$Romney
+# 
+# polls.data <- subset(polls.data, Date > as.Date("2012/04/25"))
 
-getDate <- function(x) {
-    return(strsplit(as.character(x), split = "-")[[1]][2])
-}
-
-url <- "http://www.nationalpolls.com/2012/obama-vs-romney.html"
-polls.data <- readHTMLTable(url, colClasses = c("character", "factor", "character", "numeric", "numeric"))[6][[1]]
-
-names(polls.data)[c(2, 4:5)] <- c("State", "Obama", "Romney")
-
-polls.data$Date <- sapply(polls.data$Date, getDate)
-polls.data$Date <- as.Date(polls.data$Date, "%m/%d/%y")
-polls.data$isNational <- (polls.data$State == "National")
-
-polls.data$State <- gsub("-", " ", as.character(polls.data$State))
-polls.data$Obama.Romney <- polls.data$Obama - polls.data$Romney
-
-polls.data <- subset(polls.data, Date > as.Date("2012/04/25"))
+polls.data <- read.csv("../../Data/polls-2012.csv")
+polls.data$Date <- as.Date(polls.data$Date)
 
 polls.week <- ddply(subset(polls.data, !isNational), .(week = factor(week(Date)), isNational), summarise, Obama.Romney.Avg = mean(Obama.Romney), Obama = mean(Obama), Romney = mean(Romney))
 polls.week$week <- as.numeric(as.character(polls.week$week))
