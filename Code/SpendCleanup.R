@@ -11,6 +11,7 @@ library(RColorBrewer)
 library(zoo)
 library(forecast)
 library(scales)
+library(xtable)
 
 createBucket <- function(df, text, bucket, entryText = text) {
     empty <- (all(is.na(bucket)))
@@ -108,7 +109,7 @@ getExpenditures <- function(year) {
     #There are 77 unique pacs in this dataset, but 82 rows in count_pac_can => there are 5
     #pacs that have mistakes. which ones?
     prob_spe<-count_pac_can$spe_nam[duplicated(count_pac_can$spe_nam)]
-    prob_count<-count_pac_can[count_pac_can$spe_nam %in% prob_spe,]
+    prob_count<<-count_pac_can[count_pac_can$spe_nam %in% prob_spe,]
     
     #These pacs have names that show we are right in thinking these are mistakes. 
     #Let's assume that it is a mistake and change beneful_can appropriately.
