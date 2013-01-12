@@ -50,7 +50,7 @@ getExpenditures <- function(year) {
     bucket <- createBucket(spend.data, "tv|television|production|video", rep(NA, nrow(spend.data)), entryText = "tv")
     bucket <- createBucket(spend.data, "web|internet|online|digital", bucket, "web")
     bucket <- createBucket(spend.data, "radio", bucket)
-    bucket <- createBucket(spend.data, "salar", bucket, "salary")
+    bucket <- createBucket(spend.data, "salar|wage", bucket, "salary")
     bucket <- createBucket(spend.data, "email|e\\-mail", bucket, "email")
     bucket <- createBucket(spend.data, "call|phone|cell", bucket, "call")
     bucket <- createBucket(spend.data, "travel|lodging|diem|travel|hotel|airport|flight", bucket, "travel")
@@ -74,16 +74,14 @@ getExpenditures <- function(year) {
     spend.data[spend.data$bucket2 %in% c("travel", "transport"), "bucket2"] <- "transport"
     spend.data[spend.data$bucket2 %in% c("email", "call", "mail", "canvass", "flyer", "printing"), "bucket2"] <- "direct contact"
     
+    #There are 9 records without sup_opp, we looked up
+    #the PACs and filled in accordingly
+    spend.data[spend.data$sup_opp==" ","sup_opp"]<- c("support", "support", "oppose", "oppose", "oppose", "oppose", "oppose", "support", "support")
     
     spend.data$can_nam<-factor(spend.data$can_nam)
     obama.flag <- rep(0, nrow(spend.data))
     obama.flag[grep("obama", spend.data$can_nam)] <- 1
     spend.data$oflag<-factor(obama.flag)
-    
-    #There is one record without sup_opp, we looked up
-    #the PAC, and they are conservative, we filled out
-    #sup_opp accordingly (oppose Obama)
-    spend.data[spend.data$sup_opp==" ","sup_opp"]<-"oppose"
     
     spend.data$beneful_can <- rep(0, nrow(spend.data))
     spend.data$beneful_can[spend.data$oflag==1 & spend.data$sup_opp=="support"] <- "obama"

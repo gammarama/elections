@@ -21,7 +21,7 @@ opts_chunk$set(concordance=TRUE)
 
 \title{Can you buy a president? \\ \vspace{.6cm} \Large Politics after the Tillman Act}
 \author{Eric Hare \& Andee Kaplan}
-\date{Dec. ??, 2012}
+\date{Jan. ??, 2013}
 
 \maketitle
 \thispagestyle{empty}

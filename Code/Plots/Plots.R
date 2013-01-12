@@ -27,26 +27,26 @@ temporalPlot <- ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + 
     theme_bw() +
     theme(legend.position="bottom")
 
-# minValue <- min(c(sum_exp2$obama, sum_exp2$romney))
-# maxValue <- max(c(sum_exp2$obama, sum_exp2$romney)) + 500000000
-# qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
-#     geom_abline() + 
-#     geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
-#     scale_x_log10(limits = c(minValue, maxValue)) + 
-#     scale_y_log10(limits = c(minValue, maxValue)) +
-#     theme(legend.position="none") +
-#     theme_bw() +
-#     coord_fixed()
-# 
-# ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
-#     geom_bar(position = "dodge", stat = "identity") + 
-#     coord_flip() + 
-#     scale_y_log10() + 
-#     scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + 
-#     xlab("") + 
-#     ylab("Amount Spent (Log 10)") +
-#     theme_bw() +
-#     theme(legend.position="bottom")
+minValue <- min(c(sum_exp2$obama, sum_exp2$romney))
+maxValue <- max(c(sum_exp2$obama, sum_exp2$romney)) + 500000000
+typePlot<-qplot(romney, obama, data=sum_exp2, color = `df2$bucket2`) +
+    geom_abline() + 
+    geom_text(aes(label=`df2$bucket2`), data=sum_exp2, hjust=-.1, vjust=-.02) + 
+    scale_x_log10(limits = c(minValue, maxValue)) + 
+    scale_y_log10(limits = c(minValue, maxValue)) +
+    theme(legend.position="none") +
+    theme_bw() +
+    coord_fixed()
+
+typePlot2<-ggplot(sum_exp2_p, aes(bucket2, Sum, fill = beneful_can)) + 
+    geom_bar(position = "dodge", stat = "identity") + 
+    coord_flip() + 
+    scale_y_log10() + 
+    scale_fill_manual(name = "Candidate", values = c("#3D64FF", "#CC0033")) + 
+    xlab("") + 
+    ylab("Amount Spent (Log 10)") +
+    theme_bw() +
+    theme(legend.position="bottom")
 
 pacPlot <- ggplot(sum_exp.spep, aes(beneful_can, Sum/1000000, fill = spe_nam)) + 
     geom_bar(stat = "identity") + 
