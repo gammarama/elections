@@ -183,9 +183,8 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 
 We spent a significant amount of time cleaning the the PAC spending data in order to make it usable for our analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefitting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the can\_nam field. For example, Mr. Obama's name was spelled eight different ways and Mr. Romney's name was spelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
-
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Thu Jan 10 19:02:19 2013
+% Fri Jan 11 20:44:12 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{rll}
@@ -209,12 +208,10 @@ We spent a significant amount of time cleaning the the PAC spending data in orde
 
 
 
-
 An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column are used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits.  We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  That is, an opposition advertisement expense entered with a candidate name of Obama will benefit Romney. However, 15 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefitted by those PACs.
 
-
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Thu Jan 10 19:02:19 2013
+% Fri Jan 11 20:44:12 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{rl}
@@ -245,7 +242,6 @@ An additional complication we faced was with the support/oppose column (\texttt{
 
 
 
-
 Another serious challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form with 1,466 unique entries. For example, the conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose. An entry from mid-August read ``oppose advertising-tv production (voted for)." This description lists whether it was an ad in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC preferred short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patterns by looking at the expenditure purposes and manually finding common threads among the purposes. From these patterns we were able to create buckets that each expense fell in to, as well as high level buckets that more generally classified the expenditures. The buckets we chose are: 
 
 \begin{description}
@@ -266,11 +262,11 @@ The polling data did not require much data cleanup. We split the date range and 
 Our key findings are summarized in the following sections.  We begin by analyzing the spending patterns of Super PACs over the duration of the election season. We then take a closer look at the organizations which are spending the most on each side. Next, we analyze changes in the polling data with an emphasis on swing states. We conclude by attempting to correlate these changes to spending changes over time.
 
 %\subsection{Type of Spending by Week}
-Although a cursory look at the data suggests large and frequent spending benefitting both candidates, we set out to explore how this spending changed over time.  Futhermore, we wanted see whether Super PACs benefitting Mr. Obama tended to allocate resources to different buckets when compared to Super PACs benefitting Mr. Romney.  Such differences, if they were to exist, may help future successful campaigns distribute their resources more effectively. Figure \ref{fig:temporal_plot} displays the spending in each of the six categories by independent organizations benefiting Mr. Obama and Mr. Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are three markers which signify major events in the campaign: the selection of Representative Paul Ryan as Mr. Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video, and the debates.
+Although a cursory look at the data suggests large and frequent spending benefiting both candidates, we set out to explore how this spending changed over time.  Futhermore, we wanted see whether Super PACs benefiting Mr. Obama tended to allocate resources to different buckets when compared to Super PACs benefiting Mr. Romney.  Such differences, if they were to exist, may help future successful campaigns distribute their resources more effectively. Figure \ref{fig:temporal_plot} displays the spending in each of the six categories by independent organizations benefiting Mr. Obama and Mr. Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. There are six markers which signify major events in the campaign, Paul Ryan's selection as Vice Presidential nominee, the Republican National Convention, the Democratic National Convention, the original leak of the 47\% video, the first presidential debate, and election day.
 
-Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates show increases since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Mr. Romney. A noticeable increase in spending on direct contact for Obama is also evident beginning in August, while the organizations benefiting Mr. Romney have maintained consistent spending in negative direct contact beginning in mid-May.  Furthermore, ad spending in both support and opposition by Super PACs benefitting Mr. Romney was a factor of $10^5$ higher than those by Super PACs benefitting Mr. Obama since the end of July.
+Interesting trends can be observed in advertisement spending, and direct contact. Ads in support of both candidates show increases since the end of July. However, ads in opposition of the candidates were airing well before. You can, however, see an increase in negative ads benefiting Mr. Romney. A noticeable increase in spending on direct contact for Obama is also evident beginning in August, while the organizations benefiting Mr. Romney have maintained consistent spending in negative direct contact beginning in mid-May.  Furthermore, ad spending in both support and opposition by Super PACs benefiting Mr. Romney was a factor of $10^5$ higher than those by Super PACs benefiting Mr. Obama since the end of July.
 
-Two of the advertisement weekly spending totals are highlighted in green.  These points mark extremely sharp increases in spending for Super PACs benefitting Mr. Romney.
+There are two notable week-to-week increases in spending by Super PACs benefiting Mr. Romney.  The first was between the week of July 15th to the week of July 22nd.  Total opposition advertisement spending by these Super PACs rose from \$8366.15 to \$22,590,242.45.  Advertisement spending in support of Mr. Romney totaled \$7,326,655.25 during the week of August 5th, in spite of the fact that no support spending for Mr. Romney was done in the preceding 12 weeks.  No weekly total of advertising in support matched this number until 2 weeks prior to election day.  These figures correspond to a couple of more widely known ads.  An opposition ad by American Crossroads titled \texttt{Smoke} ran in 9 swing states, which accounted for nearly 25\% of the total spending during the week of July 22nd \footnote{\href{http://www.usnews.com/news/blogs/Ken-Walshs-Washington/2012/07/20/super-pac-american-crossroads-becoming-key-to-romney-campaign}{Super PAC American Crossroads Becoming Key to Romney Campaign}}.  An ad by Restore Our Future, which ran in 11 swing states, praised Mr. Romney's leadership during the 2002 Winter Olympic Games.  This ad accounted for over 90\% of the weekly support spending total during the week of August 5th \footnote{\href{http://www.huffingtonpost.com/2012/07/30/restore-our-future_n_1719310.html}{Restore Our Future, Pro-Mitt Romney Super PAC, Releases New Ad Touting Olympics Stewardship}}.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -283,7 +279,34 @@ Two of the advertisement weekly spending totals are highlighted in green.  These
 \caption[Total weekly spending by Super PACs in support or opposition of candidates]{Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.\label{fig:temporal_plot}}
 \end{figure}
 
+
 \end{knitrout}
+
+
+% latex table generated in R 2.15.2 by xtable 1.7-0 package
+% Fri Jan 11 20:44:14 2013
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rll}
+  \hline
+ & Mr.Obama & Mr.Romney \\ 
+  \hline
+1 & obama, barack & romney, mitt / ryan, paul d. \\ 
+  2 & barack, obama & romney, w mitt \\ 
+  3 & obama, barak & romney, mitt \\ 
+  4 & barak, obama & mitt, romney \\ 
+  5 & obama, barack hussein & romney / paul d. ryan, mitt \\ 
+  6 & obama, barak hussein & romney, mary rose \\ 
+  7 & 2012, obama/biden & romney, willard \\ 
+  8 & obama, pres. barack &  \\ 
+   \hline
+\end{tabular}
+\caption{Multiple spellings of candidate names in spending data.}
+\label{tab:can_nam}
+\end{center}
+\end{table}
+
+
 
 
 
@@ -295,7 +318,7 @@ Two of the advertisement weekly spending totals are highlighted in green.  These
 % 
 
 %\subsection{Spending by Independent Organizations}
-Figure \ref{fig:PAC_plot} displays the total spending by the top independent organizations split by candidate. The cumulative amounts spent are displayed vertically, by the benefiting candidate. The organizations supporting Mr. Romney have spent significantly more than those supporting Mr. Obama. In fact, two Super PACs supporting Mr. Romney (Restore our Future, Inc and Americans for Prosperity) have spent more than all the organizations supporting Mr. Obama combined.
+Figure \ref{fig:PAC_plot} displays the total spending by the top independent organizations split by candidate. The cumulative amounts spent are displayed vertically, by the benefiting candidate. The organizations supporting Mr. Romney have spent significantly more than those supporting Mr. Obama. In fact, two Super PACs supporting Mr. Romney (Restore our Future, Inc. and Americans Crossroads) have spent more than all the organizations supporting Mr. Obama combined.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -307,6 +330,7 @@ Figure \ref{fig:PAC_plot} displays the total spending by the top independent org
 
 \caption[Spending by Super PAC, stacked by candidate]{Spending by Super PAC, stacked by candidate.\label{fig:PAC_plot}}
 \end{figure}
+
 
 \end{knitrout}
 
@@ -328,10 +352,11 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 \caption[Map of United States with swing states highlighted]{Map of United States with swing states highlighted.\label{fig:swing_map}}
 \end{figure}
 
+
 \end{knitrout}
 
 
-The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. There are five markers which signify major events in the campaign: the selection of Mr. Ryan as Mr. Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the first presidential debate. 
+The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. The six event markers previously used in the plot of spending over time are also displayed.
 
 The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 
@@ -346,13 +371,14 @@ The plots suggest that the reaction to these major campaign events was not consi
 \caption[Polling averages for Mr]{Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.\label{fig:type_swing_1}}
 \end{figure}
 
+
 \end{knitrout}
 
 
 
 %\subsection{Spending by Week}
 
-Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either candidate. Looking at weekly spending by PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We examine at the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
+Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either candidate. Looking at weekly spending by PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 15th.  This is the same increase that was previously shown to be largely due to the \texttt{Smoke} ad released by American Crossroads. The spending levels then remain consistently higher for the rest of the campaign season.  This stands in contrast to the Super PACs benefiting Mr. Obama, where spending levels remained relatively steady week-to-week.  We have shaded the period prior to July 15th and labeled it as region (1), while the period after July 15th is region (2).  We examine the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
 
 \begin{knitrout}
@@ -366,12 +392,13 @@ Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either cand
 \caption[Weekly spending by Super PACs supporting Mr]{Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.\label{fig:trend_plot}}
 \end{figure}
 
+
 \end{knitrout}
 
 
 %\subsection{Effect of Spending on Polls}
 
-Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by PACs supporting Mr. Romney. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
+Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers.  The time periods before and after July 15th are shaded in the same manner as above.  It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a LOESS smoother, as we have used previously. When using the LOESS smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the LOESS smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method places importance on past points with exponentially decreasing weights as the points become further from the event, limiting the impact of future polling on the current smoothed trend. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages.
 
@@ -386,21 +413,24 @@ Note that this plot utilizes exponential smoothing to show the trends in polls o
 \caption[Polling margin (Obama - Romney) over time, swing states versus national polls]{Polling margin (Obama - Romney) over time, swing states versus national polls. Shaded region indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region indicates a period of higher spending.\label{fig:effect_plot}}
 \end{figure}
 
+
 \end{knitrout}
 
 
-Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated important events. The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
+Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated 5 of the 6 important events (election day is not included because we are measuring the polling with a one week lag).   The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 
-{\centering \includegraphics[width=.45\textwidth]{figure/support_spend1} \includegraphics[width=.45\textwidth]{figure/support_spend2} 
+{\centering \includegraphics[width=.45\textwidth]{figure/support_spend1} 
+\includegraphics[width=.45\textwidth]{figure/support_spend2} 
 
 }
 
 \caption[Change in polling over change in spending by candidate]{Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, and (5) first presidential debate.\label{fig:support_spend}}
 \end{figure}
+
 
 \end{knitrout}
 

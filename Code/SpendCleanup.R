@@ -129,11 +129,11 @@ spend.data <- getExpenditures("2012")
 
 num.weeks <- ddply(spend.data, .(week = factor(week(exp_dat)), beneful_can, bucket2, sup_opp),.drop=FALSE, summarise, WeeklySum = sum(exp_amo))
 num.weeks[num.weeks$WeeklySum == 0,"WeeklySum"] = NA
+num.weeks$week <- as.numeric(as.character(num.weeks$week))
 
 # Subset out the final week since it is incomplete
 num.weeks <- subset(num.weeks, week < 45)
 num.weeks$date <- as.Date("1/1/2012",format="%d/%m/%Y") + weeks(as.numeric(num.weeks$week))
-
 
 df2<-spend.data[,c("exp_amo", "beneful_can", "bucket2")]
 sum_exp2 <- dcast(melt(df2,id=c("beneful_can", "bucket2")), df2$bucket2 ~ df2$beneful_can, sum)
