@@ -30,7 +30,7 @@ getExpenditures <- function(year) {
     # However, the FEC is prone to failure so for now, hardcoding
     #data <- read.csv(paste("http://www.fec.gov/data/IndependentExpenditure.do?format=csv&election_yr=", year, sep = ""))
     data <- read.csv("../../Data/independent-expenditure.csv")
-
+    
     # Format the dates and expenditure amounts
     data$rec_dat <- as.Date(data$rec_dat,format='%m/%d/%Y')
     data$exp_dat <- as.Date(data$exp_dat,format='%m/%d/%Y')
@@ -45,12 +45,14 @@ getExpenditures <- function(year) {
     
     spend.data$bucket <- rep(NA, nrow(spend.data))
     
-    
-    
     bucket <- createBucket(spend.data, "tv|television|production|video", rep(NA, nrow(spend.data)), entryText = "tv")
     bucket <- createBucket(spend.data, "web|internet|online|digital", bucket, "web")
     bucket <- createBucket(spend.data, "radio", bucket)
-    bucket <- createBucket(spend.data, "salar|wage", bucket, "salary")
+    bucket <- createBucket(spend.data, "salar|staff|wage", bucket, "salary")
+    bucket <- createBucket(spend.data, "rent", bucket)
+    bucket <- createBucket(spend.data, "meal|food", bucket, "food")
+    bucket <- createBucket(spend.data, "consultants", bucket)
+    bucket <- createBucket(spend.data, "fundraiser", bucket)
     bucket <- createBucket(spend.data, "email|e\\-mail", bucket, "email")
     bucket <- createBucket(spend.data, "call|phone|cell", bucket, "call")
     bucket <- createBucket(spend.data, "travel|lodging|diem|travel|hotel|airport|flight", bucket, "travel")
@@ -59,19 +61,19 @@ getExpenditures <- function(year) {
     bucket <- createBucket(spend.data, "^(sign)|banner", bucket, "sign")
     bucket <- createBucket(spend.data, "design", bucket)
     bucket <- createBucket(spend.data, "yard|sign", bucket, "sign")
-    bucket <- createBucket(spend.data, "vehicle|car|truck|van|bus|gas|transport|mileage", bucket, "transport")
+    bucket <- createBucket(spend.data, "vehicle|car|truck|van|bus|gas|transport|mileage|taxi|delivery", bucket, "transport")
     bucket <- createBucket(spend.data, "canvas", bucket, "canvass")
-    bucket <- createBucket(spend.data, "media|billboard", bucket, "media")
+    bucket <- createBucket(spend.data, "media|billboard|posters", bucket, "media")
     bucket <- createBucket(spend.data, "printing", bucket, "printing")
-    bucket <- createBucket(spend.data, "shirts|button|hat|bumper", bucket, "swag")
+    bucket <- createBucket(spend.data, "shirt|button|hat|bumper|sticker", bucket, "swag")
+    bucket <- createBucket(spend.data, "ad|ads", bucket, "otherad")
     bucket[bucket == "design"] <- NA
     bucket[is.na(bucket)]<-"other"
-    
     spend.data$bucket <- bucket
     
     spend.data$bucket2 <- spend.data$bucket
-    spend.data[spend.data$bucket2 %in% c("tv", "radio", "media", "web", "sign"), "bucket2"] <- "ad"
-    spend.data[spend.data$bucket2 %in% c("travel", "transport"), "bucket2"] <- "transport"
+    spend.data[spend.data$bucket2 %in% c("tv", "radio", "media", "web", "sign", "otherad"), "bucket2"] <- "ad"
+    spend.data[spend.data$bucket2 %in% c("salary", "rent", "food", "consultants", "fundraiser", "travel", "transport"), "bucket2"] <- "overhead"
     spend.data[spend.data$bucket2 %in% c("email", "call", "mail", "canvass", "flyer", "printing"), "bucket2"] <- "direct contact"
     
     #There are 9 records without sup_opp, we looked up
@@ -177,4 +179,3 @@ blue <- rev(brewer.pal(6, "Blues"))[1:3]
 
 num.weeks.sum <- ddply(subset(num.weeks, week > 17), .(week, beneful_can), summarise, sum = sum(WeeklySum, na.rm = TRUE))
 num.weeks.sum$Date <- as.Date("2012-04-28") + (7 * (as.numeric(num.weeks.sum$week) - week(as.Date("2012-04-28"))))
-
