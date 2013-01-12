@@ -6,7 +6,7 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 swingStatePlot
 @
 
-The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. There are five markers which signify major events in the campaign: the selection of Mr. Ryan as Mr. Romney's vice presidential nominee, the Republican National Convention, the Democratic National Convention, the 47\% video and the first presidential debate. 
+The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. The six event markers previously used in the plot of spending over time are also displayed.
 
 The plots suggest that the reaction to these major campaign events was not consistent state to state. Some states, such as Wisconsin, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates.
 

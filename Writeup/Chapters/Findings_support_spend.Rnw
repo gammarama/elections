@@ -1,6 +1,6 @@
 %\subsection{Spending by Week}
 
-Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either candidate. Looking at weekly spending by PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 18th. We examine at the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
+Figure \ref{fig:trend_plot} shows weekly spending by PACs benefiting either candidate. Looking at weekly spending by PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 15th.  This is the same increase that was previously shown to be largely due to the \texttt{Smoke} ad released by American Crossroads. The spending levels then remain consistently higher for the rest of the campaign season.  This stands in contrast to the Super PACs benefiting Mr. Obama, where spending levels remained relatively steady week-to-week.  We have shaded the period prior to July 15th and labeled it as region (1), while the period after July 15th is region (2).  We examine the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
 %Similarly, there was a sharp increase in spending by Obama-supporting PACs during the week of September 9th. 
 
 <<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.'>>=
@@ -9,7 +9,7 @@ trendPlot
 
 %\subsection{Effect of Spending on Polls}
 
-Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. A marker is placed on July 18th, corresponding to the sharp increase in spending by PACs supporting Mr. Romney. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
+Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers.  The time periods before and after July 15th are shaded in the same manner as above.  It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a LOESS smoother, as we have used previously. When using the LOESS smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the LOESS smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method places importance on past points with exponentially decreasing weights as the points become further from the event, limiting the impact of future polling on the current smoothed trend. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages.
 
@@ -17,7 +17,7 @@ Note that this plot utilizes exponential smoothing to show the trends in polls o
 effectPlot
 @
 
-Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated important events. The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
+Figure \ref{fig:support_spend} compares the difference in PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. The points are colored by week and certain weeks are labeled to indicated 5 of the 6 important events (election day is not included because we are measuring the polling with a one week lag).   The goal is to see if there is a relationship between PAC spending and poll results. In PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
 
 <<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4.5, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, and (5) first presidential debate.', fig.show='hold', fig.align='center'>>=
 obamaEffectPlot
