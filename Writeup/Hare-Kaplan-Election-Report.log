@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  14 JAN 2013 18:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  14 JAN 2013 21:18
 entering extended mode
 **Hare-Kaplan-Election-Report.tex
 
@@ -735,7 +735,7 @@ Package pdftex.def Info: figure/type_swing_1.pdf used on input line 355.
 pe_swing_1.pdf>]
 Package color Info: Redefining color shadecolor on input line 373.
 
-<figure/trend_plot.pdf, id=155, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=153, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
@@ -743,7 +743,7 @@ Package pdftex.def Info: figure/trend_plot.pdf used on input line 376.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
 Package color Info: Redefining color shadecolor on input line 394.
 
-<figure/effect_plot.pdf, id=157, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=155, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
@@ -753,14 +753,14 @@ Package pdftex.def Info: figure/effect_plot.pdf used on input line 397.
 ot.pdf>]
 Package color Info: Redefining color shadecolor on input line 411.
 
-<figure/support_spend1.pdf, id=174, 289.08pt x 325.215pt>
+<figure/support_spend1.pdf, id=172, 289.08pt x 325.215pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
 Package pdftex.def Info: figure/support_spend1.pdf used on input line 414.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
 
-<figure/support_spend2.pdf, id=175, 289.08pt x 325.215pt>
+<figure/support_spend2.pdf, id=173, 289.08pt x 325.215pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
@@ -786,7 +786,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
 Here is how much of TeX's memory you used:
  9143 strings out of 494045
  132233 string characters out of 3148375
- 235065 words of memory out of 3000000
+ 235075 words of memory out of 3000000
  12228 multiletter control sequences out of 15000+200000
  14711 words of font info for 56 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -802,9 +802,9 @@ msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 462956 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 535525 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
+ 271 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

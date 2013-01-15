@@ -15,9 +15,10 @@ states$swing[states$region %in% tolower(obama.states)] <- "obama"
 states$swing[states$region %in% tolower(swing.states)] <- "swing"
 states$isSwing <- states$swing == "swing"
 
-swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing, alpha = isSwing) +
-    scale_fill_manual(values = c("blue", "red", "#FFDD00")) +
-    scale_alpha_manual(values = c(.15, 1)) +
+swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing) +
+    geom_path(size = .05, colour = "darkgrey") +
+    scale_fill_manual(values = c("darkblue", "darkred", "#FFBE0D")) +
+    #scale_alpha_manual(values = c(.25, 1)) +
     theme_bw() +
     theme(aspect.ratio=1/1.5, legend.position = "none") +
     theme(axis.ticks = element_blank(),

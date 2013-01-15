@@ -184,7 +184,7 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 We had to spend a significant amount of time cleaning the the PAC spending data in order to make it usable for analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefiting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the candidate name field (\texttt{can\_nam}). For example, Mr. Obama's name was mispelled eight different ways and Mr. Romney's name was mispelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Mon Jan 14 18:00:39 2013
+% Mon Jan 14 21:17:50 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{lrlr}
@@ -211,7 +211,7 @@ obama, barack & 25978 & romney, mitt & 20655 \\
 An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, 12 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those PACs.
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Mon Jan 14 18:00:39 2013
+% Mon Jan 14 21:17:50 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{l}
@@ -337,7 +337,7 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 
 }
 
-\caption[Map of United States with swing states highlighted]{Map of United States with swing states highlighted.\label{fig:swing_map}}
+\caption[Map of United States with swing states highlighted in yellow]{Map of United States with swing states highlighted in yellow.\label{fig:swing_map}}
 \end{figure}
 
 
