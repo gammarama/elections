@@ -7,14 +7,19 @@ library(maps)
 
 states <- map_data("state")
 
+obama.states <- c("California", "Connecticut", "Delaware", "District of Columbia", "Hawaii", "Illinois", "Maine", "Maryland", "Massachusetts", "Minnesota", "New Jersey", "New Mexico", "New York", "Oregon", "Rhode Island", "Vermont", "Washington")
 swing.states <- c("Colorado", "Florida", "Iowa", "Missouri", "Michigan", "Nevada", "New Hampshire", "North Carolina", "Ohio", "Pennsylvania", "Virginia", "Wisconsin")
 
-states$swing <- states$region %in% tolower(swing.states)
+states$swing <- "romney"
+states$swing[states$region %in% tolower(obama.states)] <- "obama"
+states$swing[states$region %in% tolower(swing.states)] <- "swing"
+states$isSwing <- states$swing == "swing"
 
-swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = I("forestgreen"), alpha = swing) +
+swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing, alpha = isSwing) +
+    scale_fill_manual(values = c("blue", "red", "#FFDD00")) +
+    scale_alpha_manual(values = c(.15, 1)) +
     theme_bw() +
     theme(aspect.ratio=1/1.5, legend.position = "none") +
-    geom_path(size = .1) +
     theme(axis.ticks = element_blank(),
           axis.line=element_blank(),
           axis.text.x=element_blank(),
