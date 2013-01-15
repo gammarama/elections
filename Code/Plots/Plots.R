@@ -11,17 +11,29 @@ dates <- c(as.Date("2012-8-11", format="%Y-%m-%d"),
            as.Date("2012-11-6", format="%Y-%m-%d"))
 special.dat <- data.frame(x = dates, label = 1:6)
 
+bucketPlotCount <- qplot(bucket2, count, data = bucket.data, geom = "bar", stat = "identity") +
+    xlab("Bucket") +
+    ylab("Count") +
+    scale_y_log10(label = math_format(format = log10)) +
+    theme_bw()
+
+bucketPlotSum <- qplot(bucket2, sum, data = bucket.data, geom = "bar", stat = "identity") +
+    xlab("Bucket") +
+    ylab("Sum (Log 10)") +
+    scale_y_log10(label = math_format(format = log10)) +
+    theme_bw()
+
 temporalPlot <- ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + facet_grid(facets=bucket2~sup_opp) + 
     scale_colour_manual(name = "Candidate who benefits", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) + 
     xlab("Weeks") + 
     ylab("Amount Spent (Log 10)") + 
-    annotate(geom = "rect", xmin = as.Date("2012-8-11", format="%Y-%m-%d"), xmax = as.Date("2012-8-12", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-8-28", format="%Y-%m-%d"), xmax = as.Date("2012-8-30", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .4, fill = "black") + 
-    geom_point() + geom_line() +
+    annotate(geom = "rect", xmin = as.Date("2012-8-11", format="%Y-%m-%d"), xmax = as.Date("2012-8-12", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-8-28", format="%Y-%m-%d"), xmax = as.Date("2012-8-30", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 1, ymax = 1e+08, alpha = .3, fill = "black") + 
+    geom_point(size = 3.5) + geom_line(size = 1.5) +
     geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.5), y = log10(5), inherit.aes = FALSE, show_guide = FALSE) +
     scale_y_log10(label = math_format(format = log10)) +
     theme_bw() +

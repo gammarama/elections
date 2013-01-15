@@ -127,6 +127,8 @@ getExpenditures <- function(year) {
 
 spend.data <- getExpenditures("2012")
 
+bucket.data <- ddply(spend.data, .(bucket2), summarise, count = length(exp_amo), sum = sum(exp_amo))
+
 num.weeks <- ddply(spend.data, .(week = factor(week(exp_dat)), beneful_can, bucket2, sup_opp),.drop=FALSE, summarise, WeeklySum = sum(exp_amo))
 num.weeks[num.weeks$WeeklySum == 0,"WeeklySum"] = NA
 num.weeks$week <- as.numeric(as.character(num.weeks$week))

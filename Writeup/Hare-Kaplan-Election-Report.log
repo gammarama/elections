@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.8)  14 JAN 2013 14:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  14 JAN 2013 18:00
 entering extended mode
 **Hare-Kaplan-Election-Report.tex
 
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\Hare-Kaplan-Election-Report.tex"
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\Hare-Kaplan-Election
+-Report.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +15,9 @@ an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese,
 romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,31 +32,31 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -64,34 +64,32 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\upquote\upquote.s
-ty
+("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\framed.sty"
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\framed.sty
 Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
 \fb@frw=\dimen105
 \fb@frh=\dimen106
 \FrameRule=\dimen107
 \FrameSep=\dimen108
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2009/06/22 v3.00
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -99,24 +97,24 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen109
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
@@ -157,7 +155,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -169,18 +167,18 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count100
@@ -196,19 +194,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks27
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\ctable\ctable.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ctable\ctable.sty"
 Package: ctable 2011/09/05 v1.21 ctable package
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks28
 \XKV@tempa@toks=\toks29
 \XKV@depth=\count103
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen126
 \extrarowheight=\dimen127
@@ -216,7 +215,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip49
 \backup@length=\skip50
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@col@width=\dimen128
 \TX@old@table=\dimen129
@@ -226,8 +225,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count104
 \TX@ftn=\toks31
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\booktabs\booktabs
-.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen133
 \lightrulewidth=\dimen134
@@ -247,10 +245,10 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count108
 \@thisrulewidth=\dimen145
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\rotating\rotating
-.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count109
@@ -277,8 +275,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \@ctbloldrule=\dimen161
 \ctbl@t=\box29
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\listings\listings
-.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count110
 \lst@gtempboxa=\box30
 \lst@token=\toks33
@@ -292,23 +289,21 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \lst@lineno=\count115
 \lst@maxwidth=\dimen165
 
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\listings\lstmisc.
-sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box31
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\listings\listings
-.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\ltablex\ltablex.s
-ty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltablex\ltablex.sty"
 Package: ltablex 1995/11/06 v1.0 Modified tabularx
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
@@ -326,7 +321,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count122
 \LT@p@ftn=\toks34
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count123
 \calc@Bcount=\count124
@@ -339,14 +334,14 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count125
 \calc@Cskip=\skip59
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks35
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen169
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count126
 \float@exts=\toks36
@@ -354,7 +349,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks37
 \@floatcapt=\box37
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\soul\soul.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\soul\soul.sty"
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks38
 \SOUL@lasttoken=\toks39
@@ -366,14 +361,14 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen171
 \SOUL@ulht=\dimen172
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -412,19 +407,19 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen173
 \Hy@linkcounter=\count127
 \Hy@pagecounter=\count128
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count129
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4062.
@@ -436,7 +431,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count130
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -460,32 +455,31 @@ LaTeX Info: Redefining \pageref on input line 5847.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count135
 \c@bookmark@seq@number=\count136
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip61
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\latex\textcase\textcase
-.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\Hare-Kaplan-Election-Report.aux")
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\Hare-Kaplan-Election
+-Report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
@@ -500,9 +494,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
-
-(\\iastate.edu\cyfiles\ajkaplan\.AppData\MiKTeX\2.9\tex\context\base\supp-pdf.m
-kii
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count137
 \scratchdimen=\dimen176
@@ -550,7 +542,7 @@ kii
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -565,7 +557,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -635,10 +627,10 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 \AtBeginShipoutBox=\box39
 Package hyperref Info: Link coloring OFF on input line 69.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count144
@@ -647,26 +639,25 @@ LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
 LaTeX Info: Redefining \nameref on input line 69.
 
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\Hare-Kaplan-Election-Report.out")
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\Hare-Kaplan-Election-Report.out")
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\Hare-Kaplan-Election
+-Report.out)
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\Hare-Kaplan-Election
+-Report.out)
 \@outlinefile=\write3
 LaTeX Font Info:    Try loading font information for U+msa on input line 81.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/Users/ajkaplan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
@@ -687,117 +678,133 @@ been already used, duplicate ignored
 l.185 
        [1
 
-] [2] [3] [4]
-Package color Info: Redefining color shadecolor on input line 268.
- <figure/temporal_plot.pdf, id=70, 722.7pt x 867.24pt>
+] [2] [3]
+Package color Info: Redefining color shadecolor on input line 253.
+ <figure/bucket_plot1.pdf, id=58, 289.08pt x 325.215pt>
+File: figure/bucket_plot1.pdf Graphic file (type pdf)
+
+<use figure/bucket_plot1.pdf>
+Package pdftex.def Info: figure/bucket_plot1.pdf used on input line 256.
+(pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
+
+<figure/bucket_plot2.pdf, id=59, 289.08pt x 325.215pt>
+File: figure/bucket_plot2.pdf Graphic file (type pdf)
+
+<use figure/bucket_plot2.pdf>
+Package pdftex.def Info: figure/bucket_plot2.pdf used on input line 257.
+(pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
+ [4] [5 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/bucke
+t_plot1.pdf> <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/
+bucket_plot2.pdf>]
+Package color Info: Redefining color shadecolor on input line 284.
+
+<figure/temporal_plot.pdf, id=87, 722.7pt x 867.24pt>
 File: figure/temporal_plot.pdf Graphic file (type pdf)
 
 <use figure/temporal_plot.pdf>
-Package pdftex.def Info: figure/temporal_plot.pdf used on input line 271.
+Package pdftex.def Info: figure/temporal_plot.pdf used on input line 287.
 (pdftex.def)             Requested size: 469.75502pt x 563.71257pt.
- [5] [6 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential El
-ection/Election-2012/Writeup/figure/temporal_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 296.
- <figure/PAC_plot.pdf, id=94, 722.7pt x 361.35pt>
+ [6] [7 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/tempo
+ral_plot.pdf>]
+Package color Info: Redefining color shadecolor on input line 312.
+
+<figure/PAC_plot.pdf, id=111, 722.7pt x 361.35pt>
 File: figure/PAC_plot.pdf Graphic file (type pdf)
-
-<use figure/PAC_plot.pdf>
-Package pdftex.def Info: figure/PAC_plot.pdf used on input line 299.
+ <use figure/PAC_plot.pdf>
+Package pdftex.def Info: figure/PAC_plot.pdf used on input line 315.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
-Package color Info: Redefining color shadecolor on input line 317.
- <figure/swing_map.pdf, id=97, 722.7pt x 361.35pt>
+Package color Info: Redefining color shadecolor on input line 333.
+
+<figure/swing_map.pdf, id=114, 722.7pt x 361.35pt>
 File: figure/swing_map.pdf Graphic file (type pdf)
-
-<use figure/swing_map.pdf>
-Package pdftex.def Info: figure/swing_map.pdf used on input line 320.
+ <use figure/swing_map.pdf>
+Package pdftex.def Info: figure/swing_map.pdf used on input line 336.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
- [7 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Electi
-on/Election-2012/Writeup/figure/PAC_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 336.
 
-<figure/type_swing_1.pdf, id=113, 722.7pt x 867.24pt>
+[8 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/PAC_plot.p
+df>]
+Package color Info: Redefining color shadecolor on input line 352.
+ <figure/type_swing_1.pdf, id=130, 722.7pt x 867.24pt>
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
-Package pdftex.def Info: figure/type_swing_1.pdf used on input line 339.
+Package pdftex.def Info: figure/type_swing_1.pdf used on input line 355.
 (pdftex.def)             Requested size: 469.75502pt x 563.71257pt.
- [8 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Electi
-on/Election-2012/Writeup/figure/swing_map.pdf>]
-[9 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Electio
-n/Election-2012/Writeup/figure/type_swing_1.pdf>]
-Package color Info: Redefining color shadecolor on input line 357.
+ [9 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/swing_map
+.pdf>] [10 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/ty
+pe_swing_1.pdf>]
+Package color Info: Redefining color shadecolor on input line 373.
 
-<figure/trend_plot.pdf, id=140, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=155, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
-Package pdftex.def Info: figure/trend_plot.pdf used on input line 360.
+Package pdftex.def Info: figure/trend_plot.pdf used on input line 376.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
-Package color Info: Redefining color shadecolor on input line 378.
+Package color Info: Redefining color shadecolor on input line 394.
 
-<figure/effect_plot.pdf, id=142, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=157, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
-Package pdftex.def Info: figure/effect_plot.pdf used on input line 381.
+Package pdftex.def Info: figure/effect_plot.pdf used on input line 397.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
- [10 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Elect
-ion/Election-2012/Writeup/figure/trend_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 395.
+ [11 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/trend_pl
+ot.pdf>]
+Package color Info: Redefining color shadecolor on input line 411.
 
-<figure/support_spend1.pdf, id=159, 289.08pt x 325.215pt>
+<figure/support_spend1.pdf, id=174, 289.08pt x 325.215pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
-Package pdftex.def Info: figure/support_spend1.pdf used on input line 398.
+Package pdftex.def Info: figure/support_spend1.pdf used on input line 414.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
 
-<figure/support_spend2.pdf, id=160, 289.08pt x 325.215pt>
+<figure/support_spend2.pdf, id=175, 289.08pt x 325.215pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
-Package pdftex.def Info: figure/support_spend2.pdf used on input line 399.
+Package pdftex.def Info: figure/support_spend2.pdf used on input line 415.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
- [11 <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012 Presidential Elect
-ion/Election-2012/Writeup/figure/effect_plot.pdf>] [12 <//iastate.edu/cyfiles/a
-jkaplan/Documents/Projects/2012 Presidential Election/Election-2012/Writeup/fig
-ure/support_spend1.pdf> <//iastate.edu/cyfiles/ajkaplan/Documents/Projects/2012
- Presidential Election/Election-2012/Writeup/figure/support_spend2.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 422.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 422.
+ [12 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure/effect_p
+lot.pdf>] [13 <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup/figure
+/support_spend1.pdf> <C:/Users/ericr_000/Documents/GitHub/Election-2012/Writeup
+/figure/support_spend2.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
 
-("\\iastate.edu\cyfiles\ajkaplan\Documents\Projects\2012 Presidential Election\
-Election-2012\Writeup\Hare-Kaplan-Election-Report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 422.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 422.
+(C:\Users\ericr_000\Documents\GitHub\Election-2012\Writeup\Hare-Kaplan-Election
+-Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `Hare-Kaplan-Election-Report.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: C4EA298E5CD7DE82900D0EDE1BAA2E05;191.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 422.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 9130 strings out of 494045
- 133937 string characters out of 3145943
- 234020 words of memory out of 3000000
- 12219 multiletter control sequences out of 15000+200000
+ 9143 strings out of 494045
+ 132233 string characters out of 3148375
+ 235065 words of memory out of 3000000
+ 12228 multiletter control sequences out of 15000+200000
  14711 words of font info for 56 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 31i,11n,33p,1477b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ajkaplan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\tcrm1095.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (14 pages, 524968 bytes).
+ 31i,11n,33p,1477b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 462956 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
