@@ -83,41 +83,44 @@ head(polls.data, n = 3)
 **Bucket List**
 > - **Ads** - Advertisement spending, including television, radio, and online
 > - **Direct Contact** - Direct voter contact, such as canvassing
-> - **Salary** - Payments made to staff of the organization
+> - **Overhead** - Expenditures related to the ongoing cost of running a Super PAC, including salary, rent, consultants, fundraising, and travel
 > - **Swag** - Clothing, signs, and other promotional material
-> - **Transport** - Transportation costs, such as taxis or van rentals
 > - **Other** - All expenses that do not fit into the above categories
 
 ---
 
-## Types of Spending by Week
-![Spending by Super PACs in support or opposition of candidates](figure/SpendingByWeek.png) 
-
-
----
-
-## Spending Categories
-![Types of spending by category for Romney and Obama Super PACs](figure/SpendingByCategory1.png) ![NA](figure/SpendingByCategory2.png) 
-
----
-
 ## Spending by Independent Organization
-![Spending by Super PAC, stacked by candidate](figure/SpendingByIO.png) 
+![Spending by Super PAC, stacked by candidate.](figure/PAC_plot.png) 
+
+---
+
+## Map of Swing States
+![Map of United States with swing states highlighted in yellow.](figure/swing_map.png) 
 
 ---
 
 ## Swing State Trends
-![Polling Averages for Obama and Romney by swing state](figure/SwingTrends.png) 
+![Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.](figure/type_swing_1.png) 
+
+---
+
+## Types of Spending by Week
+![Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.](figure/temporal_plot.png) 
 
 ---
 
 ## Spending by Week
-![Weekly Spending by Super PACs supporting Obama and Romney](figure/SpendingSwingWeek.png) 
+![Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.](figure/trend_plot.png) 
+
+---
+
+## Change in Polling over Spending
+![Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, and (5) first presidential debate.](figure/support_spend1.png) ![Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, and (5) first presidential debate.](figure/support_spend2.png) 
 
 ---
 
 ## Effect of Spending on Polls
-![Polling Margin (Obama - Romney) over time, swing states versus national polls](figure/SpendEffect.png) 
+![Polling margin (Obama - Romney) over time, swing states versus national polls. Shaded region indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region indicates a period of higher spending.](figure/effect_plot.png) 
 
 ---
 

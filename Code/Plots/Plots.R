@@ -81,7 +81,7 @@ analyzeStateTrends <- function(state) {
     annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") +theme_bw() +
     geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.5), y = 33.5, inherit.aes = FALSE, show_guide = FALSE) +
-    geom_smooth(method="loess") +
+    geom_smooth(method="loess", size = 1.5) +
     geom_point() +
     theme_bw() +
     theme(legend.position="bottom")
@@ -92,9 +92,10 @@ swing.states <- c("Colorado", "Florida", "Iowa", "Michigan", "Missouri", "Nevada
 swingPlot <- analyzeStateTrends(swing.states)
 
 labels.spending <- data.frame(yval=c(1e+04, 1e+04), xval=c(as.Date("28/5/2012","%d/%m/%Y"), as.Date("10/9/2012","%d/%m/%Y")), text=c("1", "2"))
-trendPlot <- qplot(Date, sum, data = num.weeks.sum, colour = beneful_can) + 
+trendPlot <- qplot(Date, sum, data = num.weeks.sum, colour = beneful_can, geom = "blank") + 
     scale_y_log10(label = math_format(format = log10)) +
-    geom_line() +
+    geom_point(size = 3.5) +
+    geom_line(size = 1.5) +
     #annotate("text", x=as.Date("14/7/2012","%d/%m/%Y"), y=5e+07, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=10) +
     scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
     ylab("Total Spending (Log 10)") + 
@@ -120,10 +121,10 @@ effectPlot <- qplot(Date, Obama.Romney, data = polls.data, colour = isNational, 
     geom_text(data=labels.tracking[2,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#330099"), size=5, alpha=I(0.2), shape=1) +
     theme_bw() +
     theme(legend.position="bottom") +
-    geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE)
+    geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE, size = 1.5)
 
 obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=ObamaPollChange, colour = week)) +
-    geom_smooth(method="loess") +
+    geom_smooth(method="loess", size = 1.5, colour = "#3D64FF") +
     geom_point() +
     ylab("Change in % Support (Weekly Average)") +
     xlab("Change in Super PAC Spending (In Millions of $)") +
@@ -137,7 +138,7 @@ obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=Obam
     theme(legend.position="bottom")
 
 romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange/1000000, y=RomneyPollChange, colour = week)) +
-    geom_smooth(method="loess",colour = I("red")) +
+    geom_smooth(method="loess", colour = "#CC0033", size = 1.5) +
     geom_point() +
     ylab("Change in % Support (Weekly Average)") +
     xlab("Change in Super PAC Spending (In Millions of $)") +

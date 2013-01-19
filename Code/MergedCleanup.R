@@ -21,7 +21,7 @@ unmelted.sum$weeknum <- factor(unmelted.sum$weeknum)
 unmelted.sum <- unmelted.sum[-c(28, 27), ]
 final.df3 <- cbind(unmelted.sum, polls.week[-c(1,2),])
 
-
+final.df3$postHeavySpend <- final.df3$week > week(as.Date("08/7/2012","%d/%m/%Y"))
 
 
 ObamaPollPrevWeek <- c(final.df3$Obama.Poll[1], final.df3$Obama.Poll[1:length(final.df3$Obama.Poll) - 1])
