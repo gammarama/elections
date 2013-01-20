@@ -41,16 +41,19 @@ Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super
 <<ch2-data, child='Chapters/Data.Rnw', eval=TRUE>>=
 @
 
-\section{Findings}
+\section{Who are the Big Spenders?}
 <<ch3-findings-1, child='Chapters/Findings_type.Rnw', eval=TRUE>>=
 @
 
+\section{Swing States}
 <<ch3-findings-2, child='Chapters/Findings_swing.Rnw', eval=TRUE>>=
 @
 
+\section{Ads, Overhead, and Contact, Oh My!}
 <<ch3-findings-3, child='Chapters/Findings_temporal.Rnw', eval=TRUE>>=
 @
 
+\section{What does \$1 Billion Buy?}
 <<ch3-findings-4, child='Chapters/Findings_support_spend.Rnw', eval=TRUE>>=
 @
 \section{Conclusions/Future Work}

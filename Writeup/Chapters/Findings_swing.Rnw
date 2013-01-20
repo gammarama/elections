@@ -6,7 +6,7 @@ Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr
 swingStatePlot
 @
 
-The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. The six event markers previously used in the plot of spending over time are also displayed.
+The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. There are six markers which signify major events in the campaign, Paul Ryan's selection as Vice Presidential nominee, the Republican National Convention, the Democratic National Convention, the original leak of the 47\% video, the first presidential debate, and election day.
 
 The plots suggest that the reaction to many of these major campaign events was not consistent state to state. Some states, such as New Hampshire, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates. However, increases in support for Mr. Romney can be seen in nearly all states following marker five, the first presidential debate. Romney was seen to have won this debate by most observers \cite{jj-debate}. Note again however that some states had a much stronger reaction to this event, including New Hampshire, while states like North Carolina had a much more modest polling change.
 
