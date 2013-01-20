@@ -11,16 +11,20 @@ dates <- c(as.Date("2012-8-11", format="%Y-%m-%d"),
            as.Date("2012-11-6", format="%Y-%m-%d"))
 special.dat <- data.frame(x = dates, label = 1:6)
 
-bucketPlotCount <- qplot(bucket2, count, data = bucket.data, geom = "bar", stat = "identity") +
+bucketPlotCount <- ggplot(bucket.data) +
+    geom_bar(aes(x=bucket2, y=count, fill=bucket2), stat = "identity", show_guide=FALSE, width=.75) +
     xlab("Bucket") +
     ylab("Count") +
     scale_y_log10(label = math_format(format = log10)) +
+    scale_fill_brewer(palette="Set1") +
     theme_bw()
 
-bucketPlotSum <- qplot(bucket2, sum, data = bucket.data, geom = "bar", stat = "identity") +
+bucketPlotSum <- ggplot(bucket.data) +
+    geom_bar(aes(x=bucket2, y=sum, fill=bucket2), stat = "identity", show_guide=FALSE, width=.75) +
     xlab("Bucket") +
     ylab("Sum (Log 10)") +
     scale_y_log10(label = math_format(format = log10)) +
+    scale_fill_brewer(palette="Set1") +
     theme_bw()
 
 temporalPlot <- ggplot(num.weeks, aes(date, WeeklySum, colour = beneful_can)) + facet_grid(facets=bucket2~sup_opp) + 

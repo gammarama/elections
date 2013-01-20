@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  19 JAN 2013 13:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.12.5)  20 JAN 2013 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -568,43 +568,226 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 (/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2011/11/13 v1.7 programmable bibliographies
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count139
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@listtotal=\count140
+\c@listcount=\count141
+\c@liststart=\count142
+\c@liststop=\count143
+\c@citecount=\count144
+\c@citetotal=\count145
+\c@multicitecount=\count146
+\c@multicitetotal=\count147
+\c@instcount=\count148
+\c@maxnames=\count149
+\c@minnames=\count150
+\c@maxitems=\count151
+\c@minitems=\count152
+\c@citecounter=\count153
+\c@savedcitecounter=\count154
+\c@uniquelist=\count155
+\c@uniquename=\count156
+\c@refsection=\count157
+\c@refsegment=\count158
+\c@maxextrayear=\count159
+\c@maxextraalpha=\count160
+\c@abbrvpenalty=\count161
+\c@highnamepenalty=\count162
+\c@lownamepenalty=\count163
+\c@maxparens=\count164
+\c@parenlevel=\count165
+\blx@tempcnta=\count166
+\blx@tempcntb=\count167
+\blx@tempcntc=\count168
+\blx@maxsection=\count169
+\blx@maxsegment=\count170
+\blx@notetype=\count171
+\blx@parenlevel@text=\count172
+\blx@parenlevel@foot=\count173
+\labelnumberwidth=\skip62
+\labelalphawidth=\skip63
+\shorthandwidth=\skip64
+\biblabelsep=\skip65
+\bibitemsep=\skip66
+\bibnamesep=\skip67
+\bibinitsep=\skip68
+\bibparsep=\skip69
+\bibhang=\skip70
+\blx@auxin=\read1
+\blx@auxout=\write3
+\c@mincomprange=\count174
+\c@maxcomprange=\count175
+\c@mincompwidth=\count176
+\c@labelname=\count177
+\c@savedlabelname=\count178
+\c@author=\count179
+\c@savedauthor=\count180
+\c@shortauthor=\count181
+\c@savedshortauthor=\count182
+\c@editor=\count183
+\c@savededitor=\count184
+\c@editora=\count185
+\c@savededitora=\count186
+\c@editorb=\count187
+\c@savededitorb=\count188
+\c@editorc=\count189
+\c@savededitorc=\count190
+\c@shorteditor=\count191
+\c@savedshorteditor=\count192
+\c@bookauthor=\count193
+\c@savedbookauthor=\count194
+\c@translator=\count195
+\c@savedtranslator=\count196
+\c@annotator=\count197
+\c@savedannotator=\count198
+\c@commentator=\count199
+\c@savedcommentator=\count200
+\c@introduction=\count201
+\c@savedintroduction=\count202
+\c@foreword=\count203
+\c@savedforeword=\count204
+\c@afterword=\count205
+\c@savedafterword=\count206
+\c@holder=\count207
+\c@savedholder=\count208
+\c@namea=\count209
+\c@savednamea=\count210
+\c@nameb=\count211
+\c@savednameb=\count212
+\c@namec=\count213
+\c@savednamec=\count214
+\c@institution=\count215
+\c@savedinstitution=\count216
+\c@language=\count217
+\c@savedlanguage=\count218
+\c@location=\count219
+\c@savedlocation=\count220
+\c@organization=\count221
+\c@savedorganization=\count222
+\c@origlocation=\count223
+\c@savedoriglocation=\count224
+\c@origpublisher=\count225
+\c@savedorigpublisher=\count226
+\c@pageref=\count227
+\c@savedpageref=\count228
+\c@publisher=\count229
+\c@savedpublisher=\count230
+\c@lista=\count231
+\c@savedlista=\count232
+\c@listb=\count233
+Normal \count register pool exhausted, switching to extended pool.
+\c@savedlistb=\count277
+\c@listc=\count278
+\c@savedlistc=\count279
+\c@listd=\count280
+\c@savedlistd=\count281
+\c@liste=\count282
+\c@savedliste=\count283
+\c@listf=\count284
+\c@savedlistf=\count285
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2011/11/13 v1.7 biblatex generic compatibility
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2011/11/13 v1.7 biblatex generic definitions
+\c@biburlnumpenalty=\count286
+\c@biburlucpenalty=\count287
+\c@biburllcpenalty=\count288
+\c@smartand=\count289
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2011/11/13 v1.7 biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2011/11/13 v1.7 biblatex bibliography style
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2011/11/13 v1.7 biblatex citation style
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2011/11/13 v1.7 biblatex localization
+)
+\@quotelevel=\count290
+\@quotereset=\count291
+
 (./Hare-Kaplan-Election-Report.aux)
 \openout1 = `Hare-Kaplan-Election-Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
+\scratchcounter=\count292
 \scratchdimen=\dimen178
 \scratchbox=\box38
-\nofMPsegments=\count140
-\nofMParguments=\count141
+\nofMPsegments=\count293
+\nofMParguments=\count294
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count142
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen179
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -655,31 +838,43 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count145
+\c@lstlisting=\count298
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 71.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
 
 (./Hare-Kaplan-Election-Report.out) (./Hare-Kaplan-Election-Report.out)
-\@outlinefile=\write3
-\openout3 = `Hare-Kaplan-Election-Report.out'.
+\@outlinefile=\write4
+\openout4 = `Hare-Kaplan-Election-Report.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout3 = `Hare-Kaplan-Election-Report-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Hare-Kaplan-Election-Report.bbl' found.
+
+(./Hare-Kaplan-Election-Report.bbl)
+Package biblatex Info: Reference section=0 on input line 71.
+Package biblatex Info: Reference segment=0 on input line 71.
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -690,7 +885,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (10.24503pt too wide) in paragraph at lines 162--180
+Overfull \hbox (10.24503pt too wide) in paragraph at lines 164--182
 [][] 
  []
 
@@ -701,126 +896,138 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 
+l.187 
        [1
 
 ] [2] [3]
-Package color Info: Redefining color shadecolor on input line 253.
- <figure/bucket_plot1.pdf, id=59, 289.08pt x 325.215pt>
+Package color Info: Redefining color shadecolor on input line 255.
+ <figure/bucket_plot1.pdf, id=59, 289.08pt x 216.81pt>
 File: figure/bucket_plot1.pdf Graphic file (type pdf)
 
 <use figure/bucket_plot1.pdf>
-Package pdftex.def Info: figure/bucket_plot1.pdf used on input line 256.
-(pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
+Package pdftex.def Info: figure/bucket_plot1.pdf used on input line 258.
+(pdftex.def)             Requested size: 211.38832pt x 158.54124pt.
 
-<figure/bucket_plot2.pdf, id=60, 289.08pt x 325.215pt>
+<figure/bucket_plot2.pdf, id=60, 289.08pt x 216.81pt>
 File: figure/bucket_plot2.pdf Graphic file (type pdf)
 
 <use figure/bucket_plot2.pdf>
-Package pdftex.def Info: figure/bucket_plot2.pdf used on input line 257.
-(pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
- [4] [5 <./figure/bucket_plot1.pdf> <./figure/bucket_plot2.pdf>]
-Package color Info: Redefining color shadecolor on input line 287.
- <figure/PAC_plot.pdf, id=85, 722.7pt x 361.35pt>
+Package pdftex.def Info: figure/bucket_plot2.pdf used on input line 259.
+(pdftex.def)             Requested size: 211.38832pt x 158.54124pt.
+ [4 <./figure/bucket_plot1.pdf> <./figure/bucket_plot2.pdf>]
+Package color Info: Redefining color shadecolor on input line 289.
+ <figure/PAC_plot.pdf, id=78, 722.7pt x 361.35pt>
 File: figure/PAC_plot.pdf Graphic file (type pdf)
 
 <use figure/PAC_plot.pdf>
-Package pdftex.def Info: figure/PAC_plot.pdf used on input line 290.
+Package pdftex.def Info: figure/PAC_plot.pdf used on input line 292.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
-Package color Info: Redefining color shadecolor on input line 308.
- <figure/swing_map.pdf, id=88, 722.7pt x 361.35pt>
+ [5]
+Package color Info: Redefining color shadecolor on input line 310.
+
+<figure/swing_map.pdf, id=87, 722.7pt x 361.35pt>
 File: figure/swing_map.pdf Graphic file (type pdf)
-
-<use figure/swing_map.pdf>
-Package pdftex.def Info: figure/swing_map.pdf used on input line 311.
+ <use figure/swing_map.pdf>
+Package pdftex.def Info: figure/swing_map.pdf used on input line 313.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
- [6 <./figure/PAC_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 327.
 
-<figure/type_swing_1.pdf, id=104, 722.7pt x 867.24pt>
+[6 <./figure/PAC_plot.pdf> <./figure/swing_map.pdf>]
+Package color Info: Redefining color shadecolor on input line 329.
+
+<figure/type_swing_1.pdf, id=105, 722.7pt x 867.24pt>
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
-Package pdftex.def Info: figure/type_swing_1.pdf used on input line 330.
+Package pdftex.def Info: figure/type_swing_1.pdf used on input line 332.
 (pdftex.def)             Requested size: 469.75502pt x 563.71257pt.
- [7 <./figure/swing_map.pdf>] [8 <./figure/type_swing_1.pdf>]
-Package color Info: Redefining color shadecolor on input line 352.
- <figure/temporal_plot.pdf, id=131, 722.7pt x 867.24pt>
+ [7] [8 <./figure/type_swing_1.pdf>]
+Package color Info: Redefining color shadecolor on input line 354.
+
+<figure/temporal_plot.pdf, id=127, 722.7pt x 867.24pt>
 File: figure/temporal_plot.pdf Graphic file (type pdf)
 
 <use figure/temporal_plot.pdf>
-Package pdftex.def Info: figure/temporal_plot.pdf used on input line 355.
+Package pdftex.def Info: figure/temporal_plot.pdf used on input line 357.
 (pdftex.def)             Requested size: 469.75502pt x 563.71257pt.
  [9] [10 <./figure/temporal_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 373.
+Package color Info: Redefining color shadecolor on input line 375.
 
-<figure/trend_plot.pdf, id=156, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=152, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
-Package pdftex.def Info: figure/trend_plot.pdf used on input line 376.
+Package pdftex.def Info: figure/trend_plot.pdf used on input line 378.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
-Package color Info: Redefining color shadecolor on input line 390.
+Package color Info: Redefining color shadecolor on input line 392.
 
-<figure/support_spend1.pdf, id=158, 289.08pt x 325.215pt>
+<figure/support_spend1.pdf, id=154, 289.08pt x 325.215pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
-Package pdftex.def Info: figure/support_spend1.pdf used on input line 393.
+Package pdftex.def Info: figure/support_spend1.pdf used on input line 395.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
 
-<figure/support_spend2.pdf, id=159, 289.08pt x 325.215pt>
+<figure/support_spend2.pdf, id=155, 289.08pt x 325.215pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
-Package pdftex.def Info: figure/support_spend2.pdf used on input line 394.
+Package pdftex.def Info: figure/support_spend2.pdf used on input line 396.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
  [11 <./figure/trend_plot.pdf>]
-Package color Info: Redefining color shadecolor on input line 412.
+Package color Info: Redefining color shadecolor on input line 414.
 
-<figure/effect_plot.pdf, id=177, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=173, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
-Package pdftex.def Info: figure/effect_plot.pdf used on input line 415.
+Package pdftex.def Info: figure/effect_plot.pdf used on input line 417.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
  [12 <./figure/support_spend1.pdf> <./figure/support_spend2.pdf>] [13 <./figure
 /effect_plot.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
+Overfull \hbox (12.64836pt too wide) in paragraph at lines 441--441
+\OT1/cmtt/m/n/10.95 docs . google . com / spreadsheet / lv ? key = 0AjYj9mXElO 
+_ QdHpla01oWE1jOFZRbnhJZkZpVFNKeVE &
+ []
 
-(./Hare-Kaplan-Election-Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
+[14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
+ (./Hare-Kaplan-Election-Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 442.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
 Package rerunfilecheck Info: File `Hare-Kaplan-Election-Report.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: 30189C7A3B1F14405C450381D9B149BF;187.
+Package logreq Info: Writing requests to 'Hare-Kaplan-Election-Report.run.xml'.
+
+\openout1 = `Hare-Kaplan-Election-Report.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 9607 strings out of 493485
- 137966 string characters out of 3143525
- 245581 words of memory out of 3000000
- 12691 multiletter control sequences out of 15000+200000
- 14711 words of font info for 56 fonts, out of 3000000 for 9000
+ 13893 strings out of 493485
+ 213260 string characters out of 3143526
+ 551443 words of memory out of 3000000
+ 16934 multiletter control sequences out of 15000+200000
+ 15012 words of font info for 57 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,11n,35p,1494b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,11n,43p,1428b,951s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 518221 bytes).
+t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 538842 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
+ 38 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

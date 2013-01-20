@@ -10,6 +10,8 @@
 \usepackage{ltablex, calc, enumerate, multirow, float, soul}
 \usepackage{hyperref}
 \usepackage{longtable, pdflscape, textcase}
+\usepackage{biblatex}
+\bibliography{Chapters/References.bib}
 
 \begin{document}
 <<concordance, echo=FALSE>>=
@@ -54,5 +56,7 @@ Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super
 \section{Conclusions/Future Work}
 <<ch4-conclusion, child='Chapters/Conclusion.Rnw', eval=TRUE>>=
 @
+
+\printbibliography
 
 \end{document}
