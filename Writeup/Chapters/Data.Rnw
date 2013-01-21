@@ -116,7 +116,7 @@ Another serious challenge we faced was that the purpose of independent expenditu
     \item[Other] All expenses that do not fit into the above categories
 \end{description}
 
-<<bucket_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=3, out.width='.45\\textwidth', fig.pos='H', fig.show='hold', fig.align='center', fig.cap='Number of expeditures filings and total amount spent (log 10) by high level bucket (bucket2).'>>=
+<<bucket_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=3, out.width='.45\\textwidth', fig.pos='H', fig.show='hold', fig.align='center', fig.cap='Number of expeditures filings and total amount spent (log 10) by high level bucket (bucket\\_2).'>>=
 bucketPlotCount
 bucketPlotSum
 @

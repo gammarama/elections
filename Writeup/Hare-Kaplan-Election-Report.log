@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  20 JAN 2013 19:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  20 JAN 2013 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -898,14 +898,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2] [3]
 Package color Info: Redefining color shadecolor on input line 255.
- <figure/bucket_plot1.pdf, id=70, 289.08pt x 216.81pt>
+ <figure/bucket_plot1.pdf, id=72, 289.08pt x 216.81pt>
 File: figure/bucket_plot1.pdf Graphic file (type pdf)
 
 <use figure/bucket_plot1.pdf>
 Package pdftex.def Info: figure/bucket_plot1.pdf used on input line 258.
 (pdftex.def)             Requested size: 211.38832pt x 158.54124pt.
 
-<figure/bucket_plot2.pdf, id=71, 289.08pt x 216.81pt>
+<figure/bucket_plot2.pdf, id=73, 289.08pt x 216.81pt>
 File: figure/bucket_plot2.pdf Graphic file (type pdf)
 
 <use figure/bucket_plot2.pdf>
@@ -914,7 +914,7 @@ Package pdftex.def Info: figure/bucket_plot2.pdf used on input line 259.
  [4]
 Package color Info: Redefining color shadecolor on input line 289.
 
-<figure/PAC_plot.pdf, id=78, 722.7pt x 361.35pt>
+<figure/PAC_plot.pdf, id=80, 722.7pt x 361.35pt>
 File: figure/PAC_plot.pdf Graphic file (type pdf)
  <use figure/PAC_plot.pdf>
 Package pdftex.def Info: figure/PAC_plot.pdf used on input line 292.
@@ -923,7 +923,7 @@ Package pdftex.def Info: figure/PAC_plot.pdf used on input line 292.
 [5 <./figure/bucket_plot1.pdf> <./figure/bucket_plot2.pdf>]
 Package color Info: Redefining color shadecolor on input line 311.
 
-<figure/swing_map.pdf, id=98, 722.7pt x 361.35pt>
+<figure/swing_map.pdf, id=100, 722.7pt x 361.35pt>
 File: figure/swing_map.pdf Graphic file (type pdf)
  <use figure/swing_map.pdf>
 Package pdftex.def Info: figure/swing_map.pdf used on input line 314.
@@ -932,7 +932,7 @@ Package pdftex.def Info: figure/swing_map.pdf used on input line 314.
 [6 <./figure/PAC_plot.pdf> <./figure/swing_map.pdf>]
 Package color Info: Redefining color shadecolor on input line 330.
 
-<figure/type_swing_1.pdf, id=118, 722.7pt x 867.24pt>
+<figure/type_swing_1.pdf, id=120, 722.7pt x 867.24pt>
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
@@ -941,7 +941,7 @@ Package pdftex.def Info: figure/type_swing_1.pdf used on input line 333.
  [7] [8 <./figure/type_swing_1.pdf>]
 Package color Info: Redefining color shadecolor on input line 358.
 
-<figure/temporal_plot.pdf, id=141, 722.7pt x 867.24pt>
+<figure/temporal_plot.pdf, id=143, 722.7pt x 867.24pt>
 File: figure/temporal_plot.pdf Graphic file (type pdf)
 
 <use figure/temporal_plot.pdf>
@@ -950,7 +950,7 @@ Package pdftex.def Info: figure/temporal_plot.pdf used on input line 361.
  [9] [10 <./figure/temporal_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 379.
 
-<figure/trend_plot.pdf, id=167, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=169, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
@@ -958,14 +958,14 @@ Package pdftex.def Info: figure/trend_plot.pdf used on input line 382.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
 Package color Info: Redefining color shadecolor on input line 396.
 
-<figure/support_spend1.pdf, id=169, 289.08pt x 325.215pt>
+<figure/support_spend1.pdf, id=171, 289.08pt x 325.215pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
 Package pdftex.def Info: figure/support_spend1.pdf used on input line 399.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
 
-<figure/support_spend2.pdf, id=170, 289.08pt x 325.215pt>
+<figure/support_spend2.pdf, id=172, 289.08pt x 325.215pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
@@ -974,7 +974,7 @@ Package pdftex.def Info: figure/support_spend2.pdf used on input line 400.
  [11 <./figure/trend_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 418.
 
-<figure/effect_plot.pdf, id=189, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=191, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
@@ -982,6 +982,13 @@ Package pdftex.def Info: figure/effect_plot.pdf used on input line 421.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
  [12 <./figure/support_spend1.pdf> <./figure/support_spend2.pdf>] [13 <./figure
 /effect_plot.pdf>]
+Overfull \hbox (13.78894pt too wide) in paragraph at lines 445--445
+\OT1/cmr/m/it/10.95 dates\OT1/cmr/m/n/10.95 . 2008. \OT1/cmr/m/sc/10.95 url\OT1
+/cmr/m/n/10.95 : []$\OT1/cmtt/m/n/10.95 http : / / www . fec . gov / press / pr
+ess2008 / 2008indexp / 2008presindepexpend .
+ []
+
+
 Overfull \hbox (12.64836pt too wide) in paragraph at lines 445--445
 \OT1/cmtt/m/n/10.95 docs . google . com / spreadsheet / lv ? key = 0AjYj9mXElO 
 _ QdHpla01oWE1jOFZRbnhJZkZpVFNKeVE &
@@ -1002,10 +1009,10 @@ Package logreq Info: Writing requests to 'Hare-Kaplan-Election-Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13903 strings out of 493485
- 213383 string characters out of 3143525
- 550443 words of memory out of 3000000
- 16939 multiletter control sequences out of 15000+200000
+ 13905 strings out of 493485
+ 213417 string characters out of 3143525
+ 548443 words of memory out of 3000000
+ 16940 multiletter control sequences out of 15000+200000
  15353 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  32i,11n,43p,1662b,951s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1023,10 +1030,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 549918 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 551422 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
