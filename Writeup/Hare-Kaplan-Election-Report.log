@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  20 JAN 2013 21:52
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  22 JAN 2013 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,7 +932,7 @@ Package pdftex.def Info: figure/swing_map.pdf used on input line 314.
 [6 <./figure/PAC_plot.pdf> <./figure/swing_map.pdf>]
 Package color Info: Redefining color shadecolor on input line 330.
 
-<figure/type_swing_1.pdf, id=120, 722.7pt x 867.24pt>
+<figure/type_swing_1.pdf, id=124, 722.7pt x 867.24pt>
 File: figure/type_swing_1.pdf Graphic file (type pdf)
 
 <use figure/type_swing_1.pdf>
@@ -941,7 +941,7 @@ Package pdftex.def Info: figure/type_swing_1.pdf used on input line 333.
  [7] [8 <./figure/type_swing_1.pdf>]
 Package color Info: Redefining color shadecolor on input line 358.
 
-<figure/temporal_plot.pdf, id=143, 722.7pt x 867.24pt>
+<figure/temporal_plot.pdf, id=147, 722.7pt x 867.24pt>
 File: figure/temporal_plot.pdf Graphic file (type pdf)
 
 <use figure/temporal_plot.pdf>
@@ -950,7 +950,7 @@ Package pdftex.def Info: figure/temporal_plot.pdf used on input line 361.
  [9] [10 <./figure/temporal_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 379.
 
-<figure/trend_plot.pdf, id=169, 722.7pt x 361.35pt>
+<figure/trend_plot.pdf, id=173, 722.7pt x 361.35pt>
 File: figure/trend_plot.pdf Graphic file (type pdf)
 
 <use figure/trend_plot.pdf>
@@ -958,14 +958,14 @@ Package pdftex.def Info: figure/trend_plot.pdf used on input line 382.
 (pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
 Package color Info: Redefining color shadecolor on input line 396.
 
-<figure/support_spend1.pdf, id=171, 289.08pt x 325.215pt>
+<figure/support_spend1.pdf, id=175, 289.08pt x 325.215pt>
 File: figure/support_spend1.pdf Graphic file (type pdf)
 
 <use figure/support_spend1.pdf>
 Package pdftex.def Info: figure/support_spend1.pdf used on input line 399.
 (pdftex.def)             Requested size: 211.38832pt x 237.81189pt.
 
-<figure/support_spend2.pdf, id=172, 289.08pt x 325.215pt>
+<figure/support_spend2.pdf, id=176, 289.08pt x 325.215pt>
 File: figure/support_spend2.pdf Graphic file (type pdf)
 
 <use figure/support_spend2.pdf>
@@ -974,7 +974,7 @@ Package pdftex.def Info: figure/support_spend2.pdf used on input line 400.
  [11 <./figure/trend_plot.pdf>]
 Package color Info: Redefining color shadecolor on input line 418.
 
-<figure/effect_plot.pdf, id=191, 722.7pt x 361.35pt>
+<figure/effect_plot.pdf, id=195, 722.7pt x 361.35pt>
 File: figure/effect_plot.pdf Graphic file (type pdf)
 
 <use figure/effect_plot.pdf>
@@ -1030,10 +1030,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 551422 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 551726 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
+ 321 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
  43 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

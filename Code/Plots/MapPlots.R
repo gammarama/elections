@@ -18,10 +18,10 @@ states$swing[states$region %in% tolower(obama.states)] <- "obama"
 states$swing[states$region %in% tolower(swing.states)] <- "swing"
 states$isSwing <- states$swing == "swing"
 
-swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing) +
+swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing, alpha = swing) +
     geom_path(size = .05, colour = "darkgrey") +
     scale_fill_manual(values = c("darkblue", "darkred", "#FFBE0D")) +
-    #scale_alpha_manual(values = c(.25, 1)) +
+    scale_alpha_manual(values = c(.25, .25, 1)) +
     geom_text(data=missing.states.txt, mapping=aes(x=long, y=lat, label=text), size=3.5,  colour="grey50", hjust=0, inherit.aes=FALSE) +
     theme_bw() +
     theme(aspect.ratio=1/1.5, legend.position = "none") +
