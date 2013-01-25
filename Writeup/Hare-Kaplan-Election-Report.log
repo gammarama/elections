@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  25 JAN 2013 15:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.15)  25 JAN 2013 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -157,8 +157,10 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
-)) (./framed.sty
-Package: framed 2007/10/04 v 0.95: framed or shaded text with page breaks
+))
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
 \fb@frw=\dimen105
 \fb@frh=\dimen106
 \FrameRule=\dimen107
@@ -180,7 +182,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -230,8 +232,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \totwidth@=\dimen116
 \lineht@=\dimen117
 \@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
+\multlinegap=\skip45
+\multlinetaggap=\skip46
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -243,9 +245,9 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headfont=\toks23
 \thm@notefont=\toks24
 \thm@headpunct=\toks25
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
+\thm@preskip=\skip47
+\thm@postskip=\skip48
+\thm@headsep=\skip49
 \dth@everypar=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
@@ -292,8 +294,8 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen126
 \extrarowheight=\dimen127
 \NC@list=\toks30
-\extratabsurround=\skip49
-\backup@length=\skip50
+\extratabsurround=\skip50
+\backup@length=\skip51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
@@ -332,8 +334,8 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count109
-\rotFPtop=\skip51
-\rotFPbot=\skip52
+\rotFPtop=\skip52
+\rotFPbot=\skip53
 \rot@float@box=\box28
 \rot@mess@toks=\toks32
 )
@@ -396,10 +398,10 @@ Package: ltablex 1995/11/06 v1.0 Modified tabularx
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip53
-\LTright=\skip54
-\LTpre=\skip55
-\LTpost=\skip56
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
 \LTchunksize=\count120
 \LTcapwidth=\dimen168
 \LT@head=\box32
@@ -418,12 +420,12 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count126
 \calc@Adimen=\dimen169
 \calc@Bdimen=\dimen170
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count127
-\calc@Cskip=\skip59
+\calc@Cskip=\skip60
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
@@ -447,7 +449,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks40
 \SOUL@buffer=\toks41
 \SOUL@token=\toks42
-\SOUL@spaceskip=\skip60
+\SOUL@spaceskip=\skip61
 \SOUL@ttwidth=\dimen172
 \SOUL@uldp=\dimen173
 \SOUL@ulht=\dimen174
@@ -555,7 +557,7 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip61
+\Hy@SectionHShift=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
@@ -612,15 +614,15 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@notetype=\count171
 \blx@parenlevel@text=\count172
 \blx@parenlevel@foot=\count173
-\labelnumberwidth=\skip62
-\labelalphawidth=\skip63
-\shorthandwidth=\skip64
-\biblabelsep=\skip65
-\bibitemsep=\skip66
-\bibnamesep=\skip67
-\bibinitsep=\skip68
-\bibparsep=\skip69
-\bibhang=\skip70
+\labelnumberwidth=\skip63
+\labelalphawidth=\skip64
+\shorthandwidth=\skip65
+\biblabelsep=\skip66
+\bibitemsep=\skip67
+\bibnamesep=\skip68
+\bibinitsep=\skip69
+\bibparsep=\skip70
+\bibhang=\skip71
 \blx@auxin=\read1
 \blx@auxout=\write3
 \c@mincomprange=\count174
@@ -1009,10 +1011,10 @@ Package logreq Info: Writing requests to 'Hare-Kaplan-Election-Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13905 strings out of 493485
- 213390 string characters out of 3143525
- 548425 words of memory out of 3000000
- 16940 multiletter control sequences out of 15000+200000
+ 13922 strings out of 493485
+ 213700 string characters out of 3143525
+ 548974 words of memory out of 3000000
+ 16956 multiletter control sequences out of 15000+200000
  15353 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  32i,11n,43p,1662b,951s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1030,7 +1032,7 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1095.pfb>
-Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 551764 bytes).
+Output written on Hare-Kaplan-Election-Report.pdf (15 pages, 551777 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  265 compressed objects within 3 object streams
