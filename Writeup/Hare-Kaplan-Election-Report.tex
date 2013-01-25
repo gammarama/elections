@@ -66,7 +66,7 @@
 \usepackage{hyperref}
 \usepackage{longtable, pdflscape, textcase}
 \usepackage{biblatex}
-\bibliography{Chapters/References.bib}
+\bibliography{References.bib}
 
 \begin{document}
 
@@ -77,7 +77,7 @@
 
 \title{Can you buy a president? \\ \vspace{.6cm} \Large Politics after the Tillman Act}
 \author{Eric Hare \& Andee Kaplan}
-\date{Jan. ??, 2013}
+\date{Jan. 25, 2013}
 
 \maketitle
 \thispagestyle{empty}
@@ -88,14 +88,13 @@ Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super
 
 \setcounter{page}{1}
 \section{Introduction}
+
 A Political Action Committee (PAC) is defined as any organization that seeks to influence the outcome of an election or policy decision through financial donations. Until recently, there have been strict regulations in place limiting the amount of money that individuals and corporations could donate to PACs.
 
 In 2010, the United States Supreme Court released its decision on Citizens United v. Federal Election Commission. The decision found that it is a violation of the constitutional right to free speech for limits to be placed on money spent by corporations and labor unions to support or oppose political candidates. For the first time since the passage of the Tillman Act in 1907, corporations and unions could spend unlimited amounts of their own money on the presidential election. Such power led to the coining of the term Super PAC, as well as a cloud of uncertainty as to what effect such money could have on the election outcome. Three of the largest Super PACs, American Crossroads, Restore our Future, and Priorities USA Action, spent over \$305 million in the 2012 election cycle alone. In 2008, PACs spent over \$151 million on the presidential election (not including primaries), or approximately \$0.50 per US citizen \cite{fc-spend}. In 2012, PACs and Super PACs spent over \$560 million, or approximately \$1.78 per US citizen. With this 350\% increase in spending the fear is that a small group of extremely wealthy individuals or corporations can buy a president.
 
 
 In this report, we analyze independent expenditures filings from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election. We subset these expenditures to analyze only those which were filed after the Republican primary, so that we can focus on those which benefit President Barack Obama and Governor Mitt Romney. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
-
-
 
 
 
@@ -113,7 +112,7 @@ Tag & Field Name & Description  \\
 %can\_id  & Candidate ID & Unique ID of candidate for or against whom the expenditure was made. First character indicates office sought - H=House, S=Senate, P=Presidential. Columns 3-4 are the state abbreviation for Congressional candidates. NOTE - this information is provided by filers and may be missing - in these cases office, state, district and candidate name should appear.\\
 can\_nam & Candidate Name & Name of candidate for or against whom the expenditure was made. There are 58 unique presidential candidate names in the data set, but they do not identify candidates uniquely. For example, there are eight unique spellings of Mr. Obama's name.\\
 %spe\_id & Spender ID & Unique ID of committee, individual or group making expenditure. Unique FEC ID assigned to the entity submitting reports of independent expenditures.\\
-spe\_nam & Spender Name &	Name of committee, individual or group making expenditure.\\
+spe\_nam & Spender Name &    Name of committee, individual or group making expenditure.\\
 %ele\_typ & Election Type & Code for specific election for which expenditure was made. First character indicates election - P=Primary, G=General, S=Special. Next four characters indicate election year.\\
 %can\_off\_sta & Candidate State	& Postal state abbreviation for the candidate.\\
 can\_off & Office &	Office Sought by Candidate - H=House, S=Senate, P=President.\\
@@ -186,7 +185,7 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 We had to spend a significant amount of time cleaning the Super PAC spending data in order to make it usable for analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefiting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the candidate name field (\texttt{can\_nam}). For example, Mr. Obama's name was mispelled eight different ways and Mr. Romney's name was mispelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Tue Jan 22 15:41:07 2013
+% Fri Jan 25 15:46:52 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{lrlr}
@@ -213,7 +212,7 @@ obama, barack & 25978 & romney, mitt & 20655 \\
 An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, 12 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these Super PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those Super PACs.
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Tue Jan 22 15:41:07 2013
+% Fri Jan 25 15:46:52 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{l}
@@ -273,14 +272,6 @@ The polling data did not require much data cleanup. We split the date range and 
 
 
 \section{Who are the Big Spenders?}
-%\subsection{Spending Categories}
-% The plots in Figure \ref{fig:type_plot} show the comparison of amount spent for each candidate by categories of independent expenditure, since April 25, 2012. The categories are mined from the self-reported text description of the expense. The left plot shows the spending to benefit Mr. Obama against the spending to benefit Mr. Romney by category, with values to the right of the reflection line showing Super PACs supporting Mr. Romney are outspending Super PACs supporting Mr. Obama on these categories, and vice verse for those to the left. The right plot shows bar chart comparisons of the spending in main categories, on a log scale.
-% %, and bar charts showing overall spending by amount and by frequency. 
-% Organizations supporting Mr. Romney greatly outspent those supporting Mr. Obama, and particularly in direct contact and advertisements. On the other hand, organizations supporting Mr. Obama only outspent those supporting Mr. Romney in salary. 
-% %Organizations supporting Romney are spending a few large chunks of change, but those supporting Obama are spending more frequently and smaller amounts.
-% 
-
-%\subsection{Spending by Super PACs}
 Figure \ref{fig:PAC_plot} displays the total spending by the top Super PACs split by candidate. The cumulative amounts spent are displayed vertically, by the benefiting candidate. The organizations supporting Mr. Romney have spent significantly more than those supporting Mr. Obama. In fact, two Super PACs supporting Mr. Romney (Restore our Future, Inc. and American Crossroads) have spent more than all the organizations supporting Mr. Obama combined.
 
 It can be seen that certain Super PACs have accounted for the bulk of all spending. For those benefiting Mr. Obama, Priorities USA Action accounted for about 35\% of the total spending. Meanwhile, Restore Our Future, Inc. and American Crossroads combined spent about 25\% of the total spending on Mr. Romney. This suggests that Super PACs are clearly an unprecedented entity in terms of their monetary influence on the election. All Super PACs in total spent nearly one billion dollars during the course of the election campaign. With a total of just under 127 million votes cast in the election, this equates to nearly \$8 spent per vote.
@@ -300,11 +291,7 @@ It can be seen that certain Super PACs have accounted for the bulk of all spendi
 \end{knitrout}
 
 
-
-
 \section{Swing States}
-%\subsection{Swing State Trends}
-
 Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr. Romney and Mr. Obama over time, in 12 swing states. Figure \ref{fig:swing_map} highlights these particular states.
 
 \begin{knitrout}
@@ -341,9 +328,7 @@ The plots suggest that the reaction to many of these major campaign events was n
 \end{knitrout}
 
 
-
 \section{Ads, Overhead, and Contact, Oh My!}
-%\subsection{Type of Spending by Week}
 The sheer volume of adveritising in the 2012 election campaign is staggering, both on its own terms, and in comparison to previous elections.  Over one million ads aired on television during the campaign.  This contrasts with slightly over 730,000 ads in the 2008 election, and slightly over 720,000 ads in the 2004 election.  While the Obama and Romney campaigns accounted for the bulk of the advertisements, Super PACs still managed to air nearly 400,000 ads, more than accounting for the difference in advertising volume in the 2012 elections compared with previous years \cite{lb-airings}.
 
 Figure \ref{fig:temporal_plot} displays the spending in each of the six categories by Super PACs benefiting Mr. Obama and Mr. Romney for each week since April 25, 2012. The spending amounts are split by whether the goal was to support or oppose the candidate. The six event markers previously used in the plot of spending over time are also displayed.
@@ -369,10 +354,7 @@ On the other hand, organizations benefiting Mr. Obama significantly outspent tho
 \end{knitrout}
 
 
-
 \section{What does \$1 Billion Buy?}
-%\subsection{Spending by Week}
-
 Figure \ref{fig:trend_plot} shows weekly spending by Super PACs benefiting either candidate. Looking at weekly spending by Super PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 15th. This is the same increase that was previously shown to be largely due to the \textit{Smoke} ad released by American Crossroads. The spending levels then remain consistently higher for the rest of the campaign season. This stands in contrast to the Super PACs benefiting Mr. Obama, where spending levels remained relatively steady week-to-week. We have shaded the period prior to July 15th and labeled it as region (1), while the period after July 15th is region (2). We examine the national and swing state polls to determine if there is any noticeable effect due to these changes in spending in the weeks following.
 
 \begin{knitrout}
@@ -408,8 +390,6 @@ Figure \ref{fig:support_spend} compares the difference in Super PAC spending by 
 \end{knitrout}
 
 
-%\subsection{Effect of Spending on Polls}
-
 Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. The time periods before and after July 15th are shaded in the same manner as Figure \ref{fig:trend_plot}. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a loess smoother, as we have used previously. When using the loess smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the loess smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method places importance on past points with exponentially decreasing weights as the points become further from the event, limiting the impact of future polling on the current smoothed trend. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages.
@@ -439,7 +419,6 @@ Our analysis also makes clear that Mr. Obama's polling held up more strongly in 
 Another interesting feature of our analysis is the non-uniform effect of the major events in the campaign on the polling. For instance, Mr. Ryan's selection as Mr. Romney's Vice Presidential nominee seemed to have no effect on the polls in his home state of Wisconsin. However, in Missouri, Mr. Ryan's selection coincided with a noticeable increase in support for Mr. Romney. A similar trend can be seen with the release of the 47\% video. Following the release, Mr. Obama's support seemed to expand in Ohio. But in Colorado, an opposite effect is observed. The only event which seemed to produce a rather uniform change in the polls was the first presidential debate, where Mr. Romney gained support in nearly all swing states.
 
 An extension of this research should take into account spending done by the candidates themselves, in addition to independent expenditures. This would allow for a more informed look at the relative spending difference, and how it may or may not correlate with changes in the polling averages. Another area of exploration would be the purpose field of the independent expenditures data set. Our analysis attempted to categorize spending entries into broad categories, but many of the entries in the database have more specific information. For instance, an ad buy may list the name of the ad, as well as the state the ad is running in. It may also be possible to incorporate another data source in order to link the expenditure entries with ad buys in particular states.
-
 
 \printbibliography
 
