@@ -76,13 +76,13 @@
 \setlength{\parindent}{0pt}
 
 \title{Can you buy a president? \\ \vspace{.6cm} \Large Politics after the Tillman Act}
-\author{Eric Hare \& Andee Kaplan}
+\author{Andee Kaplan, Eric Hare, and Heike Hofmann}
 \date{Jan. 25, 2013}
 
 \maketitle
 \thispagestyle{empty}
 \begin{abstract}
-Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and several packages, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, there is not a lot of evidence to support a clear and direct relationship between increases in spending and changes in public support. However, our analysis does reinforce for some commonly held views of the candidate's spending habits and geographical areas of strength and weakness.
+Motivated by the 2010 Citizens United ruling and the subsequent birth of ``Super PACs", this paper uses independent expenditures data from the Federal Elections Commission, in conjunction with presidential polling data to analyze the 2012 presidential campaign. Using R, and several packages, we scrape data from these sources and analyze them in order to highlight interesting trends in campaign spending. Furthermore, we correlate these trends in spending over time to the changes in the polls. Ultimately, there is not a lot of evidence to support a clear and direct relationship between increases in spending and changes in public support. However, our analysis does reinforce some commonly held views of Super PAC spending habits and the candidates' geographical areas of strength and weakness.
 \end{abstract}
 \clearpage
 
@@ -185,7 +185,7 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 We had to spend a significant amount of time cleaning the Super PAC spending data in order to make it usable for analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefiting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the candidate name field (\texttt{can\_nam}). For example, Mr. Obama's name was mispelled eight different ways and Mr. Romney's name was mispelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Jan 25 16:05:14 2013
+% Mon Feb 11 10:34:44 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{lrlr}
@@ -212,7 +212,7 @@ obama, barack & 25978 & romney, mitt & 20655 \\
 An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, 12 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these Super PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those Super PACs.
 
 % latex table generated in R 2.15.2 by xtable 1.7-0 package
-% Fri Jan 25 16:05:14 2013
+% Mon Feb 11 10:34:44 2013
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{l}
@@ -419,6 +419,12 @@ Our analysis also makes clear that Mr. Obama's polling held up more strongly in 
 Another interesting feature of our analysis is the non-uniform effect of the major events in the campaign on the polling. For instance, Mr. Ryan's selection as Mr. Romney's Vice Presidential nominee seemed to have no effect on the polls in his home state of Wisconsin. However, in Missouri, Mr. Ryan's selection coincided with a noticeable increase in support for Mr. Romney. A similar trend can be seen with the release of the 47\% video. Following the release, Mr. Obama's support seemed to expand in Ohio. But in Colorado, an opposite effect is observed. The only event which seemed to produce a rather uniform change in the polls was the first presidential debate, where Mr. Romney gained support in nearly all swing states.
 
 An extension of this research should take into account spending done by the candidates themselves, in addition to independent expenditures. This would allow for a more informed look at the relative spending difference, and how it may or may not correlate with changes in the polling averages. Another area of exploration would be the purpose field of the independent expenditures data set. Our analysis attempted to categorize spending entries into broad categories, but many of the entries in the database have more specific information. For instance, an ad buy may list the name of the ad, as well as the state the ad is running in. It may also be possible to incorporate another data source in order to link the expenditure entries with ad buys in particular states.
+
+\section{Supplemental Materials}
+Supplemental materials including code and datasets are available at \url{http://harekaplan.github.com/election.html}.
+
+\section{Acknowledgements}
+The authors thank Prof. Dianne Cook and the ISU Statistical Graphics Working Group for inspiration and help. See \url{http://dicook.github.com/} for additional analysis.
 
 \printbibliography
 
