@@ -83,11 +83,11 @@ analyzeStateTrends <- function(state) {
     annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
     annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") + 
-    annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") +theme_bw() +
+    annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = 30, ymax = 60, alpha = .4, fill = "black") +
+    theme_bw() +
     geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.5), y = 33.5, inherit.aes = FALSE, show_guide = FALSE) +
     geom_smooth(method="loess", size = 1.5) +
     geom_point() +
-    theme_bw() +
     theme(legend.position="bottom")
 }
 
@@ -98,38 +98,21 @@ swingPlot <- analyzeStateTrends(swing.states)
 labels.spending <- data.frame(yval=c(1e+04, 1e+04), xval=c(as.Date("28/5/2012","%d/%m/%Y"), as.Date("10/9/2012","%d/%m/%Y")), text=c("1", "2"))
 trendPlot <- qplot(Date, sum, data = num.weeks.sum, colour = beneful_can, geom = "blank") + 
     scale_y_log10(label = math_format(format = log10)) +
+    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = 0, ymax = Inf, fill="darkgrey", alpha=0.4) +
     geom_point(size = 3.5) +
     geom_line(size = 1.5) +
     #annotate("text", x=as.Date("14/7/2012","%d/%m/%Y"), y=5e+07, label="1", color="#FF0000", hjust=-0.5, alpha=0.4, size=10) +
     scale_colour_manual(name = "Candidate", values = c("#3D64FF", "#CC0033"), labels=c("Obama","Romney" )) +
     ylab("Total Spending (Log 10)") + 
     scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = 0, ymax = Inf, fill="grey", alpha=0.3) +
     geom_text(data=labels.spending[1,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE, show_guide = FALSE) +
     geom_text(data=labels.spending[2,], mapping=aes(x=xval, y=yval, label=text), inherit.aes = FALSE, show_guide = FALSE) +
     theme_bw() +
     theme(legend.position="bottom")
 
-labels.tracking <- data.frame(Obama.Romney=c(-12, 12), date=c(as.Date("1/8/2012","%d/%m/%Y"), as.Date("1/8/2012","%d/%m/%Y")), text=c("Romney", "Obama"), colour=c("red", "blue"))
-effectPlot <- qplot(Date, Obama.Romney, data = polls.data, colour = isNational, alpha=0.6) +
-    scale_alpha(guide="none") +
-    scale_colour_manual(name = " ", values = c("#600CAC","#FF7600"), labels=c("Swing State","National" ), breaks=c(FALSE, TRUE)) + 
-    scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
-    scale_y_continuous(limits=c(-20,20)) +
-    ylab("Romney -------- | -------- Obama  ") +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = -Inf, ymax = 0, fill="grey", alpha=0.3) +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = 0, ymax = Inf, fill="grey", alpha=0.3) +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=0, ymax=Inf, fill="blue", alpha=0.03) +
-    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=-Inf, ymax=0, fill="red", alpha=0.03) +
-    geom_text(data=labels.tracking[1,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#FF0000"), size=5, alpha=I(0.2), shape=1) +
-    geom_text(data=labels.tracking[2,], mapping=aes(x=date, y=Obama.Romney, label=text), colour=I("#330099"), size=5, alpha=I(0.2), shape=1) +
-    theme_bw() +
-    theme(legend.position="bottom") +
-    geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE, size = 1.5)
-
-obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=ObamaPollChange, colour = week)) +
+obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=ObamaPollChange)) +
     geom_smooth(method="loess", size = 1.5, colour = "#3D64FF") +
-    geom_point() +
+    geom_point(colour = I("darkblue")) +
     ylab("Change in % Support (Weekly Average)") +
     xlab("Change in Super PAC Spending (In Millions of $)") +
     annotate("text", x = final.df3$ObamaSpendChange[15]/1000000, y = final.df3$ObamaPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
@@ -141,9 +124,9 @@ obamaEffectPlot <- ggplot(final.df3[-1,], aes(x=ObamaSpendChange/1000000, y=Obam
     ylim(c(-6,11)) +
     theme(legend.position="bottom")
 
-romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange/1000000, y=RomneyPollChange, colour = week)) +
+romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange/1000000, y=RomneyPollChange)) +
     geom_smooth(method="loess", colour = "#CC0033", size = 1.5) +
-    geom_point() +
+    geom_point(colour = I("darkred")) +
     ylab("Change in % Support (Weekly Average)") +
     xlab("Change in Super PAC Spending (In Millions of $)") +
     annotate("text", x = final.df3$RomneySpendChange[15]/1000000, y = final.df3$RomneyPollChange[15], label = "1", color = "#000000", hjust = -0.5, size = 5) +
@@ -151,7 +134,30 @@ romneyEffectPlot <- ggplot(final.df3[-1,], aes(x=RomneySpendChange/1000000, y=Ro
     annotate("text", x = final.df3$RomneySpendChange[19]/1000000, y = final.df3$RomneyPollChange[19], label = "3", color = "#000000", hjust = -0.5, size = 5) +
     annotate("text", x = final.df3$RomneySpendChange[21]/1000000, y = final.df3$RomneyPollChange[21], label = "4", color = "#000000", hjust = -0.5, size = 5) +
     annotate("text", x = final.df3$RomneySpendChange[24]/1000000, y = final.df3$RomneyPollChange[24], label = "5", color = "#000000", hjust = -0.5, size = 5) +
-    scale_colour_gradientn(colours = c("#850707", "#F78686")) +
     theme_bw() +
     # ylim(c(-6,12)) + 
     theme(legend.position="bottom")
+
+colours.pal <- brewer.pal(n = 3, name = "Set1")
+
+effectPlot <- qplot(Date, Obama.Romney, data = polls.data, geom = "blank") +
+    scale_alpha(guide="none") +
+    scale_colour_manual(name = " ", values = c("#FFBE0D", colours.pal[3]), labels=c("Swing State","National" ), breaks=c(FALSE, TRUE)) + 
+    scale_x_date(limits=c(as.Date("25/4/2012","%d/%m/%Y"), as.Date("2/11/2012","%d/%m/%Y"))) +
+    scale_y_continuous(limits=c(-20,20)) +
+    ylab("Romney -------- | -------- Obama  ") +
+    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = -Inf, ymax = 0, fill="darkgrey", alpha=0.4) +
+    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("08/7/2012","%d/%m/%Y"), ymin = 0, ymax = Inf, fill="darkgrey", alpha=0.4) +
+    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=0, ymax=Inf, fill="blue", alpha=0.03) +
+    annotate("rect", xmin=as.Date("2/2/2012","%d/%m/%Y"), xmax=as.Date("2/12/2012","%d/%m/%Y"), ymin=-Inf, ymax=0, fill="red", alpha=0.03) +
+    annotate(geom = "rect", xmin = as.Date("2012-8-11", format="%Y-%m-%d"), xmax = as.Date("2012-8-12", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-8-28", format="%Y-%m-%d"), xmax = as.Date("2012-8-30", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-9-4", format="%Y-%m-%d"), xmax = as.Date("2012-9-6", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-9-17", format="%Y-%m-%d"), xmax = as.Date("2012-9-18", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-10-3", format="%Y-%m-%d"), xmax = as.Date("2012-10-4", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") + 
+    annotate(geom = "rect", xmin = as.Date("2012-11-6", format="%Y-%m-%d"), xmax = as.Date("2012-11-7", format="%Y-%m-%d"), ymin = -20, ymax = 20, alpha = .4, fill = "black") +
+    geom_text(data = special.dat, aes(x = x, label = label, hjust = -0.7), y = -18, inherit.aes = FALSE, show_guide = FALSE) +
+    theme_bw() +
+    theme(legend.position="bottom") +
+    geom_line(data=polls.smooth, aes(x=Date, y=Obama.Romney, colour=isNational), inherit.aes=FALSE, size = 1.5) +
+    geom_point(aes(colour = isNational))

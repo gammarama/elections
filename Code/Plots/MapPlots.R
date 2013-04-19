@@ -6,6 +6,7 @@ library(animation)
 library(maps)
 
 states <- map_data("state")
+
 missing.states <- data.frame(long=c(-122, -122, -118, -118, -122, -113, -113, -109, -109, -113, -68, -68, -72, -72, -68, -68, -68, -72, -72, -68), lat=c(27, 29, 29, 27, 27, 27, 29, 29, 27, 27, 33, 35, 35, 33, 33, 30, 32, 32, 30, 30), group=rep(64:67, rep(5,4)), order=rep(1:5, 4), region=c(rep("alaska", 5), rep("hawaii", 5), rep("rhode island", 5), rep("district of columbia", 5)), subregion=NA)
 states <- rbind(states, missing.states)
 missing.states.txt <- data.frame(long=c(-117.5, -108.5, -67.5, -67.5), lat=c(28, 28, 34, 31), text=c("AK","HI","RI","DC"))
@@ -17,12 +18,23 @@ states$swing <- "romney"
 states$swing[states$region %in% tolower(obama.states)] <- "obama"
 states$swing[states$region %in% tolower(swing.states)] <- "swing"
 states$isSwing <- states$swing == "swing"
+states.names <- data.frame(abb=state.abb, name=state.name, stringsAsFactors=FALSE)
+states.names <- rbind(states.names, c("DC", "district of columbia"))
+centers <- ddply(states, .(region, isSwing), function(df) kmeans(df[,1:2], centers=1)$centers)
+#centers <-ddply(states, .(region, isSwing), summarise, minlong=min(long), maxlong=max(long), minlat=min(lat), maxlat=max(lat))
+centers$abbrev <- apply(centers, 1, function(x){states.names[tolower(states.names$name) == tolower(x["region"]), "abb"]})
+
+centers.test <- read.csv("state_latlon.csv")
+centers.test$abbrev <- centers.test$state
+test.merge <- merge(centers.test, centers, by = "abbrev")
+test.merge <- subset(test.merge, !(abbrev %in% c("AK", "HI")))
 
 swingStatePlot <- qplot(long, lat, geom = "polygon", data = states, group = group, fill = swing, alpha = swing) +
     geom_path(size = .05, colour = "darkgrey") +
     scale_fill_manual(values = c("darkblue", "darkred", "#FFBE0D")) +
     scale_alpha_manual(values = c(.25, .25, 1)) +
     geom_text(data=missing.states.txt, mapping=aes(x=long, y=lat, label=text), size=3.5,  colour="grey50", hjust=0, inherit.aes=FALSE) +
+    geom_text(data=subset(test.merge, isSwing), mapping=aes(x=longitude, y=latitude, label=state), size=3.5,  colour="grey50", hjust=.5, inherit.aes=FALSE) +    
     theme_bw() +
     theme(aspect.ratio=1/1.5, legend.position = "none") +
     theme(axis.ticks = element_blank(),
