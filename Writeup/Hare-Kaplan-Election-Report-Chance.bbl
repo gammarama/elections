@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.2 $
+% $ biblatex version 1.7 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -61,7 +61,7 @@
   \name{author}{4}{}{%
     {{}%
      {Cook}{C.}%
-     {Di}{D.}%
+     {Dianne}{D.}%
      {}{}%
      {}{}}%
     {{}%

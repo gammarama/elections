@@ -11,6 +11,7 @@
 }
 \makeatother
 
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
 \newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
 \newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
@@ -66,7 +67,6 @@
 \usepackage{longtable, pdflscape, textcase}
 \usepackage[backend=bibtex, natbib=true, sorting=nyt, style=authoryear]{biblatex}
 \addbibresource{References.bib}
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 \begin{document}
 
@@ -179,21 +179,21 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 
 We had to spend a significant amount of time cleaning the Super PAC spending data in order to make it usable for analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefiting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the candidate name field (\texttt{can\_nam}). For example, Mr. Obama's name was mispelled eight different ways and Mr. Romney's name was mispelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
-% latex table generated in R 3.0.0 by xtable 1.7-1 package
-% Mon Jul 29 13:24:38 2013
+% latex table generated in R 2.15.3 by xtable 1.7-1 package
+% Mon Jul 29 14:53:10 2013
 \begin{table}[H]
 \centering
 \begin{tabular}{lrlr}
   \hline
 Mr.Obama & Count & Mr.Romney & Count \\ 
   \hline
-obama, barack & 25978 & romney, mitt & 20655 \\ 
-  obama, barak hussein & 1327 & romney, willard & 1143 \\ 
-  obama, barack hussein & 160 & romney, mitt / ryan, paul d. & 104 \\ 
+obama, barack & 25978 & romney, mitt / ryan, paul d. & 104 \\ 
+  obama, barak hussein & 1327 & romney, w mitt &   1 \\ 
+  obama, barack hussein & 160 & romney / paul d. ryan, mitt &  18 \\ 
   obama, pres. barack &  62 & mitt, romney &  23 \\ 
-  barack, obama &  52 & romney / paul d. ryan, mitt &  18 \\ 
-  obama, barak &  10 & romney, mary rose &   1 \\ 
-  2012, obama/biden &   3 & romney, w mitt &   1 \\ 
+  barack, obama &  52 & romney, mary rose &   1 \\ 
+  obama, barak &  10 & romney, mitt & 20655 \\ 
+  2012, obama/biden &   3 & romney, willard & 1143 \\ 
   barak, obama &   2 &  &  \\ 
    \hline
 \end{tabular}
@@ -205,8 +205,8 @@ obama, barack & 25978 & romney, mitt & 20655 \\
 
 An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, 12 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these Super PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those Super PACs.
 
-% latex table generated in R 3.0.0 by xtable 1.7-1 package
-% Mon Jul 29 13:24:38 2013
+% latex table generated in R 2.15.3 by xtable 1.7-1 package
+% Mon Jul 29 14:53:10 2013
 \begin{table}[H]
 \centering
 \begin{tabular}{l}
