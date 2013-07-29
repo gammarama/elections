@@ -1,0 +1,197 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{ap-restore}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{AP/The Huffington Post}}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{labelyear}{2012}
+  \field{sortinit}{A}
+  \field{title}{Restore Our Future, Pro-Mitt Romney Super PAC, Releases New Ad
+  Touting Olympics Stewardship}
+  \verb{url}
+  \verb http://www.huffingtonpost.com/2012/07/30/restore-our-future_n_1719310.h
+  \verb tml
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{lb-airings}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Baum}{B.}%
+     {Laura}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BL1}
+  \strng{fullhash}{BL1}
+  \field{labelyear}{2012}
+  \field{sortinit}{B}
+  \field{title}{Presidential Ad War Tops 1M Airings}
+  \verb{url}
+  \verb http://mediaproject.wesleyan.edu/2012/11/02/presidential-ad-war-tops-1m
+  \verb -airings/
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{dc-election}{online}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Cook}{C.}%
+     {Di}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {VanderPlas}{V.}%
+     {Susan}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hare}{H.}%
+     {Eric}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kaplan}{K.}%
+     {Andee}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CD+1}
+  \strng{fullhash}{CDVSHEKA1}
+  \field{labelyear}{2012}
+  \field{sortinit}{C}
+  \field{title}{Election 2012}
+  \verb{url}
+  \verb http://dicook.github.com/
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{fc-spend}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Federal Election Commission}}{F.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{F1}
+  \strng{fullhash}{F1}
+  \field{labelyear}{2008}
+  \field{sortinit}{F}
+  \field{title}{2008 Independent Expenditure Summaries - Presidential
+  Candidates}
+  \verb{url}
+  \verb http://www.fec.gov/press/press2008/2008indexp/2008presindepexpend.html
+  \endverb
+  \field{year}{2008}
+\endentry
+
+\entry{fc-vote}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Federal Election Commission}}{F.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{F1}
+  \strng{fullhash}{F1}
+  \field{labelyear}{2013}
+  \field{sortinit}{F}
+  \field{title}{Official 2012 Presidential General Election Results}
+  \verb{url}
+  \verb http://www.fec.gov/pubrec/fe2012/2012presgeresults.pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\entry{jj-debate}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Jones}{J.}%
+     {Jeffrey~M.}{J.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JJM1}
+  \strng{fullhash}{JJM1}
+  \field{labelyear}{2012}
+  \field{sortinit}{J}
+  \field{title}{Romney Narrows Vote Gap After Historic Debate Win}
+  \verb{url}
+  \verb http://www.gallup.com/poll/157907/romney-narrows-vote-gap-historic-deba
+  \verb te-win.aspx
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{ns-polls}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Silver}{S.}%
+     {Nate}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SN1}
+  \strng{fullhash}{SN1}
+  \field{labelyear}{2012}
+  \field{sortinit}{S}
+  \field{title}{Which Polls Fared Best (and Worst) in the 2012 Presidential
+  Race}
+  \verb{url}
+  \verb http://fivethirtyeight.blogs.nytimes.com/2012/11/10/which-polls-fared-b
+  \verb est-and-worst-in-the-2012-presidential-race/
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{kw-crossroads}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Walsh}{W.}%
+     {Kenneth~T.}{K.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WKT1}
+  \strng{fullhash}{WKT1}
+  \field{labelyear}{2012}
+  \field{sortinit}{W}
+  \field{title}{Super PAC American Crossroads Becoming Key to Romney Campaign}
+  \verb{url}
+  \verb http://www.usnews.com/news/blogs/Ken-Walshs-Washington/2012/07/20/super
+  \verb -pac-american-crossroads-becoming-key-to-romney-campaign
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

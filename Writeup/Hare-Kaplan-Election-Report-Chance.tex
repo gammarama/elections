@@ -1,4 +1,58 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{article}\usepackage{graphicx, color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.2, 0.2, 0.2}
+\newcommand{\hlnumber}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlfunctioncall}[1]{\textcolor[rgb]{0.501960784313725,0,0.329411764705882}{\textbf{#1}}}%
+\newcommand{\hlstring}[1]{\textcolor[rgb]{0.6,0.6,1}{#1}}%
+\newcommand{\hlkeyword}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlargument}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlcomment}[1]{\textcolor[rgb]{0.180392156862745,0.6,0.341176470588235}{#1}}%
+\newcommand{\hlroxygencomment}[1]{\textcolor[rgb]{0.43921568627451,0.47843137254902,0.701960784313725}{#1}}%
+\newcommand{\hlformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hleqformalargs}[1]{\textcolor[rgb]{0.690196078431373,0.250980392156863,0.0196078431372549}{#1}}%
+\newcommand{\hlassignement}[1]{\textcolor[rgb]{0,0,0}{\textbf{#1}}}%
+\newcommand{\hlpackage}[1]{\textcolor[rgb]{0.588235294117647,0.709803921568627,0.145098039215686}{#1}}%
+\newcommand{\hlslot}[1]{\textit{#1}}%
+\newcommand{\hlsymbol}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlprompt}[1]{\textcolor[rgb]{0.2,0.2,0.2}{#1}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 
 %AMS-TeX packages
 \usepackage{amssymb,amsmath,amsthm} 
@@ -12,11 +66,11 @@
 \usepackage{longtable, pdflscape, textcase}
 \usepackage[backend=bibtex, natbib=true, sorting=nyt, style=authoryear]{biblatex}
 \addbibresource{References.bib}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 \begin{document}
-<<concordance, echo=FALSE>>=
-opts_chunk$set(concordance=TRUE)
-@
+
+
 
 \setlength{\parskip}{3ex}
 \setlength{\parindent}{0pt}
@@ -37,10 +91,8 @@ In 2010, the United States Supreme Court released its decision on Citizens Unite
 
 In this report, we analyze independent expenditures filings from the Federal Election Commission in an attempt to determine the effect of this spending on the 2012 election. We subset these expenditures to analyze only those which were filed after the Republican primary, so that we can focus on those which benefit President Barack Obama and Governor Mitt Romney. We also retrieve data from the NationalPolls.com database of polling results to quantify the effect of this spending. The results of our analysis suggest that the spending may have had a measurable impact on public opinion, but external factors, such as the presidential debates, had much stronger impacts.
 
-<<importdata, echo=FALSE, warning=FALSE, message=FALSE, cache=FALSE>>=
-source("../Code/Plots/Plots.R", chdir = TRUE)
-source("../Code/Plots/MapPlots.R", chdir = TRUE)
-@
+
+
 
 \section*{Data}
 We are primarily working with two data sources to complete our analysis: independent expenditures data and polling data. The \href{http://www.fec.gov/data/IndependentExpenditure.do?format=html&cf=superPAC}{Federal Election Commission} keeps track of the spending by independent organizations and makes the information publicly available. Note that this data includes organizations not considered to be Super PACs, including the Republican and Democratic National Committees, as well as smaller PACs. We will henceforth reference all of these organizations simply as Super PACs for simplicity. The polling data comes from \href{http://nationalpolls.com/}{NationalPolls.com}, a website which aggregated national and state polls from multiple polling companies\footnote{As of January 1, 2013 NationalPolls.com has taken down their website, so we are working with a stored copy of their data.}. We are primarily working with the independent organization names, expense amounts, date of filed expense, and purpose of the expense from the spending data. These provide us with information on the organization filing the expense, the amount, the date, and the purpose of the expense. We also make extensive use of our created field that indicates which candidate benefited from the expense. A description of the fields used most in the spending data set is provided in Table \ref{tab:spendData} and a description of the fields used in the polling data set is provided in Table \ref{tab:pollData}. A full description of all fields available from the FEC and NationalPolls.com is available in our supplementary materials.
@@ -69,15 +121,15 @@ pay &	name of payee &	Name of the person or vendor or other entity receiving thi
 \multicolumn{3}{l}{\MakeTextUppercase{Currency Variables}}\\
 \hline
 exp\_amo & Expenditure Amount & Dollar amount of specific expenditure. \newline 
-Min: \\Sexpr{dollar_format()(min(spend.data$exp_amo, na.rm=TRUE))} \newline
-Max: \\Sexpr{dollar_format()(max(spend.data$exp_amo, na.rm=TRUE))} \newline
-Mean: \\Sexpr{dollar_format()(mean(spend.data$exp_amo, na.rm=TRUE))} \newline
-Median: \\Sexpr{dollar_format()(median(spend.data$exp_amo, na.rm=TRUE))}\\
+Min: \$0 \newline
+Max: \$17,661,251 \newline
+Mean: \$11,306.42 \newline
+Median: \$26.61\\
 %agg\_amo & Aggregate amount &	Total amount expended during the calendar year, per election, per office sought. \newline 
-%Min: \$\Sexpr{format(min(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-%Max: \$\Sexpr{format(max(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-%Mean: \$\Sexpr{format(mean(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)} \newline
-%Median: \$\Sexpr{format(median(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)}\\
+%Min: \$format(min(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE) \newline
+%Max: \$format(max(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE) \newline
+%Mean: \$format(mean(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE) \newline
+%Median: \$format(median(spend.data$agg_amo, na.rm=TRUE), nsmall=2, scientific=FALSE)\\
 \hline
 \multicolumn{3}{l}{\MakeTextUppercase{Date Variables}}\\
 \hline
@@ -127,31 +179,61 @@ Romney & Support for Mr. Romney & Integer rounded percent of support in the poll
 
 We had to spend a significant amount of time cleaning the Super PAC spending data in order to make it usable for analysis. We used pattern recognition as well as text manipulation methods to accomplish the cleaning. Even seemingly simple analyses like counting the number of expenditures benefiting each candidate were made more complicated by the reality of the data. Complications arose from multiple issues, the first being the lack of standardization in the candidate name field (\texttt{can\_nam}). For example, Mr. Obama's name was mispelled eight different ways and Mr. Romney's name was mispelled seven different ways. See Table \ref{tab:can_nam} for details. 
 
-<<can_nam, echo=FALSE, results='asis'>>=
-nameTable <- table(spend.data$can_nam)
-myDF <- data.frame(
-                "Mr.Obama" = names(nameTable[c(5, 8, 6, 9, 2, 7, 1, 3)]),
-                "Count" = nameTable[c(5, 8, 6, 9, 2, 7, 1, 3)],
-                "Mr.Romney" = c(names(nameTable[c(12, 15, 13, 4, 10, 11, 14)]), NA),
-                "Count" = c(nameTable[c(12, 15, 13, 4, 10, 11, 14)], NA), check.names = FALSE)
-xTab <- xtable(myDF,
-       caption="Number of occurrences of candidate name spellings in spending data.",
-       label="tab:can_nam")
+% latex table generated in R 3.0.0 by xtable 1.7-1 package
+% Mon Jul 29 13:24:38 2013
+\begin{table}[H]
+\centering
+\begin{tabular}{lrlr}
+  \hline
+Mr.Obama & Count & Mr.Romney & Count \\ 
+  \hline
+obama, barack & 25978 & romney, mitt & 20655 \\ 
+  obama, barak hussein & 1327 & romney, willard & 1143 \\ 
+  obama, barack hussein & 160 & romney, mitt / ryan, paul d. & 104 \\ 
+  obama, pres. barack &  62 & mitt, romney &  23 \\ 
+  barack, obama &  52 & romney / paul d. ryan, mitt &  18 \\ 
+  obama, barak &  10 & romney, mary rose &   1 \\ 
+  2012, obama/biden &   3 & romney, w mitt &   1 \\ 
+  barak, obama &   2 &  &  \\ 
+   \hline
+\end{tabular}
+\caption{Number of occurrences of candidate name spellings in spending data.} 
+\label{tab:can_nam}
+\end{table}
 
-print(xTab, include.rownames = FALSE, table.placement="H")
-@
 
-An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, \Sexpr{length(unique(as.character(prob_count$spe_nam)))} Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these Super PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those Super PACs.
 
-<<prob_spe, echo=FALSE, results='asis'>>=
-xTab <- xtable(data.frame("Super PAC Names" = unique(as.character(prob_count$spe_nam))),
-       caption="Super PACs appearing to support both candidates.",
-       label="tab:prob_spe")
+An additional complication we faced was with the support/oppose column (\texttt{sup\_opp}). This column in conjunction with the candidate column (\texttt{can\_nam}) is used to indicate which candidate benefits from the expenditure. An example would be if the support/oppose value is ``oppose'' and the candidate name is ``Romney'', then Mr. Obama benefits because the money is being spent to ``oppose Romney". Likewise, if the support/oppose column equals ``support'' and the candidate name is ``Romney'', then Mr. Romney benefits. We solved this by adding a new field which simply stores the candidate that benefits from the particular expense.  However, 12 Super PACs appeared to support both candidates (see Table \ref{tab:prob_spe}). After researching these Super PACs, we found that they were not in fact bipartisan supporters, and concluded that an entry error had been made on those filings. We coded those records to indicate support of the candidate most often benefited by those Super PACs.
 
-print(xTab, include.rownames = FALSE, table.placement="H")
-@
+% latex table generated in R 3.0.0 by xtable 1.7-1 package
+% Mon Jul 29 13:24:38 2013
+\begin{table}[H]
+\centering
+\begin{tabular}{l}
+  \hline
+Super.PAC.Names \\ 
+  \hline
+america vs obama \\ 
+  campaign to defeat barack obama \\ 
+  house majority pac \\ 
+  jewish council for education and research \\ 
+  lcv victory fund \\ 
+  liberty action pac \\ 
+  naral pro-choice america \\ 
+  national rifle association institute for legislative action \\ 
+  service employees international union pea - federal \\ 
+  unite here tip state \& local fund \\ 
+  workers' voice \\ 
+  working america \\ 
+   \hline
+\end{tabular}
+\caption{Super PACs appearing to support both candidates.} 
+\label{tab:prob_spe}
+\end{table}
 
-Another serious challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. This left us with \Sexpr{comma_format()(length(unique(spend.data$pur)))} unique entries. For example, the conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose. An entry from mid-August read ``oppose advertising-tv production (voted for)." This description lists whether it was an ad in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC preferred short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what Super PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patterns by looking at the expenditure purposes and manually identifying common threads among the purposes. From these patterns we were able to create ``buckets" that each expense fell in to, as well as high level buckets that more generally classified the expenditures. The buckets we chose are: 
+
+
+Another serious challenge we faced was that the purpose of independent expenditures column is a free text field on the FEC reporting form. This left us with 1,466 unique entries. For example, the conservative Super PAC Americans for Prosperity tended to use verbose descriptions of the spending purpose. An entry from mid-August read ``oppose advertising-tv production (voted for)." This description lists whether it was an ad in support or opposition, that it was a television ad, and the name of the ad. In contrast, the anti-abortion Women Speak Out PAC preferred short descriptions, such as ``ads" for their early-October expense. The result was that when trying to explore what Super PACs spent the majority of their money on, we were unable to group expenditures together. To solve this issue we searched for matches to patterns in the purpose field. We chose these patterns by looking at the expenditure purposes and manually identifying common threads among the purposes. From these patterns we were able to create ``buckets" that each expense fell in to, as well as high level buckets that more generally classified the expenditures. The buckets we chose are: 
 
 \begin{description}
     \item[Ads] Advertisement spending, including television, radio, and online
@@ -161,10 +243,21 @@ Another serious challenge we faced was that the purpose of independent expenditu
     \item[Other] All expenses that do not fit into the above buckets
 \end{description}
 
-<<bucket_plot, echo=FALSE, warning=FALSE, fig.width=4, fig.height=3, out.width='.45\\textwidth', fig.pos='H', fig.show='hold', fig.align='center', fig.cap='Number of expenditures filings and total amount spent (log 10) by high level bucket (bucket\\_2).'>>=
-bucketPlotCount
-bucketPlotSum
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=.45\textwidth]{figure/bucket_plot1} 
+\includegraphics[width=.45\textwidth]{figure/bucket_plot2} 
+
+}
+
+\caption[Number of expenditures filings and total amount spent (log 10) by high level bucket (bucket\_2)]{Number of expenditures filings and total amount spent (log 10) by high level bucket (bucket\_2).\label{fig:bucket_plot}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 Both of the example records above (the Americans for Prosperity and Women Speak Out PAC expenditures) have a high-level classification (\texttt{bucket\_2}) of ``ad", while they have a low-level classification (\texttt{bucket}) of ``tv" and ``media", respectively.
 
@@ -176,16 +269,38 @@ Figure \ref{fig:PAC_plot} displays the total spending by the top Super PACs spli
 
 It can be seen that certain Super PACs have accounted for the bulk of all spending. For those benefiting Mr. Obama, Priorities USA Action accounted for about 35\% of the total spending. Meanwhile, Restore Our Future, Inc. and American Crossroads combined spent about 25\% of the total spending on Mr. Romney. This suggests that Super PACs are clearly an unprecedented entity in terms of their monetary influence on the election. All Super PACs in total spent nearly one billion dollars during the course of the election campaign. With a total of just under 127 million votes cast in the election, this equates to nearly \$8 spent per vote.
 
-<<PAC_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap ='Spending by Super PAC, stacked by candidate.'>>=
-pacPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/PAC_plot} 
+
+}
+
+\caption[Spending by Super PAC, stacked by candidate]{Spending by Super PAC, stacked by candidate.\label{fig:PAC_plot}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 \section*{Swing States}
 Figure \ref{fig:swing_map} highlights 12 states with particularly even polling results. We will refer to these as swing states. Figure \ref{fig:type_swing_1} displays the change in polling support for both Mr. Romney and Mr. Obama over time, in these swing states.
 
-<<swing_map, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Map of United States with swing states highlighted in yellow. States won by the Republican candidate, John McCain, in 2008 election are highlighted in red, while states won by Mr. Obama in 2008 are highlighted in blue.'>>=
-swingStatePlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/swing_map} 
+
+}
+
+\caption[Map of United States with swing states highlighted in yellow]{Map of United States with swing states highlighted in yellow. States won by the Republican candidate, John McCain, in 2008 election are highlighted in red, while states won by Mr. Obama in 2008 are highlighted in blue.\label{fig:swing_map}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 The data includes all polls in the NationalPolls.com database from April 25th to November 6th. Percent support for each candidate is shown for each state with a smoothed line indicating trend. There are six markers which signify major events in the campaign, Paul Ryan's selection as Vice Presidential nominee, the Republican National Convention, the Democratic National Convention, the original leak of the 47\% video -- in which Mr. Romney was recorded delivering controversial comments regarding government dependency -- the first presidential debate, and election day.
 
@@ -193,9 +308,20 @@ Figure \ref{fig:type_swing_1} uses a loess smoother to show an overall trend in 
 
 The plots suggest that the reaction to many of these major campaign events was not consistent state to state. Some states, such as New Hampshire, have produced drastic changes in polling support over time (``bounces"), while others, such as North Carolina, have maintained a consistent margin of support for the two candidates. However, increases in support for Mr. Romney can be seen in nearly all states following marker five, the first presidential debate. Romney was seen to have won this debate by most observers\nocite{jj-debate}. Note again however that some states had a much stronger reaction to this event, including New Hampshire, while states like North Carolina had a much more modest polling change.
 
-<<type_swing_1, echo=FALSE, warning=FALSE, fig.width=10, fig.height=12, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, (5) first presidential debate, and (6) election day. The overall trends in polling are shown using a loess smoother The gray bands surrounding the curves are confidence bands representing plausible values of percentage support for each candidate.'>>=
-swingPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/type_swing_1} 
+
+}
+
+\caption[Polling averages for Mr]{Polling averages for Mr. Obama and Mr. Romney by swing state. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day. The overall trends in polling are shown using a loess smoother The gray bands surrounding the curves are confidence bands representing plausible values of percentage support for each candidate.\label{fig:type_swing_1}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 \section*{Ads, Overhead, and Contact, Oh My!}
 The sheer volume of advertising in the 2012 election campaign is staggering, both on its own terms, and in comparison to previous elections. Over one million ads aired on television during the campaign. This contrasts with slightly over 730,000 ads in the 2008 election, and slightly over 720,000 ads in the 2004 election. While the Obama and Romney campaigns accounted for the bulk of the advertisements, Super PACs still managed to air nearly 400,000 ads, more than accounting for the difference in advertising volume in the 2012 elections compared with previous years, as was reported by Laura Baum in the Wesleyan Media Project\nocite{lb-airings}.
@@ -208,31 +334,75 @@ There are two notable week-to-week increases in spending by Super PACs benefitin
 
 On the other hand, organizations benefiting Mr. Obama significantly outspent those supporting Mr. Romney in overhead and swag. It is interesting to note that Super PACs supporting Mr. Romney began spending on overhead in opposition in May and continued until election day, whereas their spending on overhead in support began in October. Super PACs supporting Mr. Obama spent fairly consistently on overhead from August to November.
 
-<<temporal_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=12, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, (5) first presidential debate, and (6) election day.'>>=
-temporalPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/temporal_plot} 
+
+}
+
+\caption[Total weekly spending by Super PACs in support or opposition of candidates]{Total weekly spending by Super PACs in support or opposition of candidates. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day.\label{fig:temporal_plot}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 \section*{What does \$1 Billion Buy?}
 Figure \ref{fig:trend_plot} shows weekly spending by Super PACs benefiting either candidate. Looking at weekly spending by Super PACs benefiting Mr. Romney, we can see a sharp increase in spending that occurred during the week of July 15th. This is the same increase that was previously shown to be largely due to the \textit{Smoke} ad released by American Crossroads. The spending levels then remain consistently higher for the rest of the campaign season. This stands in contrast to the Super PACs benefiting Mr. Obama, whose spending levels remained relatively steady week-to-week. We have shaded the period prior to July 15th and labeled it as region (1), while the period after July 15th is region (2). We examine the national and swing state polls to determine if there is any noticeable effect due to this change in spending in the weeks following.
 
-<<trend_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.'>>=
-trendPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/trend_plot} 
+
+}
+
+\caption[Weekly spending by Super PACs supporting Mr]{Weekly spending by Super PACs supporting Mr. Obama and Mr. Romney. Shaded region (1) indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region (2) indicates a period of higher spending.\label{fig:trend_plot}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 Figure \ref{fig:support_spend} compares the difference in Super PAC spending by week to the difference in polling between Mr. Romney and Mr. Obama with a one week lag. Certain weeks are labeled to indicate the first five of the six important events (election day is not included because we are measuring the polling with a one week lag). We include a loess smoother to highlight a relationship between change in support and change in spending. Again, the gray bands surrounding the curves indicate uncertainty in the smoothing curve. The goal is to see if there is a relationship between Super PAC spending and poll results. In Super PACs supporting both Mr. Obama and Mr. Romney we can see a weak positive relationship between spending and polling.
 
-<<support_spend, echo=FALSE, warning=FALSE, fig.width=4, fig.height=4.5, out.width='.45\\textwidth', fig.pos='H', fig.cap='Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, and (5) first presidential debate. We include a loess smoother to highlight a relationship between change in support and change in spending. Again, the gray bands surrounding the curves indicate uncertainty in the smoothing curve.', fig.show='hold', fig.align='center'>>=
-obamaEffectPlot
-romneyEffectPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=.45\textwidth]{figure/support_spend1} 
+\includegraphics[width=.45\textwidth]{figure/support_spend2} 
+
+}
+
+\caption[Change in polling over change in spending by candidate]{Change in polling over change in spending by candidate. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, and (5) first presidential debate. We include a loess smoother to highlight a relationship between change in support and change in spending. Again, the gray bands surrounding the curves indicate uncertainty in the smoothing curve.\label{fig:support_spend}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 Figure \ref{fig:effect_plot} shows the polling margin (Obama - Romney) over time, colored by swing states versus the national polls. The six event markers previously used are displayed. It can be seen that Mr. Obama consistently maintained an advantage in swing states relative to his national numbers. This is particularly true immediately following the first presidential debate, in which Mr. Obama's swing state polling support decreased much slower than his national polling support. The time periods before and after July 15th are shaded in the same manner as Figure \ref{fig:trend_plot}. It does not seem that this spending increase had a measurable effect on the overall trend in the polls at this time.
 
 Note that this plot utilizes exponential smoothing to show the trends in polls over time rather than a loess smoother, as we have used previously. When using the loess smoother, the future polling numbers were heavily affecting the smoothed trend line, which was undesirable. This is because the loess smoother takes points past and future with equal weight into account when showing the trend. However, the exponential smoothing method places importance on past points with exponentially decreasing weights as the points become further from the event, limiting the impact of future polling on the current smoothed trend. We implemented the exponential smoothing method using the \texttt{forecast} and \texttt{zoo} packages in R.
 
-<<effect_plot, echo=FALSE, warning=FALSE, fig.width=10, fig.height=5, out.width='\\textwidth', fig.align='center', fig.pos='H', fig.cap='Polling margin (Obama - Romney) over time, swing states versus national polls. Shaded region indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region indicates a period of higher spending. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\\% video leaked, (5) first presidential debate, and (6) election day. This plot utilizes exponential smoothing to show the trends in polls over time rather than a loess smoother, as we have used previously.'>>=
-effectPlot
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+
+{\centering \includegraphics[width=\textwidth]{figure/effect_plot} 
+
+}
+
+\caption[Polling margin (Obama - Romney) over time, swing states versus national polls]{Polling margin (Obama - Romney) over time, swing states versus national polls. Shaded region indicates a period of lower spending by Super PACs supporting Mr. Romney and unshaded region indicates a period of higher spending. Important events are indicated as follows: (1) Paul Ryan VP selection, (2) Republican National Convention, (3) Democratic National Convention, (4) 47\% video leaked, (5) first presidential debate, and (6) election day. This plot utilizes exponential smoothing to show the trends in polls over time rather than a loess smoother, as we have used previously.\label{fig:effect_plot}}
+\end{figure}
+
+
+\end{knitrout}
+
 
 \section*{Conclusions/Future Work}
 Ultimately, our findings suggest that while election spending itself was a very significant aspect of the 2012 election, it is not clear whether the existence of Super PACs had a measurable impact on the outcome of the presidential race. Instead, the events that garnered large amounts of media coverage, such as the 47\% video and the first presidential debate, seem to have had the most noticeable effect on the polling. Furthermore, our analysis did not take into account the spending done by the candidates themselves. It may be that such spending muted the effect of Super PAC spending.
