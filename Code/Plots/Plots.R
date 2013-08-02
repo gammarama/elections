@@ -14,7 +14,7 @@ special.dat <- data.frame(x = dates, label = 1:6)
 bucketPlotCount <- ggplot(bucket.data) +
     geom_bar(aes(x=factor(bucket2, levels = c("ad", "direct contact", "overhead", "swag", "other")), y=count, fill=bucket2), stat = "identity", show_guide=FALSE, width=.75) +
     xlab("Bucket") +
-    ylab("Count") +
+    ylab("Number of Expenditures") +
     scale_y_log10(label = math_format(format = log10)) +
     scale_fill_brewer(palette="Set1") +
     theme_bw()
@@ -22,7 +22,7 @@ bucketPlotCount <- ggplot(bucket.data) +
 bucketPlotSum <- ggplot(bucket.data) +
     geom_bar(aes(x=factor(bucket2, levels = c("ad", "direct contact", "overhead", "swag", "other")), y=sum, fill=bucket2), stat = "identity", show_guide=FALSE, width=.75) +
     xlab("Bucket") +
-    ylab("Sum (Log 10)") +
+    ylab("Sum of Expenditure Amounts (Log 10)") +
     scale_y_log10(label = math_format(format = log10)) +
     scale_fill_brewer(palette="Set1") +
     theme_bw()
